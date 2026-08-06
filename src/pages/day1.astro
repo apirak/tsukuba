@@ -39,41 +39,52 @@ const day1Spots: Spot[] = [
   },
   {
     step: 4,
-    name: "สวนสาธารณะโดโฮ & Doho Park Cafe",
-    lat: 36.0602,
-    lng: 140.1215,
-    desc: "พักผ่อน จิบกาแฟ/เบเกอรี่ ทานมื้อเที่ยงริมทะเลสาบสวน Doho Park",
-    distFromPrev: "~800 ม. (ปั่น 3 นาทีจาก AIST)",
-    icon: "fa-seedling",
+    name: "มื้อเที่ยง: ทงคัตสึ TonQ Tsukuba Honten",
+    lat: 36.0765,
+    lng: 140.1135,
+    desc: "มื้อเที่ยงไฮไลต์! ทงคัตสึทอดกรอบพรีเมียมอันดับ 1 ของเมือง Tsukuba",
+    distFromPrev: "~1.5 กม. (ปั่น 6 นาทีจาก AIST)",
+    icon: "fa-utensils",
     img: `${base}/images/doho_park_cafe_lakeside.jpg`,
-    googleMapsUrl: "https://maps.google.com/?q=Doho+Park"
+    googleMapsUrl: "https://maps.google.com/?q=TonQ+Tsukuba"
   },
   {
     step: 5,
-    name: "สถานี Tsukuba (คืนจักรยาน)",
-    lat: 36.0830,
-    lng: 140.1110,
-    desc: "ปั่นจักรยานกลับตามทาง Pedestrian Deck คืนจักรยานก่อน 18:00 น.",
-    distFromPrev: "~2.2 กม. (ปั่นกลับสถานี)",
+    name: "สวนสาธารณะโดโฮ & คืนจักรยาน",
+    lat: 36.0602,
+    lng: 140.1215,
+    desc: "เดินชิลริมทะเลสาบสวน Doho Park ปั่นย้อนกลับคืนจักรยานก่อน 18:00 น.",
+    distFromPrev: "~800 ม. (ปั่นไปสวนโดโฮ)",
     icon: "fa-flag-checkered",
     img: `${base}/images/tsukuba_station.jpg`,
-    googleMapsUrl: "https://maps.google.com/?q=Tsukuba+Station"
+    googleMapsUrl: "https://maps.google.com/?q=Doho+Park"
+  },
+  {
+    step: 6,
+    name: "มื้อเย็น: ร้านอาหารญี่ปุ่น Gohan-ya Fugen",
+    lat: 36.0820,
+    lng: 140.1150,
+    desc: "มื้อเย็นอบอุ่น เซ็ตอาหารญี่ปุ่นเทโชกุดั้งเดิม บรรยากาศโลคอลแท้ๆ",
+    distFromPrev: "ใกล้สถานี Tsukuba (เดิน 5 นาที)",
+    icon: "fa-bowl-rice",
+    img: `${base}/images/tsukuba_ramen.jpg`,
+    googleMapsUrl: "https://maps.google.com/?q=Gohan-ya+Fugen+Tsukuba"
   }
 ];
 ---
 
-<Layout title="Day 1: ปั่นจักรยานชิลๆ โซน JAXA & สวนใกล้เคียง - Tsukuba Travel Strategy" activePath="/day1">
+<Layout title="Day 1: ปั่นจักรยานชิลๆ โซน JAXA & ร้านทงคัตสึ TonQ - Tsukuba Travel Strategy" activePath="/day1">
   <!-- Header -->
   <header class="bg-slate-900 text-white py-12 border-b border-slate-800 text-center">
     <div class="max-w-4xl mx-auto px-4 space-y-3">
       <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-xs font-semibold">
-        <i class="fa-solid fa-bicycle"></i> JAXA & NEARBY SPOTS (EASY CYCLING)
+        <i class="fa-solid fa-bicycle"></i> JAXA & TONKATSU TONQ (EASY CYCLING)
       </span>
       <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">
-        Day 1: เช่าจักรยานปั่นชิลๆ ตะลุย JAXA & สถานที่รอบๆ (ไม่เกิน 2–3 กม.)
+        Day 1: เช่าจักรยานปั่นชิลๆ ตะลุย JAXA & ลิ้มลองทงคัตสึ TonQ ติดอันดับเมือง
       </h1>
       <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
-        เน้นเที่ยวโซน JAXA, พิพิธภัณฑ์วิทยาศาสตร์ Science Square และสวนโดโฮ ปั่นระยะสั้น 1–2 กม. ทางปลอดภัย ไร้รถยนต์
+        เน้นเที่ยวโซน JAXA, พิพิธภัณฑ์วิทยาศาสตร์ Science Square, มื้อเที่ยงหมูทอด TonQ และมื้อเย็นเทโชกุ Gohan-ya Fugen
       </p>
     </div>
   </header>
@@ -83,8 +94,8 @@ const day1Spots: Spot[] = [
     <!-- Day 1 Route Map (TOP SECTION) -->
     <DayMap 
       mapId="map-day1"
-      title="แผนที่เส้นทางปั่นจักรยาน Day 1 (JAXA & โซนรอบๆ)"
-      subtitle="พิกัดจุดเช่าจักรยาน JAXA Space Center, Science Square AIST, สวน Doho Park และเส้นทางปั่นย้อนกลับสถานี"
+      title="แผนที่เส้นทางปั่นจักรยาน Day 1 (JAXA & ร้านอาหารทงคัตสึ TonQ)"
+      subtitle="พิกัดจุดเช่าจักรยาน JAXA Space Center, Science Square AIST, ร้านทงคัตสึ TonQ และสวน Doho Park"
       themeColor="emerald"
       spots={day1Spots}
       totalDistance="ระยะทางปั่นรวมทั้งวันเพียง ~6 กม. (ละจุดห่าง 0.8–2.1 กม.)"
@@ -98,7 +109,7 @@ const day1Spots: Spot[] = [
             ภาพรวมแผนงาน Day 1 (ระยะใกล้สบายๆ)
           </span>
           <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">
-            ตารางเวลา & ไฮไลต์โซน JAXA & สวนโดโฮ (Top Summary)
+            ตารางเวลา & ไฮไลต์โซน JAXA & ร้าน TonQ (Top Summary)
           </h2>
         </div>
         <span class="px-3 py-1 bg-slate-900 text-white font-semibold text-xs rounded-full">
@@ -123,20 +134,20 @@ const day1Spots: Spot[] = [
           <p class="text-slate-500 text-xs leading-relaxed">ชมจรวด H-II Rocket ยาว 50 เมตร & Space Dome</p>
         </a>
 
-        <a href="#part-science" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
-          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">12:00 – 13:30</span>
+        <a href="#part-tonq" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">12:30 – 14:00</span>
           <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
-            <i class="fa-solid fa-robot text-teal-600 me-1"></i> 3. Science Square & Geology
+            <i class="fa-solid fa-utensils text-rose-600 me-1"></i> 3. มื้อเที่ยง: ทงคัตสึ TonQ
           </h3>
-          <p class="text-slate-500 text-xs leading-relaxed">เล่นหุ่นยนต์แมวน้ำ AI Paro & ฟอสซิล/อัญมณี (ห่าง JAXA 1.2 กม.)</p>
+          <p class="text-slate-500 text-xs leading-relaxed">ร้านหมูทอดทงคัตสึพรีเมียมอันดับ 1 ของเมือง Tsukuba</p>
         </a>
 
-        <a href="#part-doho" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
-          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">13:45 – 15:30</span>
+        <a href="#part-fugen" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">18:00 – 19:30</span>
           <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
-            <i class="fa-solid fa-seedling text-emerald-600 me-1"></i> 4. Doho Park & Cafe
+            <i class="fa-solid fa-bowl-rice text-amber-600 me-1"></i> 4. มื้อเย็น: Gohan-ya Fugen
           </h3>
-          <p class="text-slate-500 text-xs leading-relaxed">ทานมื้อเที่ยง/ขนม & เดินชิลริมทะเลสาบสวน Doho (ห่าง 800 ม.)</p>
+          <p class="text-slate-500 text-xs leading-relaxed">ชุดอาหารญี่ปุ่นเทโชกุดั้งเดิม บรรยากาศโลคอลอบอุ่น</p>
         </a>
       </div>
 
@@ -199,17 +210,6 @@ const day1Spots: Spot[] = [
               <li>รับกุญแจ ล็อกจักรยาน และหมวกกันน็อก</li>
             </ol>
           </div>
-
-          <div class="space-y-2">
-            <h3 class="font-bold text-slate-900 flex items-center gap-2">
-              <i class="fa-solid fa-shield-halved text-rose-600"></i>กฎการปั่นจักรยานในญี่ปุ่น:
-            </h3>
-            <ul class="list-disc pl-5 space-y-1">
-              <li>ปั่นชิดซ้ายบนเส้นทาง Pedestrian/Bike Deck ที่แยกจากทางรถยนต์อย่างชัดเจน</li>
-              <li>เมื่อจอดตามสถานที่ท่องเที่ยว ให้ล็อกแม่กุญแจจักรยานที่ล้อหลังเสมอ</li>
-              <li>นำจักรยานกลับมาคืนที่จุดเช่าเดิมก่อนเวลา 18:00 น.</li>
-            </ul>
-          </div>
         </div>
       </article>
 
@@ -219,7 +219,7 @@ const day1Spots: Spot[] = [
           <div class="flex items-center gap-3">
             <span class="w-9 h-9 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">2</span>
             <div>
-              <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">09:45 – 11:45 (ปั่นจากสถานี ~2.1 กม. 8–10 นาที)</span>
+              <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">09:45 – 11:45 (ปั่นจากสถานี ~2.1 กม.)</span>
               <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">JAXA Tsukuba Space Center (ศูนย์อวกาศสึกุบะ)</h2>
             </div>
           </div>
@@ -231,90 +231,64 @@ const day1Spots: Spot[] = [
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
-          ศูนย์วิจัยอวกาศหลักของญี่ปุ่น ชมจรวด H-II Rocket ขนาดจริงยาว 50 เมตรตั้งตระหง่านหน้าทางเข้า เข้าชมอาคารนิทรรศการ Space Dome ฟรี 
-          มอดูลห้องทดลองอวกาศ Kibo โมเดลดาวเทียม และชุดนักบินอวกาศจริง
+          ศูนย์วิจัยอวกาศหลักของญี่ปุ่น ชมจรวด H-II Rocket ขนาดจริงยาว 50 เมตรตั้งตระหง่านหน้าทางเข้า เข้าชมอาคารนิทรรศการ Space Dome ฟรี มอดูลห้องทดลองอวกาศ Kibo
+        </p>
+      </article>
+
+      <!-- Part 3: TonQ Tonkatsu Lunch -->
+      <article id="part-tonq" class="bg-white border-2 border-rose-300 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-rose-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">3</span>
+            <div>
+              <span class="px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">12:30 – 14:00 (ร้าน TonQ Tsukuba Honten)</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">มื้อเที่ยงไฮไลต์: ร้านหมูทอดทงคัตสึ TonQ (とんかつ とんQ つくば本店)</h2>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-rose-600 text-white font-semibold text-xs rounded-full">อันดับ 1 ของเมือง 🥩</span>
+        </div>
+
+        <p class="text-slate-600 text-sm leading-relaxed">
+          ทานมื้อเที่ยงสุดฟินกับร้านทงคัตสึชื่องดังที่สุดใน Tsukuba <strong>TonQ (とんかつ とんQ つくば本店)</strong> หมูทอดชิ้นหนากรุบกรอบนอกนุ่มใน เสิร์ฟพร้อมกะหล่ำปลีสดกรอบ น้ำซุปหมูมิโซะ และซอสทงคัตสึสูตรพิเศษ คุ้มค่าคุ้มราคาเป็นอันดับ 1!
         </p>
 
         <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
           <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong>ค่าเข้าชม:</strong> ฟรี (สำหรับโซน Space Dome และ Rocket Park)</li>
-            <li><strong>ไฮไลต์เด็กๆ ชอบ:</strong> แบบจำลองขนาดเท่าของจริงของสถานีอวกาศ ISS โมดูล Kibo เดินเข้าไปถ่ายรูปเสมือนเป็นนักบินอวกาศได้</li>
-            <li><strong>ร้านของฝาก JAXA Museum Shop:</strong> อาหารอวกาศจริง (แกงกะหรี่อวกาศ, ไอศกรีมอวกาศ), พวงกุญแจจรวด และเสื้อยืด JAXA แท้</li>
+            <li><strong>ที่ตั้ง:</strong> 〒305-0033 茨城県つくば市東新井13-12 (ห่างจาก Science Square AIST ~1.5 กม.)</li>
+            <li><strong>เมนูแนะนำ:</strong> เซ็ตทงคัตสึหมูสันนอก/สันใน, เซ็ตหมูทอดแป้งเกล็ดขนมปังสด และซุปมิโซะเติมได้ตลอด</li>
           </ul>
-          
-          <a href="https://maps.google.com/?q=JAXA+Tsukuba+Space+Center" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
-            <i class="fa-solid fa-map-location-dot me-1.5"></i>พิกัด JAXA บน Google Maps
+
+          <a href="https://maps.google.com/?q=TonQ+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
           </a>
         </div>
       </article>
 
-      <!-- Part 3: Science Square & Geology Museum -->
-      <article id="part-science" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+      <!-- Part 4: Gohan-ya Fugen Dinner -->
+      <article id="part-fugen" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
           <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">3</span>
+            <span class="w-9 h-9 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">4</span>
             <div>
-              <span class="px-2.5 py-0.5 bg-teal-100 text-teal-800 font-semibold text-xs rounded-full">12:00 – 13:30 (ปั่นจาก JAXA เพียง ~1.2 กม. 5 นาที)</span>
-              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">Science Square AIST & Geological Museum (พิพิธภัณฑ์ธรณีวิทยา)</h2>
+              <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">18:00 – 19:30 (ร้าน Gohan-ya Fugen)</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">มื้อเย็นไฮไลต์: ร้านอาหารญี่ปุ่นดั้งเดิม Gohan-ya Fugen (ごはんや 冨元)</h2>
             </div>
           </div>
-          <span class="px-3 py-1 bg-teal-600 text-white font-semibold text-xs rounded-full">เข้าชมฟรีทั้งคู่</span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-80">
-          <div class="rounded-xl overflow-hidden border border-slate-200">
-            <img src={`${base}/images/science_square_ta1.jpg`} alt="Science Square AIST" class="w-full h-64 object-cover" />
-          </div>
-          <div class="rounded-xl overflow-hidden border border-slate-200">
-            <img src={`${base}/images/geological_museum_ta1.jpg`} alt="Geological Museum" class="w-full h-64 object-cover" />
-          </div>
+          <span class="px-3 py-1 bg-amber-600 text-white font-semibold text-xs rounded-full">เซ็ตเทโชกุโลคอล 🍱</span>
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
-          ตั้งอยู่ติดกันข้างๆ JAXA! Science Square AIST โชว์รูมนวัตกรรมและเทคโนโลยีอนาคต สัมผัสหุ่นยนต์แมวน้ำบำบัด Paro Seal Robot และข้างๆ เป็นพิพิธภัณฑ์ธรณีวิทยา รวบรวมอัญมณี ฟอสซิล และหินภูเขาไฟทั่วโลก
+          ทานมื้อเย็นสไตล์โฮมเมดญี่ปุ่นดั้งเดิมกับร้าน <strong>Gohan-ya Fugen (ごはんや 冨元 / ふげん)</strong> บรรยากาศโลคอลอบอุ่นเป็นกันเอง เสิร์ฟชุดอาหารเซ็ตเทโชกุ ปลาปิ้งย่างเตาถ่าน ปลานึ่งซีอิ๊ว และผักเครื่องเคียงตามฤดูกาล
         </p>
 
         <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
           <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong>ระยะทาง:</strong> อยู่ห่างจาก JAXA เพียง 1.2 กิโลเมตร ปั่นจักรยานบนทางเท้าลอยฟ้าเพียง 5 นาที</li>
-            <li><strong>ไฮไลต์:</strong> ทรวดทรงหินอัญมณีเรืองแสง, ฟอสซิลไดโนเสาร์ขนาดใหญ่ และการสาธิต AI หุ่นยนต์อัจฉริยะ</li>
+            <li><strong>จุดเด่น:</strong> รสชาติอาหารญี่ปุ่นแท้ๆ วัตถุดิบสดใหม่ ให้ความรู้สึกเหมือนทานอาหารรสมือแม่ในบ้านญี่ปุ่น</li>
+            <li><strong>การเดินทาง:</strong> ตั้งอยู่ย่านใจกลางเมืองใกล้อาคาร Tsukuba Center (เดิน 5-8 นาที)</li>
           </ul>
 
-          <a href="https://maps.google.com/?q=Science+Square+AIST" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
-            <i class="fa-solid fa-map-location-dot me-1.5"></i>พิกัด Science Square AIST บน Google Maps
-          </a>
-        </div>
-      </article>
-
-      <!-- Part 4: Doho Park & Return -->
-      <article id="part-doho" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
-          <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">4</span>
-            <div>
-              <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">13:45 – 16:30 (ปั่นจาก AIST เพียง ~800 ม. 3 นาที)</span>
-              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">สวนสาธารณะโดโฮ (Doho Park) & ทานอาหาร/จิบกาแฟริมทะเลสาบ</h2>
-            </div>
-          </div>
-          <span class="px-3 py-1 bg-emerald-600 text-white font-semibold text-xs rounded-full">พักผ่อนริมทะเลสาบ</span>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src={`${base}/images/doho_park_cafe_lakeside.jpg`} alt="Doho Park Lakeside Cafe" class="w-full h-64 object-cover" />
-        </div>
-
-        <p class="text-slate-600 text-sm leading-relaxed">
-          สวนสาธารณะใหญ่ร่มรื่นมีทะเลสาบกึ่งกลางสวน พร้อมคาเฟ่เรือนไม้อบอุ่น Doho Cafe & ร้านเบเกอรี่ชื่อดัง ปั่นพักผ่อน ทานมื้อเที่ยงเลท หรือเบเกอรี่อบใหม่ริมน้ำสบายๆ
-        </p>
-
-        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
-          <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong>บรรยากาศ:</strong> มีต้นแปะก๊วยและสนยักษ์ล้อมรอบทะเลสาบ มีลานเล่นเด็ก และเป็ดบึงธรรมชาติ</li>
-            <li><strong>ขากลับ (16:00 - 16:30):</strong> ปั่นจักรยานย้อนกลับตาม Pedestrian Deck สู่สถานี Tsukuba (ระยะทาง ~2.2 กม.) คืนจักรยานเรียบร้อยก่อนเวลา 18:00 น.</li>
-          </ul>
-
-          <a href="https://maps.google.com/?q=Doho+Park" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
-            <i class="fa-solid fa-map-location-dot me-1.5"></i>พิกัด Doho Park บน Google Maps
+          <a href="https://maps.google.com/?q=Gohan-ya+Fugen+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
           </a>
         </div>
       </article>
@@ -323,4 +297,3 @@ const day1Spots: Spot[] = [
 
   </div>
 </Layout>
-
