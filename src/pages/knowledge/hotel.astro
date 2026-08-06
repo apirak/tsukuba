@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="Hotel Guide - Knowledge Hub Tsukuba" activePath="/knowledge/hotel">
@@ -23,7 +24,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 1. Tabist Tsukuba Sky Hotel (CONFIRMED CHOICE) -->
       <article id="tabist-sky" class="bg-white border-2 border-rose-300 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/tabist_sky_hotel_booking_01_ext.jpg" alt="Tabist Tsukuba Sky Hotel" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/tabist_sky_hotel_booking_01_ext.jpg`} alt="Tabist Tsukuba Sky Hotel" class="w-full h-64 object-cover" />
         </div>
 
         <div class="flex flex-wrap items-center gap-2">
@@ -80,7 +81,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 2. Daiwa Roynet Hotel Tsukuba -->
       <article id="daiwa" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/daiwa_roynet_tsukuba_real.jpg" alt="Daiwa Roynet Hotel Tsukuba" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/daiwa_roynet_tsukuba_real.jpg`} alt="Daiwa Roynet Hotel Tsukuba" class="w-full h-64 object-cover" />
         </div>
         <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-building me-1"></i> โรงแรมติดสถานี TX Exit A5
@@ -109,7 +110,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 3. Hotel Nikko Tsukuba -->
       <article id="nikko" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/hotel_nikko_tsukuba_bstatic.jpg" alt="Hotel Nikko Tsukuba" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/hotel_nikko_tsukuba_bstatic.jpg`} alt="Hotel Nikko Tsukuba" class="w-full h-64 object-cover" />
         </div>
         <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-crown me-1"></i> โรงแรมหรูระดับ 4 ดาว
@@ -138,7 +139,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 4. Tsukubasan Edoya Ryokan -->
       <article id="edoya" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/tsukubasan_shrine_real.jpg" alt="Tsukubasan Edoya Ryokan" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/tsukubasan_shrine_real.jpg`} alt="Tsukubasan Edoya Ryokan" class="w-full h-64 object-cover" />
         </div>
         <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-hot-tub-person me-1"></i> เรียวกังออนเซ็น 300 ปี

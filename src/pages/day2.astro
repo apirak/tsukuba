@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="Day 2: เที่ยวสถานที่ในเมือง & ลานสกี - Tsukuba Travel Strategy" activePath="/day2">
@@ -99,7 +100,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/tsukuba_expo_center.jpg" alt="Tsukuba Expo Center Rocket" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/tsukuba_expo_center.jpg`} alt="Tsukuba Expo Center Rocket" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
@@ -133,7 +134,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/science_square_ta1.jpg" alt="Science Square Tsukuba AIST Robot" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/science_square_ta1.jpg`} alt="Science Square Tsukuba AIST Robot" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
@@ -163,7 +164,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/doho_park_scenery_real.jpg" alt="Doho Park Scenery Real Photo" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/doho_park_scenery_real.jpg`} alt="Doho Park Scenery Real Photo" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">

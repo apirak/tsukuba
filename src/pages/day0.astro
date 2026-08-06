@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="Day 0: ลงสนามบิน & เข้าที่พัก - Tsukuba Travel Strategy" activePath="/day0">
@@ -96,7 +97,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/narita_tsukuba_bus_real.jpg" alt="Highway Bus Narita to Tsukuba" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/narita_tsukuba_bus_real.jpg`} alt="Highway Bus Narita to Tsukuba" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
@@ -148,7 +149,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/tsukuba_center_building_real.jpg" alt="Tsukuba Center Building" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/tsukuba_center_building_real.jpg`} alt="Tsukuba Center Building" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
@@ -191,7 +192,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/tabist_sky_hotel_booking_01_ext.jpg" alt="Tabist Tsukuba Sky Hotel Booking" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/tabist_sky_hotel_booking_01_ext.jpg`} alt="Tabist Tsukuba Sky Hotel Booking" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">

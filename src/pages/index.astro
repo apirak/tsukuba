@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="Tsukuba Travel Strategy & Portal" activePath="/">
@@ -31,16 +32,16 @@ import Layout from '../layouts/Layout.astro';
       </p>
 
       <div class="flex flex-wrap justify-center gap-3 pt-2">
-        <a href="/day0" class="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full text-sm font-semibold border border-white/20 transition-colors">
+        <a href={`${base}/day0`} class="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full text-sm font-semibold border border-white/20 transition-colors">
           <i class="fa-solid fa-plane-arrival me-2 text-sky-400"></i>Day 0: ลงเครื่อง & เข้าที่พัก
         </a>
-        <a href="/day1" class="inline-flex items-center px-4 py-2 bg-emerald-400 hover:bg-emerald-300 text-slate-950 rounded-full text-sm font-semibold transition-colors">
+        <a href={`${base}/day1`} class="inline-flex items-center px-4 py-2 bg-emerald-400 hover:bg-emerald-300 text-slate-950 rounded-full text-sm font-semibold transition-colors">
           <i class="fa-solid fa-bicycle me-2"></i>Day 1: ปั่นจักรยานไกล
         </a>
-        <a href="/day2" class="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full text-sm font-semibold border border-white/20 transition-colors">
+        <a href={`${base}/day2`} class="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full text-sm font-semibold border border-white/20 transition-colors">
           <i class="fa-solid fa-building-columns me-2 text-amber-400"></i>Day 2: เที่ยวเมือง & สกี
         </a>
-        <a href="/knowledge" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-full text-sm font-semibold transition-colors">
+        <a href={`${base}/knowledge`} class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-full text-sm font-semibold transition-colors">
           <i class="fa-solid fa-book-open me-2"></i>Knowledge Hub
         </a>
       </div>
@@ -94,10 +95,10 @@ import Layout from '../layouts/Layout.astro';
               <div class="bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 border-b border-slate-200 flex items-center gap-1.5">
                 <i class="fa-solid fa-map-location-dot"></i> เส้นทางเดินทาง Day 0
               </div>
-              <img src="/images/narita_tsukuba_bus_real.jpg" alt="Day 0 Bus Map" class="w-full h-32 object-cover" />
+              <img src={`${base}/images/narita_tsukuba_bus_real.jpg`} alt="Day 0 Bus Map" class="w-full h-32 object-cover" />
             </div>
 
-            <a href="/day0" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors">
+            <a href={`${base}/day0`} class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors">
               <i class="fa-solid fa-arrow-right me-2"></i>ดูแผนรายละเอียด Day 0
             </a>
           </div>
@@ -131,10 +132,10 @@ import Layout from '../layouts/Layout.astro';
               <div class="bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 border-b border-slate-200 flex items-center gap-1.5">
                 <i class="fa-solid fa-map-location-dot"></i> เส้นทางปั่นจักรยาน Day 1
               </div>
-              <img src="/images/jaxa_space_center.jpg" alt="Day 1 Bike Map" class="w-full h-32 object-cover" />
+              <img src={`${base}/images/jaxa_space_center.jpg`} alt="Day 1 Bike Map" class="w-full h-32 object-cover" />
             </div>
 
-            <a href="/day1" class="inline-flex items-center justify-center w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full text-sm font-semibold transition-colors">
+            <a href={`${base}/day1`} class="inline-flex items-center justify-center w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full text-sm font-semibold transition-colors">
               <i class="fa-solid fa-arrow-right me-2"></i>ดูแผนรายละเอียด Day 1
             </a>
           </div>
@@ -168,10 +169,10 @@ import Layout from '../layouts/Layout.astro';
               <div class="bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 border-b border-slate-200 flex items-center gap-1.5">
                 <i class="fa-solid fa-map-location-dot"></i> เส้นทางในเมือง Day 2
               </div>
-              <img src="/images/tsukuba_expo_center.jpg" alt="Day 2 City Map" class="w-full h-32 object-cover" />
+              <img src={`${base}/images/tsukuba_expo_center.jpg`} alt="Day 2 City Map" class="w-full h-32 object-cover" />
             </div>
 
-            <a href="/day2" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors">
+            <a href={`${base}/day2`} class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors">
               <i class="fa-solid fa-arrow-right me-2"></i>ดูแผนรายละเอียด Day 2
             </a>
           </div>
@@ -195,7 +196,7 @@ import Layout from '../layouts/Layout.astro';
           </p>
         </div>
         <div>
-          <a href="/knowledge/map" class="inline-flex items-center px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors shadow-sm">
+          <a href={`${base}/knowledge/map`} class="inline-flex items-center px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors shadow-sm">
             <i class="fa-solid fa-map me-2"></i>เปิดแผนที่ Interactive Map
           </a>
         </div>
@@ -218,7 +219,7 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <a href="/knowledge/science" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+        <a href={`${base}/knowledge/science`} class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
           <div class="space-y-2">
             <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">Science & Space</span>
             <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">ศูนย์วิทยาศาสตร์ & อวกาศ</h3>
@@ -226,7 +227,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/knowledge/nature" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+        <a href={`${base}/knowledge/nature`} class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
           <div class="space-y-2">
             <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">Scenic & Nature</span>
             <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">ธรรมชาติ & ภูเขาสึกุบะ</h3>
@@ -234,7 +235,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/knowledge/food" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+        <a href={`${base}/knowledge/food`} class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
           <div class="space-y-2">
             <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">Dining & Farm</span>
             <h3 class="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors">อาหาร & ฟาร์มสตรอเบอร์รี่</h3>
@@ -242,7 +243,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/knowledge/hotel" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+        <a href={`${base}/knowledge/hotel`} class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
           <div class="space-y-2">
             <span class="inline-block px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">Hotel Guide</span>
             <h3 class="text-lg font-bold text-slate-900 group-hover:text-rose-600 transition-colors">ที่พัก & โรงแรม</h3>
@@ -250,7 +251,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/knowledge/map" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+        <a href={`${base}/knowledge/map`} class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
           <div class="space-y-2">
             <span class="inline-block px-2.5 py-0.5 bg-teal-100 text-teal-800 font-semibold text-xs rounded-full">GPS Map</span>
             <h3 class="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors">แผนที่พิกัด 20 จุด</h3>

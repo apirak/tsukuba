@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="Day 1: ปั่นจักรยานสถานที่ระยะไกล - Tsukuba Travel Strategy" activePath="/day1">
@@ -147,7 +148,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/jaxa_tsukuba_space_center_ta1.jpg" alt="JAXA Tsukuba Space Center H-II Rocket" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/jaxa_tsukuba_space_center_ta1.jpg`} alt="JAXA Tsukuba Space Center H-II Rocket" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
@@ -182,7 +183,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/tsukuba_botanical_garden_ta1.jpg" alt="Tsukuba Botanical Garden Greenhouses" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/tsukuba_botanical_garden_ta1.jpg`} alt="Tsukuba Botanical Garden Greenhouses" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
@@ -217,7 +218,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/soba_shin_ida_ext.webp" alt="Tsukuba Scenic Ring Ring Road and Culture" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/soba_shin_ida_ext.webp`} alt="Tsukuba Scenic Ring Ring Road and Culture" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="Science & Space - Knowledge Hub Tsukuba" activePath="/knowledge/science">
@@ -23,7 +24,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 1. JAXA Space Center -->
       <article id="jaxa" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/jaxa_tsukuba_space_center_ta1.jpg" alt="JAXA Tsukuba Space Center" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/jaxa_tsukuba_space_center_ta1.jpg`} alt="JAXA Tsukuba Space Center" class="w-full h-64 object-cover" />
         </div>
         <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-shuttle-space me-1"></i> อวกาศ & ดาวเทียม
@@ -53,7 +54,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 2. Tsukuba Botanical Garden -->
       <article id="botanical" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/tsukuba_botanical_garden_ta1.jpg" alt="Tsukuba Botanical Garden" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/tsukuba_botanical_garden_ta1.jpg`} alt="Tsukuba Botanical Garden" class="w-full h-64 object-cover" />
         </div>
         <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-seedling me-1"></i> พฤกษศาสตร์ & ธรรมชาติวิจัย
@@ -83,7 +84,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 3. Tsukuba Expo Center -->
       <article id="expo" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/tsukuba_expo_center.jpg" alt="Tsukuba Expo Center" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/tsukuba_expo_center.jpg`} alt="Tsukuba Expo Center" class="w-full h-64 object-cover" />
         </div>
         <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-robot me-1"></i> พิพิธภัณฑ์วิทยาศาสตร์เด็ก & ท้องฟ้าจำลอง
@@ -113,7 +114,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 4. Geological Museum -->
       <article id="geological" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/geological_museum_ta1.jpg" alt="Geological Museum AIST" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/geological_museum_ta1.jpg`} alt="Geological Museum AIST" class="w-full h-64 object-cover" />
         </div>
         <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-gem me-1"></i> ธรณีวิทยา & แร่ธาตุธรรมชาติ
@@ -143,7 +144,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 5. Science Square AIST -->
       <article id="science-square" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/science_square_ta1.jpg" alt="Science Square TSUKUBA" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/science_square_ta1.jpg`} alt="Science Square TSUKUBA" class="w-full h-64 object-cover" />
         </div>
         <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-microchip me-1"></i> นวัตกรรมอนาคต & หุ่นยนต์ AI
@@ -173,7 +174,7 @@ import Layout from '../../layouts/Layout.astro';
       <!-- 6. NARO Food Research Center -->
       <article id="naro" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src="/images/naro_food_research.jpg" alt="NARO Tsukuba Agriculture Research Hall" class="w-full h-64 object-cover" />
+          <img src={`${base}/images/naro_food_research.jpg`} alt="NARO Tsukuba Agriculture Research Hall" class="w-full h-64 object-cover" />
         </div>
         <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-flask-vial me-1"></i> วิทยาศาสตร์การอาหาร & เกษตรอัจฉริยะ
