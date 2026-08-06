@@ -1,0 +1,295 @@
+---
+export interface Spot {
+  step: number;
+  name: string;
+  lat: number;
+  lng: number;
+  desc: string;
+  distFromPrev: string;
+  icon: string;
+  img?: string;
+  googleMapsUrl?: string;
+}
+
+interface Props {
+  mapId: string;
+  title: string;
+  subtitle?: string;
+  themeColor?: 'sky' | 'emerald' | 'amber' | 'teal';
+  spots: Spot[];
+  totalDistance?: string;
+}
+
+const {
+  mapId,
+  title,
+  subtitle = "พิกัดสถานที่ ลำดับการเดินทาง และระยะทางระหว่างแต่ละจุด",
+  themeColor = "sky",
+  spots,
+  totalDistance
+} = Astro.props;
+
+// Theme mapping for colors
+const themeStyles = {
+  sky: {
+    bg: "bg-sky-50/70",
+    border: "border-sky-200",
+    badgeBg: "bg-sky-100",
+    badgeText: "text-sky-800",
+    pinBg: "#0284c7",
+    lineColor: "#0284c7",
+    headerIcon: "text-sky-600"
+  },
+  emerald: {
+    bg: "bg-emerald-50/70",
+    border: "border-emerald-200",
+    badgeBg: "bg-emerald-100",
+    badgeText: "text-emerald-800",
+    pinBg: "#059669",
+    lineColor: "#059669",
+    headerIcon: "text-emerald-600"
+  },
+  amber: {
+    bg: "bg-amber-50/70",
+    border: "border-amber-200",
+    badgeBg: "bg-amber-100",
+    badgeText: "text-amber-800",
+    pinBg: "#d97706",
+    lineColor: "#d97706",
+    headerIcon: "text-amber-600"
+  },
+  teal: {
+    bg: "bg-teal-50/70",
+    border: "border-teal-200",
+    badgeBg: "bg-teal-100",
+    badgeText: "text-teal-800",
+    pinBg: "#0d9488",
+    lineColor: "#0d9488",
+    headerIcon: "text-teal-600"
+  }
+};
+
+const currentTheme = themeStyles[themeColor] || themeStyles.sky;
+---
+
+<!-- Include Leaflet CSS if not present -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
+<section class={`border rounded-2xl p-4 md:p-6 space-y-5 shadow-sm ${currentTheme.bg} ${currentTheme.border}`}>
+  <!-- Map Header -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b pb-4 border-slate-200/80">
+    <div class="space-y-1">
+      <div class="flex items-center gap-2">
+        <span class={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold ${currentTheme.badgeBg} ${currentTheme.badgeText}`}>
+          <i class="fa-solid fa-map-location-dot"></i> ROUTE MAP & DISTANCES
+        </span>
+        {totalDistance && (
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-slate-900 text-white">
+            <i class="fa-solid fa-route text-amber-400 me-1"></i> {totalDistance}
+          </span>
+        )}
+      </div>
+      <h2 class="text-xl md:text-2xl font-extrabold text-slate-900 flex items-center gap-2">
+        <i class={`fa-solid fa-compass ${currentTheme.headerIcon}`}></i> {title}
+      </h2>
+      <p class="text-xs md:text-sm text-slate-600">
+        {subtitle}
+      </p>
+    </div>
+  </div>
+
+  <!-- Route Sequential Timeline Ribbon -->
+  <div class="overflow-x-auto pb-2 scrollbar-thin">
+    <div class="flex items-center gap-2 min-w-max text-xs">
+      {spots.map((spot, index) => (
+        <>
+          <div 
+            class="flex items-center gap-2 bg-white border border-slate-200 px-3 py-1.5 rounded-xl shadow-xs cursor-pointer hover:border-sky-400 transition-colors spot-ribbon-btn"
+            data-map-id={mapId}
+            data-spot-idx={index}
+          >
+            <span class="w-5 h-5 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-[10px]">
+              {spot.step}
+            </span>
+            <span class="font-bold text-slate-800">
+              <i class={`fa-solid ${spot.icon} me-1 text-slate-500`}></i>
+              {spot.name}
+            </span>
+          </div>
+
+          {index < spots.length - 1 && (
+            <div class="flex items-center gap-1 text-[11px] font-semibold text-slate-500 bg-slate-100/90 px-2 py-1 rounded-full border border-slate-200 shrink-0">
+              <i class="fa-solid fa-arrow-right text-[10px] text-slate-400"></i>
+              <span>{spots[index + 1].distFromPrev}</span>
+            </div>
+          )}
+        </>
+      ))}
+    </div>
+  </div>
+
+  <!-- Map Container & Sidebar Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <!-- Map Element -->
+    <div class="lg:col-span-2 rounded-xl overflow-hidden border border-slate-300 shadow-inner h-[360px] md:h-[420px] bg-slate-100 relative">
+      <div id={mapId} class="w-full h-full z-0"></div>
+    </div>
+
+    <!-- Spot List Cards -->
+    <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-xs flex flex-col h-[360px] md:h-[420px]">
+      <div class="font-bold text-xs text-slate-900 border-b border-slate-100 pb-2 mb-2 flex items-center justify-between">
+        <span><i class="fa-solid fa-list-ol text-slate-500 me-1"></i> รายการจุดแวะ ({spots.length} จุด)</span>
+        <span class="text-[10px] text-slate-500 font-normal">คลิกเพื่อซูม</span>
+      </div>
+
+      <div class="overflow-y-auto flex-1 space-y-2 pr-1 scrollbar-thin">
+        {spots.map((spot, index) => (
+          <div 
+            class="flex items-start gap-2.5 p-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-lg cursor-pointer transition-all hover:shadow-xs spot-card-item"
+            data-map-id={mapId}
+            data-spot-idx={index}
+          >
+            <div class="w-6 h-6 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-xs shrink-0 mt-0.5">
+              {spot.step}
+            </div>
+
+            <div class="min-w-0 flex-1 space-y-0.5">
+              <div class="font-bold text-slate-900 text-xs flex items-center justify-between">
+                <span class="truncate">{spot.name}</span>
+              </div>
+              <p class="text-[11px] text-slate-600 line-clamp-1">{spot.desc}</p>
+              
+              <div class="flex items-center gap-2 pt-1">
+                <span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-white border border-slate-200 text-slate-600 text-[10px] font-medium rounded">
+                  <i class="fa-solid fa-route text-[9px] text-slate-400"></i> {spot.distFromPrev}
+                </span>
+                {spot.googleMapsUrl && (
+                  <a 
+                    href={spot.googleMapsUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="text-[10px] text-sky-600 hover:underline font-semibold flex items-center gap-0.5 ms-auto"
+                    onclick="event.stopPropagation();"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> Maps
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script is:inline define:vars={{ mapId, spots, currentTheme }}>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof L === "undefined") {
+      console.error("Leaflet library not loaded");
+      return;
+    }
+
+    const mapElement = document.getElementById(mapId);
+    if (!mapElement) return;
+
+    // Initialize Map
+    const map = L.map(mapId, {
+      zoomControl: true,
+      scrollWheelZoom: false
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const latLngs = [];
+    const markerInstances = [];
+
+    // Custom Icon Generator for Numbered Pins
+    function createNumberedPin(stepNumber, color) {
+      return L.divIcon({
+        className: 'custom-day-pin',
+        html: `
+          <div style="
+            background-color: ${color}; 
+            color: white; 
+            width: 28px; 
+            height: 28px; 
+            border-radius: 50%; 
+            border: 2px solid white; 
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 13px;
+            font-family: sans-serif;
+          ">
+            ${stepNumber}
+          </div>
+        `,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      });
+    }
+
+    spots.forEach((spot, idx) => {
+      const pos = [spot.lat, spot.lng];
+      latLngs.push(pos);
+
+      const marker = L.marker(pos, {
+        icon: createNumberedPin(spot.step, currentTheme.pinBg)
+      }).addTo(map);
+
+      const imgHtml = spot.img ? `<img src="${spot.img}" style="width:100%; height:100px; object-fit:cover; border-radius:8px; margin-bottom:8px;" alt="${spot.name}">` : '';
+      const mapsBtnHtml = spot.googleMapsUrl ? `<a href="${spot.googleMapsUrl}" target="_blank" style="display:inline-block; width:100%; text-align:center; background:#0f172a; color:white; border-radius:999px; padding:4px 0; font-size:11px; text-decoration:none; font-weight:600; margin-top:6px;">📍 เปิดนำทางบน Google Maps</a>` : '';
+
+      const popupContent = `
+        <div style="width: 220px; font-family: sans-serif;">
+          ${imgHtml}
+          <div style="display:inline-block; background:${currentTheme.pinBg}; color:white; border-radius:999px; padding:2px 8px; font-size:10px; font-weight:700; margin-bottom:4px;">จุดที่ ${spot.step}</div>
+          <div style="font-weight:700; font-size:14px; color:#0f172a; margin-bottom:4px;">${spot.name}</div>
+          <div style="font-size:11px; color:#475569; margin-bottom:6px; line-height:1.4;">${spot.desc}</div>
+          <div style="font-size:11px; font-weight:600; color:#0284c7; background:#f0f9ff; padding:4px 8px; border-radius:6px; border:1px solid #bae6fd;">
+            🛣️ ระยะทางจากจุดก่อนหน้า: ${spot.distFromPrev}
+          </div>
+          ${mapsBtnHtml}
+        </div>
+      `;
+
+      marker.bindPopup(popupContent);
+      markerInstances.push(marker);
+    });
+
+    // Draw Polyline connecting spots in order
+    if (latLngs.length > 1) {
+      const polyline = L.polyline(latLngs, {
+        color: currentTheme.lineColor,
+        weight: 4,
+        opacity: 0.8,
+        dashArray: '8, 8'
+      }).addTo(map);
+
+      map.fitBounds(polyline.getBounds(), { padding: [40, 40] });
+    } else if (latLngs.length === 1) {
+      map.setView(latLngs[0], 14);
+    }
+
+    // Interactivity for Cards & Ribbon Buttons
+    const triggerElements = document.querySelectorAll(`[data-map-id="${mapId}"]`);
+    triggerElements.forEach(el => {
+      el.addEventListener('click', function () {
+        const spotIdx = parseInt(this.getAttribute('data-spot-idx'), 10);
+        if (!isNaN(spotIdx) && spots[spotIdx] && markerInstances[spotIdx]) {
+          const spot = spots[spotIdx];
+          map.setView([spot.lat, spot.lng], 15, { animate: true });
+          markerInstances[spotIdx].openPopup();
+        }
+      });
+    });
+  });
+</script>

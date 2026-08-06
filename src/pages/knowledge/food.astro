@@ -10,10 +10,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         <i class="fa-solid fa-utensils"></i> FOOD & CULINARY
       </span>
       <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">
-        หมวดอาหาร & ฟาร์มสตรอเบอร์รี่ (Dining & Farm)
+        หมวดอาหาร & ร้านอร่อยขึ้นชื่อ (Dining & Local Food Guide)
       </h1>
       <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
-        ลิ้มลองความอร่อยแห่งเมืองทซึคุบะ ราเมนชามยักษ์ สตรอเบอร์รี่สดจากฟาร์ม อุด้งบ้านโบราณ โรงบ่มไวน์ และเนื้อวัวฮิตาจิ
+        รวบรวมร้านอาหารรสเลิศ เนื้อวัวฮิตาจิวากิว คาเฟ่เบเกอรี่บ้านโบราณ ขนมหวานมันเผา เบียร์คราฟต์ และฟาร์มสตรอเบอร์รี่ในทซึคุบะ
       </p>
     </div>
   </header>
@@ -21,7 +21,238 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   <div class="max-w-4xl mx-auto px-4 py-10">
     <div class="space-y-8">
 
-      <!-- 1. Ramen Tatsuro -->
+      <!-- 1. Hitachi Beef Sansui (Hotel Nikko Tsukuba) -->
+      <article id="hitachi-sansui" class="bg-white border-2 border-amber-300 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src={`${base}/images/hotel_nikko_tsukuba_real.jpg`} alt="Hitachi Beef Sansui at Hotel Nikko Tsukuba" class="w-full h-64 object-cover" />
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">
+            <i class="fa-solid fa-drumstick-bite me-1"></i> เนื้อวัวฮิตาจิ A5 ติดสถานี Tsukuba Station Exit A3
+          </span>
+          <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
+            <i class="fa-solid fa-star me-1"></i> แนะนำติดสถานี
+          </span>
+        </div>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900">1. ร้าน Hitachi Beef Sansui (常陸牛 山水) - Hotel Nikko Tsukuba</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          ร้านอาหารเนื้อวากิวพรีเมียมประจำจังหวัดอิบารากิ "Hitachi Beef (常陸牛)" ตั้งอยู่ภายในโรงแรม Hotel Nikko Tsukuba ติดสถานี Tsukuba Station เพียงเดิน 2 นาที 
+          เสิร์ฟสเต๊กเนื้อวัวฮิตาจิวากิวเกรด A5 ลายหินอ่อน สุกี้ยากี้เนื้อวากิว และชาบูชาบู ในบรรยากาศสุดหรูหรา อบอุ่น และบริการระดับมาตรฐานโรงแรมชั้นนำ
+        </p>
+        
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
+          <div><strong><i class="fa-solid fa-location-dot me-2 text-rose-600"></i>ที่ตั้ง:</strong> 〒305-0031 茨城県つくば市吾妻1-1364-1 (ชั้น 2 Hotel Nikko Tsukuba)</div>
+          <div><strong><i class="fa-solid fa-clock me-2 text-amber-600"></i>เวลาทำการ:</strong> มื้อเที่ยง 11:30 – 14:30 น. / มื้อค่ำ 17:30 – 21:00 น.</div>
+          <div><strong><i class="fa-solid fa-yen-sign me-2 text-amber-600"></i>ช่วงราคา:</strong> คอร์สมื้อเที่ยง 2,800 – 5,000 เยน / มื้อค่ำ 6,000 – 12,000 เยน</div>
+          <div><strong><i class="fa-solid fa-person-walking me-2 text-amber-600"></i>การเดินทาง:</strong> เดินเพียง 2 นาที (150 เมตร) จากสถานี Tsukuba Station Exit A3 (ในตึก Hotel Nikko Tsukuba)</div>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap pt-1">
+          <a href="https://tabelog.com/ibaraki/A0802/A080201/8000494/" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
+            <i class="fa-solid fa-utensils me-1.5"></i>ดูบน Tabelog
+          </a>
+          <a href="https://maps.google.com/?q=Hotel+Nikko+Tsukuba+Sansui" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
+          </a>
+        </div>
+      </article>
+
+      <!-- 2. Sushi Dokoro Yagura Tsukuba Honten -->
+      <article id="sushi-yagura" class="bg-white border-2 border-emerald-300 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src={`${base}/images/sushi_yagura_real.jpg`} alt="Sushi Dokoro Yagura Tsukuba Honten" class="w-full h-64 object-cover" />
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">
+            <i class="fa-solid fa-fish me-1"></i> ร้านซูชิชิ้นใหญ่พรีเมียมอันดับ 1 ของทซึคุบะ
+          </span>
+          <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
+            ⭐ Google 4.3 (556 รีวิว) & Wanderlog Recommended
+          </span>
+        </div>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900">2. ร้านซูชิยอดนิยม Sushi Dokoro Yagura (鮨処 やぐら つくば本店)</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          ร้านซูชิดั้งเดิมขึ้นชื่อที่สุดในเมืองทซึคุบะ ห่างจากสถานี Tsukuba เพียงเดิน 8 นาที (ย่าน Takezono) โดดเด่นด้วยปลาสดคุณภาพสูง ชิ้นใหญ่เต็มคำ 
+          เซ็ตมื้อเที่ยงคุ้มค่าคุ้มราคามาก ทั้งชุด <strong>Nigiri (นิกิริ)</strong> หอยเชลล์ อูนิ ทูน่าชิ้นหนาฉ่ำ และ <strong>Chirashi Don (ชิราชิด้ง)</strong> ข้าวหน้าปลาดิบรวมทรงเครื่องล้นชาม
+        </p>
+        
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
+          <div><strong><i class="fa-solid fa-location-dot me-2 text-emerald-600"></i>ที่ตั้ง:</strong> 〒305-0032 茨城県つくば市竹園1-8-8 (ย่าน Takezono 1 Chome)</div>
+          <div><strong><i class="fa-solid fa-clock me-2 text-amber-600"></i>เวลาทำการ:</strong> มื้อเที่ยง 11:30 – 14:00 น. / มื้อค่ำ 17:00 – 22:00 น. (หยุดวันจันทร์)</div>
+          <div><strong><i class="fa-solid fa-yen-sign me-2 text-amber-600"></i>ช่วงราคา:</strong> เซ็ตมื้อเที่ยงเริ่มต้น 1,500 – 3,800 เยน</div>
+          <div><strong><i class="fa-solid fa-person-walking me-2 text-amber-600"></i>การเดินทาง:</strong> เดิน 8 นาที (600 เมตร) จากสถานี Tsukuba Station ทางออก A4</div>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap pt-1">
+          <a href="https://tabelog.com/ibaraki/A0802/A080201/8002208/" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
+            <i class="fa-solid fa-utensils me-1.5"></i>ดูบน Tabelog
+          </a>
+          <a href="https://maps.google.com/?q=Sushi+Dokoro+Yagura+Tsukuba+Honten" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
+          </a>
+        </div>
+      </article>
+
+      <!-- 2. Tsukubasan Hitachino -->
+      <article id="hitachino" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src={`${base}/images/tsukubasan_hitachino_real.jpg`} alt="Tsukubasan Hitachino Gassho-zukuri Restaurant" class="w-full h-64 object-cover" />
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">
+            <i class="fa-solid fa-fire me-1"></i> เตาถ่านอิโรริ (Irori Yaki) & สุกี้ยากี้เนื้อฮิตาจิ
+          </span>
+          <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">
+            <i class="fa-solid fa-house me-1"></i> เรือนโบราณ 200 ปี Gassho-zukuri
+          </span>
+        </div>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900">2. ร้าน Tsukubasan Hitachino (つくば山 ひたち野)</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          ร้านอาหารระดับตำนานเชิงเขาสึกุบะ ตั้งอยู่ในอาคารเรือนไม้หลังคามุงจากโบราณอายุ 200 ปี (ทรง Gassho-zukuri ย้ายมาจากชิราคาวาโกะ) 
+          โดดเด่นด้วยการปิ้งย่างเนื้อวัวฮิตาจิวากิวบนเตาถ่านโบราณอิโรริ (Irori Charcoal Grill), สุกี้ยากี้เนื้อฮิตาจิ และสเต๊กกระทะร้อนท่ามกลางวิวธรรมชาติเชิงเขา 360 องศา
+        </p>
+        
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
+          <div><strong><i class="fa-solid fa-location-dot me-2 text-amber-600"></i>ที่ตั้ง:</strong> 〒305-0068 茨城県つくば市臼井2101-1 (บริเวณเชิงเขาสึกุบะ)</div>
+          <div><strong><i class="fa-solid fa-clock me-2 text-amber-600"></i>เวลาทำการ:</strong> 11:30 – 15:00 น. และ 17:00 – 21:00 น. (ควรจองล่วงหน้า)</div>
+          <div><strong><i class="fa-solid fa-yen-sign me-2 text-amber-600"></i>ช่วงราคา:</strong> มื้อเที่ยง 3,500 – 6,000 เยน / มื้อค่ำ 6,000 – 12,000 เยน</div>
+          <div><strong><i class="fa-solid fa-bus me-2 text-amber-600"></i>การเดินทาง:</strong> นั่งรถบัส Tsukubasan Shuttle Bus ~35 นาที จากสถานี Tsukuba Station</div>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap pt-1">
+          <a href="https://hitachino.com/" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
+            <i class="fa-solid fa-globe me-1.5"></i>เว็บไซต์ Hitachino Official
+          </a>
+          <a href="https://maps.google.com/?q=Tsukubasan+Hitachino" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
+          </a>
+        </div>
+      </article>
+
+      <!-- 3. Café Boulangerie Takezono -->
+      <article id="takezono-bakery" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src={`${base}/images/cafe_takezono_real.webp`} alt="Café Boulangerie Takezono Exterior" class="w-full h-64 object-cover" />
+        </div>
+        <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">
+          <i class="fa-solid fa-bread-slice me-1"></i> เบเกอรี่หอมอบสดใหม่ เปิดยามเช้า 06:00 น.
+        </span>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900">3. คาเฟ่เบเกอรี่ ทาเคโซโนะ (Café Boulangerie Takezono)</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          ร้านคาเฟ่เบเกอรี่หลังคาสีฟ้าสะดุดตา ตั้งอยู่ในย่านที่อยู่อาศัยทาเคโซโนะ ห่างจากสถานี Tsukuba เพียงเดิน 8 นาที 
+          เปิดให้บริการตั้งแต่อรุณสวัสดิ์ 06:00 น. อบขนมปังสดใหม่ส่งกลิ่นหอมกรุ่นทุกเช้า เมนูเด็ดคือ <strong>Pomme Caramel</strong> (แอปเปิ้ลเชื่อมคาราเมลแป้งพายกรอบ) และ <strong>Canelé</strong> ฝรั่งเศส
+        </p>
+        
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
+          <div><strong><i class="fa-solid fa-location-dot me-2 text-sky-600"></i>ที่ตั้ง:</strong> 〒305-0032 茨城県つくば市竹園1-13-2 (Duo Hills Takezono)</div>
+          <div><strong><i class="fa-solid fa-clock me-2 text-sky-600"></i>เวลาทำการ:</strong> 06:00 – 18:00 น. (เปิดเช้าตรู่!)</div>
+          <div><strong><i class="fa-solid fa-yen-sign me-2 text-sky-600"></i>ช่วงราคา:</strong> ขนมปัง 180 – 380 เยน</div>
+          <div><strong><i class="fa-solid fa-person-walking me-2 text-sky-600"></i>การเดินทาง:</strong> เดิน 8 นาที (650 เมตร) จากสถานี Tsukuba Station ทางออก A4</div>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap pt-1">
+          <a href="https://maps.google.com/?q=Cafe+Boulangerie+Takezono" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
+          </a>
+        </div>
+      </article>
+
+      <!-- 4. Kurabiyori -->
+      <article id="kurabiyori" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src={`${base}/images/kurabiyori_real.webp`} alt="Kurabiyori 180 Year Edo Warehouse Bakery" class="w-full h-64 object-cover" />
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">
+            <i class="fa-solid fa-landmark me-1"></i> โกดังข้าวยุคเอโดะ 180 ปี (มรดกชาติด้านวัฒนธรรม)
+          </span>
+          <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
+            🏆 อันดับ 1 เมเปิลเมล่อนปัง
+          </span>
+        </div>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900">4. คาเฟ่เบเกอรี่เรือนโบราณ คุราบิโยริ (Kurabiyori - 蔵日和)</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          คาเฟ่เบเกอรี่สไตล์ญี่ปุ่นในโกดังเก็บข้าวสมัยเอโดะอายุมากกว่า 180 ปี ได้รับการขึ้นทะเบียนเป็นมรดกชาติด้านวัฒนธรรม ล้อมรอบด้วยสวนญี่ปุ่นโบราณร่มรื่น 
+          โด่งดังด้วยเมนู <strong>เมเปิลเมล่อนปัง (Maple Melon Pan)</strong> ที่ชนะเลิศการประกวดขนมปังเมือง Tsukuba และขนมปังยีสต์ธรรมชาติส้มยูซุโฮจิฉะ
+        </p>
+        
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
+          <div><strong><i class="fa-solid fa-location-dot me-2 text-emerald-600"></i>ที่ตั้ง:</strong> 〒305-0018 茨城県つくば市金田38-1 (ย่าน Kaneda)</div>
+          <div><strong><i class="fa-solid fa-clock me-2 text-emerald-600"></i>เวลาทำการ:</strong> 10:00 – 17:00 น. (หยุดวันจันทร์)</div>
+          <div><strong><i class="fa-solid fa-yen-sign me-2 text-emerald-600"></i>ช่วงราคา:</strong> ขนมปัง 200 – 350 เยน / เซ็ตมื้อเที่ยง 1,200 เยน</div>
+          <div><strong><i class="fa-solid fa-car me-2 text-emerald-600"></i>การเดินทาง:</strong> นั่งรถบัส หรือแท็กซี่ 8 นาที (~2.8 กม. จากสถานี Tsukuba)</div>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap pt-1">
+          <a href="https://maps.google.com/?q=Kurabiyori+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
+          </a>
+        </div>
+      </article>
+
+      <!-- 5. Kuradashi YAKIIMO KAITSUKA -->
+      <article id="kaitsuka-yakiimo" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src={`${base}/images/kaitsuka_yakiimo_real.webp`} alt="Kuradashi Yakiimo Kaitsuka Desserts" class="w-full h-64 object-cover" />
+        </div>
+        <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
+          <i class="fa-solid fa-cloud-sun me-1"></i> ร้านมันเผาชื่อดัง & ขนมหวานมันเทศ "เบนิเท็นชิ"
+        </span>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900">5. คุราดาชิ ยากิโมะไคสึกะ (Kuradashi YAKIIMO KAITSUKA - 蔵出し焼き芋かいつか)</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          ร้านของหวานมันเผาชื่อดังระดับประเทศแห่งจังหวัดอิบารากิ! ใช้มันเทศสายพันธุ์พิเศษ <strong>"เบนิเท็นชิ (Beni-Tenshi)"</strong> อบอบเผานุ่มหนึบหวานฉ่ำเสมือนน้ำผึ้ง 
+          เมนูห้ามพลาดคือ <strong>ซอฟต์ครีมลาเต้มันเผา</strong>, <strong>พายแอปเปิ้ลมันเผาอบกรอบ</strong> และพุดดิ้งมันเผาเนื้อเนียน
+        </p>
+        
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
+          <div><strong><i class="fa-solid fa-location-dot me-2 text-amber-600"></i>ที่ตั้ง:</strong> 〒305-0056 茨城県つくば市松の木4-17-2 (สาขาใหญ่ Tsukuba)</div>
+          <div><strong><i class="fa-solid fa-clock me-2 text-amber-600"></i>เวลาทำการ:</strong> 10:00 – 18:00 น. (หยุดวันจันทร์)</div>
+          <div><strong><i class="fa-solid fa-yen-sign me-2 text-amber-600"></i>ช่วงราคา:</strong> มันเผาอบถุง 600 เยน / ลาเต้ซอฟต์ครีม 530 เยน / พายแอปเปิ้ล 630 เยน</div>
+          <div><strong><i class="fa-solid fa-car me-2 text-amber-600"></i>การเดินทาง:</strong> นั่งบัสหรือแท็กซี่ 7 นาที (~2.5 กม. จากสถานี Tsukuba)</div>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap pt-1">
+          <a href="https://www.kuradashi-yakiimo.com/" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
+            <i class="fa-solid fa-globe me-1.5"></i>เว็บไซต์ Kaitsuka Official
+          </a>
+          <a href="https://maps.google.com/?q=Kuradashi+Yakiimo+Kaitsuka+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
+          </a>
+        </div>
+      </article>
+
+      <!-- 6. TSUKUBA BREWERY -->
+      <article id="tsukuba-brewery" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src={`${base}/images/tsukuba_brewery_real.webp`} alt="TSUKUBA BREWERY Craft Beer Bar" class="w-full h-64 object-cover" />
+        </div>
+        <span class="inline-block px-2.5 py-0.5 bg-teal-100 text-teal-800 font-semibold text-xs rounded-full">
+          <i class="fa-solid fa-beer-mug-empty me-1"></i> โรงเบียร์คราฟต์สด local ใช้วัตถุดิบเมือง Tsukuba
+        </span>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900">6. โรงเบียร์คราฟต์ ทสึคุบะ (TSUKUBA BREWERY)</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          บาร์เบียร์คราฟต์คึกคักย่านนิโนมิยะ ผู้ก่อตั้งหมักเบียร์สดจากถังบ่มกระจกที่มองเห็นได้ตรงหน้า บรรยากาศเป็นกันเอง มีเบียร์คราฟต์รสหมุนเวียนตามฤดูกาล 
+          เสิร์ฟคู่กับเมนูแกล้มแสนอร่อย และอนุญาตให้นำอาหารจากร้านรอบๆ เข้ามารับประทานคู่กับเบียร์ได้
+        </p>
+        
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
+          <div><strong><i class="fa-solid fa-location-dot me-2 text-teal-600"></i>ที่ตั้ง:</strong> 〒305-0051 茨城県つくば市二の宮2-14-15 (ย่าน Ninomiya)</div>
+          <div><strong><i class="fa-solid fa-clock me-2 text-teal-600"></i>เวลาทำการ:</strong> 15:00 – 22:00 น. (เสาร์-อาทิตย์ เปิดตั้งแต่ 13:00 น. / หยุดพุธ-พฤหัส)</div>
+          <div><strong><i class="fa-solid fa-yen-sign me-2 text-teal-600"></i>ช่วงราคา:</strong> เบียร์คราฟต์แก้วละ 700 – 1,100 เยน</div>
+          <div><strong><i class="fa-solid fa-bus me-2 text-teal-600"></i>การเดินทาง:</strong> นั่งบัส 8 นาที ลงป้าย Ninomiya 1-chome (ห่างสถานี 2.2 กม.)</div>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap pt-1">
+          <a href="https://tsukuba-brewery.com/" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
+            <i class="fa-solid fa-globe me-1.5"></i>เว็บไซต์ Tsukuba Brewery
+          </a>
+          <a href="https://maps.google.com/?q=TSUKUBA+BREWERY" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
+          </a>
+        </div>
+      </article>
+
+      <!-- 7. Ramen Tatsuro -->
       <article id="ramen" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
           <img src={`${base}/images/ramen_tatsuro_ta1.jpg`} alt="Ramen Tatsuro Miso Double" class="w-full h-64 object-cover" />
@@ -29,10 +260,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-bowl-food me-1"></i> ร้านราเมนอันดับ 1 ของทซึคุบะ
         </span>
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">1. ร้าน Ramen Tatsuro (ラーメン龍郎)</h2>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900">7. ร้าน Ramen Tatsuro (ラーメン龍郎)</h2>
         <p class="text-slate-600 text-sm leading-relaxed">
           ร้านราเมนสไตล์ Jiro-inspired ยอดฮิตที่สุดในเมืองทซึคุบะ โดดเด่นด้วย Miso Ramen เข้มข้น หมูชาชูชิ้นหนาพิเศษนุ่มละลายในปาก 
-          ผักกะหล่ำปลีและถั่วงอกพูนชาม น้ำซุปกระดูกหมูหอมกลมกล่อม สามารถเลือกปรับปริมาณกระเทียมและไขมันซุปได้ฟรี
+          ผักกะหล่ำปลีและถั่วงอกพูนชาม น้ำซุปกระดูกหมูหอมกลมกล่อม
         </p>
         
         <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
@@ -42,72 +273,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         </div>
 
         <div class="flex items-center gap-2 flex-wrap pt-1">
-          <a href="https://tabelog.com/ibaraki/A0802/A080201/8013147/" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
-            <i class="fa-solid fa-utensils me-1.5"></i>รีวิวบน Tabelog
-          </a>
           <a href="https://maps.google.com/?q=Ramen+Tatsuro+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
             <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
           </a>
         </div>
       </article>
 
-      <!-- 2. AOYAMA Kamaage Udon -->
-      <article id="aoyama-udon" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
-        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src={`${base}/images/soba_shin_ida_ext.webp`} alt="AOYAMA Kamaage Udon" class="w-full h-64 object-cover" />
-        </div>
-        <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
-          <i class="fa-solid fa-bowl-rice me-1"></i> อุด้งบ้านโบราณยุคไทโช (ย่านถนนโฮโจ)
-        </span>
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">2. ร้าน AOYAMA Kamaage Udon</h2>
-        <p class="text-slate-600 text-sm leading-relaxed">
-          ร้านอุด้งยอดฮิตที่ปรับปรุงจากอาคารบ้านญี่ปุ่นโบราณบนถนนทสึคุบะ (Tsukuba Road) บรรยากาศภายในร้านอบอวลด้วยความคลาสสิกสไตล์ไทโชโรแมนติก 
-          เสิร์ฟเส้นอุด้งคามาอาเกะทำมือเหนียวนุ่ม นำมาจุ่มซอสโชยุสูตรพิเศษพร้อมขิงสดฝนเอง
-        </p>
-        
-        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
-          <div><strong><i class="fa-solid fa-clock me-2 text-amber-600"></i>เวลาทำการ:</strong> 11:00 – 14:30 น. (หยุดวันอังคาร)</div>
-          <div><strong><i class="fa-solid fa-yen-sign me-2 text-amber-600"></i>ช่วงราคา:</strong> คามาอาเกะอุด้งเริ่มต้น 800 เยน</div>
-          <div><strong><i class="fa-solid fa-bicycle me-2 text-amber-600"></i>การเดินทาง:</strong> ปั่นจักรยานจากจุดเช่า Tsukubasanguchi หรือนั่งบัสลงย่าน Hojo</div>
-        </div>
-
-        <div class="flex items-center gap-2 flex-wrap pt-1">
-          <a href="https://maps.google.com/?q=AOYAMA+Kamaage+Udon+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
-            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
-          </a>
-        </div>
-      </article>
-
-      <!-- 3. Tsukuba Winery -->
-      <article id="winery" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
-        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src={`${base}/images/tsukuba_botanical_garden_ta1.jpg`} alt="Tsukuba Winery Vineyard" class="w-full h-64 object-cover" />
-        </div>
-        <span class="inline-block px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">
-          <i class="fa-solid fa-wine-glass me-1"></i> โรงผลิตไวน์และไร่องุ่น 6,000 ต้น
-        </span>
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">3. Tsukuba Winery (ทสึคุบะไวน์เนอรี่)</h2>
-        <p class="text-slate-600 text-sm leading-relaxed">
-          โรงผลิตไวน์และไร่องุ่นแห่งแรกของเมืองทซึคุบะ ปลูกองุ่นกว่า 6,000 ต้น (องุ่นขาวพันธุ์ Hokuten no Shizuku และองุ่นแดงพันธุ์ Fuji no Yume) 
-          ตั้งอยู่ติดกับเส้นทางปั่นจักรยาน Ring Ring Road สามารถแวะชมไร่องุ่นและซื้อไวน์ท้องถิ่นสุดเอ็กซ์คลูซีฟ
-        </p>
-        
-        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
-          <div><strong><i class="fa-solid fa-clock me-2 text-rose-600"></i>เวลาทำการ:</strong> 10:00 – 17:00 น.</div>
-          <div><strong><i class="fa-solid fa-bicycle me-2 text-rose-600"></i>การเดินทาง:</strong> ตั้งอยู่ติดเส้นทางปั่นจักรยาน Ring Ring Road</div>
-        </div>
-
-        <div class="flex items-center gap-2 flex-wrap pt-1">
-          <a href="https://tsukubawinery.jp/" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
-            <i class="fa-solid fa-globe me-1.5"></i>เว็บไซต์ Tsukuba Winery Official
-          </a>
-          <a href="https://maps.google.com/?q=Tsukuba+Winery" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
-            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
-          </a>
-        </div>
-      </article>
-
-      <!-- 4. Kawarakeya Strawberry Farm -->
+      <!-- 8. Kawarakeya Strawberry Farm -->
       <article id="strawberry" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
           <img src={`${base}/images/kawarakeya_strawberry_1.jpg`} alt="Kawarakeya Strawberry Farm" class="w-full h-64 object-cover" />
@@ -115,7 +287,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         <span class="inline-block px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">
           <i class="fa-solid fa-strawberry me-1"></i> บุฟเฟต์สตรอเบอร์รี่สด 45 นาที
         </span>
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">4. Kawarakeya Strawberry Farm (かわらけや いちご狩り)</h2>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900">8. Kawarakeya Strawberry Farm (かわらけや いちご狩り)</h2>
         <p class="text-slate-600 text-sm leading-relaxed">
           ฟาร์มสตรอเบอร์รี่เรือนกระจกยกระดับความสูง (Elevated Hydroponics) สดสะอาด ไม่ต้องก้มเก็บ ทานสดๆ ไม่จำกัดปริมาณพร้อมนมข้นหวาน 45 นาที 
           ไฮไลต์น่ารักสำหรับเด็กๆ คือโซนเลี้ยงและให้อาหารน้องแพะตัวน้อย 🐐
@@ -123,67 +295,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         
         <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
           <div><strong><i class="fa-solid fa-clock me-2 text-rose-600"></i>ฤดูกาลเปิดให้บริการ:</strong> ธันวาคม – พฤษภาคม (เวลา 10:00 – 15:30 น.)</div>
-          <div><strong><i class="fa-solid fa-ticket me-2 text-rose-600"></i>ค่าบริการบุฟเฟต์:</strong> ผู้ใหญ่ 2,000 – 2,300 เยน / เด็ก 1,500 เยน / เด็กเล็กต่ำกว่า 3 ขวบ ฟรี!</div>
-          <div><strong><i class="fa-solid fa-bus me-2 text-rose-600"></i>การเดินทาง:</strong> นั่ง Tsukbus สาย Nambu Shuttle ลงป้าย "Kawarakeya-mae" (20 นาทีจากสถานี)</div>
+          <div><strong><i class="fa-solid fa-ticket me-2 text-rose-600"></i>ค่าบริการบุฟเฟต์:</strong> ผู้ใหญ่ 2,000 – 2,300 เยน / เด็ก 1,500 เยน</div>
         </div>
 
         <div class="flex items-center gap-2 flex-wrap pt-1">
-          <a href="https://www.jalan.net/kankou/spt_guide000000212700/" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
-            <i class="fa-solid fa-globe me-1.5"></i>จองผ่าน Jalan.net Official
-          </a>
           <a href="https://maps.google.com/?q=Kawarakeya+Strawberry+Farm" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
-            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
-          </a>
-        </div>
-      </article>
-
-      <!-- 5. Hitachi Beef -->
-      <article id="hitachi-beef" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
-        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src={`${base}/images/tsukuba_center_building.jpg`} alt="BiVi Tsukuba Dining Complex" class="w-full h-64 object-cover" />
-        </div>
-        <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
-          <i class="fa-solid fa-drumstick-bite me-1"></i> วัวฮิตาจิ & หมูทซึคุบะ local
-        </span>
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">5. เนื้อวัวฮิตาจิ (Hitachi Beef) & หมูทซึคุบะ (Tsukuba Pork)</h2>
-        <p class="text-slate-600 text-sm leading-relaxed">
-          สัมผัสรสชาติเนื้อวัววากิวเกรดพรีเมียมประจำจังหวัดอิบารากิ "Hitachi Beef" ลายหินอ่อนละมุนนุ่ม ลิ้มลองได้ในรูปแบบสเต๊ก สุกี้ยากี้ หรือยากินิคุ 
-          รวมถึงเนื้อหมู Local Tsukuba Pork ไร้กลิ่นคาว เสิร์ฟในคอมเพล็กซ์ BiVi Tsukuba ติดสถานีรถไฟ
-        </p>
-        
-        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
-          <div><strong><i class="fa-solid fa-location-dot me-2 text-amber-600"></i>พิกัดร้านแนะนำ:</strong> BiVi Tsukuba ชั้น 2-3 (ติดสถานี Tsukuba Exit A3)</div>
-          <div><strong><i class="fa-solid fa-yen-sign me-2 text-amber-600"></i>ช่วงราคา:</strong> มื้อเที่ยง 1,500 – 2,800 เยน / มื้อค่ำ 3,500 – 6,000 เยน</div>
-        </div>
-
-        <div class="flex items-center gap-2 flex-wrap pt-1">
-          <a href="https://maps.google.com/?q=BiVi+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
-            <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
-          </a>
-        </div>
-      </article>
-
-      <!-- 6. Soba Shin Ida -->
-      <article id="soba" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
-        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src={`${base}/images/soba_shin_ida_duck.webp`} alt="Soba Shin Ida Handcrafted Soba" class="w-full h-64 object-cover" />
-        </div>
-        <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">
-          <i class="fa-solid fa-wheat-awn me-1"></i> โซบะทำมือ & อาหารเชิงเขา
-        </span>
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">6. Soba Shin Ida (蕎麦 Shin 飯田) & เมนูเชิงเขา</h2>
-        <p class="text-slate-600 text-sm leading-relaxed">
-          ร้านโซบะทำมือระดับตำนานเชิงเขาสึคุบะ นวดและสไลซ์เส้นโซบะสดวันต่อวัน เสิร์ฟพร้อมน้ำซุปร้อนและเป็ดปิ้งย่างหอมเตาถ่าน 
-          นอกจากนี้บริเวณจุดพักยอดเขายังมีร้าน 877Stand เสิร์ฟกาแฟลาเต้ ซอฟต์เสิร์ฟนมสด และอุดอนผักเขา (Sansai Udon)
-        </p>
-        
-        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-1.5">
-          <div><strong><i class="fa-solid fa-clock me-2 text-amber-600"></i>เวลาทำการ Soba Shin Ida:</strong> 11:00 – 15:00 น. (ปิดวันพุธ)</div>
-          <div><strong><i class="fa-solid fa-yen-sign me-2 text-amber-600"></i>ช่วงราคา:</strong> 1,100 – 1,800 เยน</div>
-        </div>
-
-        <div class="flex items-center gap-2 flex-wrap pt-1">
-          <a href="https://maps.google.com/?q=Soba+Shin+Ida+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
             <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
           </a>
         </div>

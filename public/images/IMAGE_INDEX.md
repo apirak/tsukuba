@@ -13,6 +13,7 @@
 | `aozora_kitchen_kids1.jpg` | Aozora Kitchen | ภาพเด็กๆ ร่วมกิจกรรมสร้างสรรค์เมนูอาหารอย่างสนุกสนาน | `เด็กๆ ร่วมกิจกรรมห้องเรียนทำอาหาร Aozora Kitchen` |
 | `aozora_kitchen_level.png` | Aozora Kitchen | ภาพแผนผังระดับทักษะความสามารถการทำอาหารตามช่วงวัย | `แผนผังระดับทักษะคุกกิ้งตามช่วงวัยเด็ก Aozora Kitchen` |
 | `aozora_kitchen_support.jpg` | Aozora Kitchen | ภาพทีมงานและคุณครูคอยดูแลช่วยเหลือเด็กๆ ในการสไลซ์และเตรียมวัตถุดิบ | `คุณครูคอยดูแลเด็กๆ ในกิจกรรมทำอาหาร Aozora Kitchen` |
+| `cafe_takezono_real.webp` | Takezono Bakery | ภาพถ่ายหน้าร้านและเบเกอรี่หลังคาสีฟ้าเปิดแต่เช้าย่าน Takezono | `หน้าร้านและขนมปังอบใหม่ร้าน Café Boulangerie Takezono` |
 | `daiwa_roynet_tsukuba.jpg` | Daiwa Roynet Hotel | ภาพหน้าอาคารโรงแรม Daiwa Roynet Hotel Tsukuba ติดสถานีรถไฟ | `ภาพโรงแรม Daiwa Roynet Hotel Tsukuba` |
 | `daiwa_roynet_tsukuba_real.jpg` | Daiwa Roynet Hotel | ภาพถ่ายจริงภายนอกอาคารโรงแรม Daiwa Roynet Hotel หน้าสถานี Tsukuba Exit A5 | `ภาพถ่ายอาคารโรงแรม Daiwa Roynet Hotel Tsukuba ติดสถานีรถไฟ` |
 | `doho_park.jpg` | Doho Park | สวนสาธารณะโดโฮร่มรื่นมีสระน้ำขนาดใหญ่และทางเดินพักผ่อน | `ทัศนียภาพสระน้ำและสวนสาธารณะโดโฮ (Doho Park)` |
@@ -35,6 +36,8 @@
 | `jaxa_tsukuba_space_center_ta1.jpg` | JAXA Space Center | ภาพจรวด H-II Rocket ขนาด 50 เมตรและทางเข้าศูนย์อวกาศ JAXA | `จรวด H-II Rocket ขนาดความยาว 50 เมตร ณ ศูนย์อวกาศ JAXA` |
 | `jaxa_tsukuba_space_center_ta2.jpg` | JAXA Space Center | ภาพนิทรรศการดาวเทียมสำรวจและโมเดลสถานีอวกาศ Kibo | `นิทรรศการดาวเทียมและโมเดลสถานีอวกาศ Kibo ISS` |
 | `jaxa_tsukuba_space_center_ta3.jpg` | JAXA Space Center | ภาพชุดนักบินอวกาศและชิ้นส่วนยานสำรวจอวกาศจริง | `ชุดนักบินอวกาศและอุปกรณ์สำรวจอวกาศ JAXA` |
+| `kaitsuka_yakiimo_real.webp` | Kaitsuka Yakiimo | ภาพของหวานมันเผา Beni-Tenshi ซอฟต์ครีมลาเต้และพายแอปเปิ้ล | `ของหวานเมนูกิตติมศักดิ์มันเผา Kaitsuka Yakiimo` |
+| `kurabiyori_real.webp` | Kurabiyori Bakery | ภาพอาคารโกดังข้าวเอโดะ 180 ปี และสวนญี่ปุ่นร้านเบเกอรี่ Kurabiyori | `อาคารโกดังข้าวโบราณและสวนญี่ปุ่นร้านเบเกอรี่ Kurabiyori` |
 | `kawarakeya_strawberry_1.jpg` | Kawarakeya Farm | บรรยากาศผลสตรอเบอร์รี่สดแดงฉ่ำบนต้นในเรือนกระจก Kawarakeya | `ผลสตรอเบอร์รี่สดแดงฉ่ำในฟาร์มเรือนกระจก Kawarakeya` |
 | `kawarakeya_strawberry_2.jpg` | Kawarakeya Farm | กิจกรรมเก็บสตรอเบอร์รี่สดแบบยกระดับไม่ต้องก้มเก็บ | `กิจกรรมบุฟเฟต์เก็บสตรอเบอร์รี่สดในเรือนกระจก` |
 | `kawarakeya_strawberry_3.jpg` | Kawarakeya Farm | เด็กๆ และนักท่องเที่ยวสนุกสนานกับการเก็บและทานสตรอเบอร์รี่สด | `บรรยากาศนักท่องเที่ยวเก็บสตรอเบอร์รี่สดจากต้น` |
@@ -78,6 +81,7 @@
 | `soba_shin_ida_ext.webp` | Soba Shin Ida | ภายนอกอาคารร้านโซบะสไตล์ญี่ปุ่นดั้งเดิม Soba Shin Ida | `ภายนอกอาคารเรือนญี่ปุ่นร้าน Soba Shin Ida` |
 | `soba_shin_ida_matcha.webp` | Soba Shin Ida | พุดดิ้งมัทฉะเข้มข้นและของหวานปิดท้ายมื้ออาหารร้าน Shin Ida | `ของหวานพุดดิ้งมัทฉะแท้ร้าน Soba Shin Ida` |
 | `strawberry_picking.jpg` | Strawberry Farm | ภาพบรรยากาศฟาร์มสตรอเบอร์รี่สดในเรือนกระจกช่วงฤดูหนาว | `กิจกรรมเก็บสตรอเบอร์รี่สดจากต้นในเรือนกระจกช่วงฤดูหนาว` |
+| `sushi_yagura_real.jpg` | Sushi Yagura Honten | ภาพบรรยากาศหน้าร้านและเซ็ตซูชิชิ้นใหญ่พรีเมียมร้าน Sushi Dokoro Yagura | `หน้าร้านและเซ็ตซูชิสดชิ้นใหญ่ร้าน Sushi Dokoro Yagura Honten` |
 | `tabist_sky_hotel_booking_01_ext.jpg` | Tabist Tsukuba Sky Hotel | ภาพถ่ายภายนอกอาคารโรงแรมสีขาวและลานจอดรถ Booking.com | `อาคารหลักภายนอกและลานจอดรถโรงแรม Tabist Tsukuba Sky Hotel` |
 | `tabist_sky_hotel_booking_02_single.jpg` | Tabist Tsukuba Sky Hotel | ภาพห้องพักเดี่ยว เตียงนุ่ม โต๊ะทำงาน และกระจกแต่งตัว | `ห้องพักเดี่ยว Single Room พร้อมสิ่งอำนวยความสะดวกครบครัน` |
 | `tabist_sky_hotel_booking_03_park.jpg` | Tabist Tsukuba Sky Hotel | ภาพศาลาพักผ่อนริมบึงน้ำและทิวทัศน์สวนสาธารณะรอบโรงแรม | `บรรยากาศสวนสาธารณะและบึงน้ำธรรมชาติรอบโรงแรม` |
@@ -102,6 +106,7 @@
 | `tsukuba_botanical_garden_ta1.jpg` | Botanical Garden | เรือนกระจกพืชพรรณเขตร้อนและสวนพฤกษศาสตร์สึกุบะ | `เรือนกระจกยักษ์สวนพฤกษศาสตร์ Tsukuba Botanical Garden` |
 | `tsukuba_botanical_garden_ta2.jpg` | Botanical Garden | โซนจัดแสดงพืชสะวันนาและแคคตัสยักษ์สวนพฤกษศาสตร์ | `โดมจัดแสดงพืชสะวันนาและแคคตัสยักษ์` |
 | `tsukuba_botanical_garden_ta3.jpg` | Botanical Garden | พันธุ์ไม้น้ำและพืชเขตร้อนชื้นในเรือนกระจกปรับอุณหภูมิ | `เรือนกระจกจัดแสดงไม้น้ำและพืชเขตร้อนชื้น` |
+| `tsukuba_brewery_real.webp` | Tsukuba Brewery | ภาพถังหมักเบียร์และแก้วเบียร์คราฟต์สด local หน้าร้าน Tsukuba Brewery | `เบียร์คราฟต์สดคั้นจากถังและบรรยากาศร้าน Tsukuba Brewery` |
 | `tsukuba_center_building.jpg` | Tsukuba Center Building | ผลงานสถาปัตยกรรมระดับโลกดีไซน์โดย Arata Isozaki | `อาคาร Tsukuba Center Building ดีไซน์โดย Arata Isozaki` |
 | `tsukuba_center_building_real.jpg` | Tsukuba Center Terminal | ภาพตึกศูนย์กลางขนส่งและป้ายจอดรถบัส Tsukuba Center Exit A5 | `ภาพอาคาร Tsukuba Center Bus Terminal และสถานี Tsukuba` |
 | `tsukuba_center_isozaki_real.jpg` | Tsukuba Center Building | ภาพถ่ายจริง Sunken Plaza รูปไข่ผลงาน Arata Isozaki | `ภาพถ่าย Sunken Plaza อาคาร Tsukuba Center Building` |
@@ -115,8 +120,8 @@
 | `tsukuba_expo_center_facility_map.jpeg` | Tsukuba Expo Center | Tsukuba Expo Center facility map and exhibition halls guide | `แผนผังโซนจัดแสดงนิทรรศการวิทยาศาสตร์ Tsukuba Expo Center` |
 | `tsukuba_express_train.jpg` | Tsukuba Express | รถไฟความเร็วสูง Tsukuba Express (TX) เชื่อมต่อ Akihabara และ Tsukuba | `รถไฟด่วน Tsukuba Express (TX) เชื่อมต่อตรงจากโตเกียวถึงทซึคุบะ` |
 | `tsukuba_ramen.jpg` | Tsukuba Dining | ภาพชามราเมนญี่ปุ่นท้องถิ่นน้ำซุปเข้มข้น เมนูขึ้นชื่อของเมืองทซึคุบะ | `ชามราเมนญี่ปุ่นร้อนๆ เมนูเด็ดประจำเมืองทซึคุบะ` |
-| `tsukuba_station.jpg` | Tsukuba Station | ภาพบรรยากาศย่านศูนย์กลางเมือง Tsukuba Center และสถานีรถไฟ | `ย่านสถานี Tsukuba Center ศูนย์กลางการเดินทางและโรงแรมที่พัก` |
 | `tsukuba_station.jpg` | Tsukuba Station | ภาพถ่ายย่านสถานี Tsukuba Express และห้างสรรพสินค้า Tonarie | `บรรยากาศหน้าสถานี Tsukuba Station และอาคารขนส่ง` |
+| `tsukubasan_hitachino_real.jpg` | Tsukubasan Hitachino | ภาพถ่ายอาคารเรือนไม้โบราณ 200 ปี Gassho-zukuri และเตาถ่านอิโรริย่างเนื้อฮิตาจิ | `เรือนไม้โบราณ Gassho-zukuri ร้าน Tsukubasan Hitachino` |
 | `tsukubasan_shrine_real.jpg` | Tsukubasan Shrine | ภาพถ่ายจริงซุ้มประตูและอาคารศาลเจ้าสึคุบะซันเชิงเขา | `ภาพถ่ายอาคารศาลเจ้าสึคุบะซันเชิงเขาสึกุบะ` |
 
 ---

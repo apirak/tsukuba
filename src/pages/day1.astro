@@ -1,45 +1,114 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import DayMap, { type Spot } from '../components/DayMap.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const day1Spots: Spot[] = [
+  {
+    step: 1,
+    name: "จุดเช่าจักรยาน Kanto Railway Tsukuba",
+    lat: 36.0830,
+    lng: 140.1110,
+    desc: "รับจักรยาน Helmet และแผนที่ หน้าสถานี Tsukuba Exit A5 (500 เยน/วัน)",
+    distFromPrev: "จุดเริ่มต้น (สถานี Tsukuba)",
+    icon: "fa-bicycle",
+    img: `${base}/images/tsukuba_station.jpg`,
+    googleMapsUrl: "https://maps.google.com/?q=Tsukuba+Station"
+  },
+  {
+    step: 2,
+    name: "JAXA Tsukuba Space Center",
+    lat: 36.0645,
+    lng: 140.1265,
+    desc: "ชมจรวด H-II Rocket ยาว 50 เมตร & โดมจัดแสดงอวกาศ Space Dome",
+    distFromPrev: "~2.1 กม. (ปั่น 8–10 นาที)",
+    icon: "fa-shuttle-space",
+    img: `${base}/images/jaxa_tsukuba_space_center_ta1.jpg`,
+    googleMapsUrl: "https://maps.google.com/?q=JAXA+Tsukuba+Space+Center"
+  },
+  {
+    step: 3,
+    name: "Science Square AIST & Geology Museum",
+    lat: 36.0562,
+    lng: 140.1365,
+    desc: "หุ่นยนต์แมวน้ำ AI Paro, พิพิธภัณฑ์ธรณีวิทยา อัญมณีและฟอสซิล",
+    distFromPrev: "~1.2 กม. (ปั่น 5 นาทีจาก JAXA)",
+    icon: "fa-robot",
+    img: `${base}/images/science_square_ta1.jpg`,
+    googleMapsUrl: "https://maps.google.com/?q=Science+Square+AIST"
+  },
+  {
+    step: 4,
+    name: "สวนสาธารณะโดโฮ & Doho Park Cafe",
+    lat: 36.0602,
+    lng: 140.1215,
+    desc: "พักผ่อน จิบกาแฟ/เบเกอรี่ ทานมื้อเที่ยงริมทะเลสาบสวน Doho Park",
+    distFromPrev: "~800 ม. (ปั่น 3 นาทีจาก AIST)",
+    icon: "fa-seedling",
+    img: `${base}/images/doho_park_cafe_lakeside.jpg`,
+    googleMapsUrl: "https://maps.google.com/?q=Doho+Park"
+  },
+  {
+    step: 5,
+    name: "สถานี Tsukuba (คืนจักรยาน)",
+    lat: 36.0830,
+    lng: 140.1110,
+    desc: "ปั่นจักรยานกลับตามทาง Pedestrian Deck คืนจักรยานก่อน 18:00 น.",
+    distFromPrev: "~2.2 กม. (ปั่นกลับสถานี)",
+    icon: "fa-flag-checkered",
+    img: `${base}/images/tsukuba_station.jpg`,
+    googleMapsUrl: "https://maps.google.com/?q=Tsukuba+Station"
+  }
+];
 ---
 
-<Layout title="Day 1: ปั่นจักรยานสถานที่ระยะไกล - Tsukuba Travel Strategy" activePath="/day1">
+<Layout title="Day 1: ปั่นจักรยานชิลๆ โซน JAXA & สวนใกล้เคียง - Tsukuba Travel Strategy" activePath="/day1">
   <!-- Header -->
   <header class="bg-slate-900 text-white py-12 border-b border-slate-800 text-center">
     <div class="max-w-4xl mx-auto px-4 space-y-3">
       <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-xs font-semibold">
-        <i class="fa-solid fa-bicycle"></i> CYCLING DAY TOUR
+        <i class="fa-solid fa-bicycle"></i> JAXA & NEARBY SPOTS (EASY CYCLING)
       </span>
       <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">
-        Day 1: เช่าจักรยานตะลุยสถานที่ท่องเที่ยวระยะไกล (Distant Spots)
+        Day 1: เช่าจักรยานปั่นชิลๆ ตะลุย JAXA & สถานที่รอบๆ (ไม่เกิน 2–3 กม.)
       </h1>
       <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
-        ระยะทางปั่นรวม ~12–15 กม. บนเส้นทางจักรยานไร้รถยนต์ ปลอดภัย ปั่นสบายทั้งครอบครัว
+        เน้นเที่ยวโซน JAXA, พิพิธภัณฑ์วิทยาศาสตร์ Science Square และสวนโดโฮ ปั่นระยะสั้น 1–2 กม. ทางปลอดภัย ไร้รถยนต์
       </p>
     </div>
   </header>
 
   <div class="max-w-4xl mx-auto px-4 py-10 space-y-10">
 
+    <!-- Day 1 Route Map (TOP SECTION) -->
+    <DayMap 
+      mapId="map-day1"
+      title="แผนที่เส้นทางปั่นจักรยาน Day 1 (JAXA & โซนรอบๆ)"
+      subtitle="พิกัดจุดเช่าจักรยาน JAXA Space Center, Science Square AIST, สวน Doho Park และเส้นทางปั่นย้อนกลับสถานี"
+      themeColor="emerald"
+      spots={day1Spots}
+      totalDistance="ระยะทางปั่นรวมทั้งวันเพียง ~6 กม. (ละจุดห่าง 0.8–2.1 กม.)"
+    />
+
     <!-- TOP SECTION: Day 1 High-Level Plan Summary -->
     <section class="bg-emerald-50/70 border border-emerald-200 rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">
       <div class="flex flex-wrap items-center justify-between gap-3 border-b border-emerald-200/80 pb-4">
         <div>
           <span class="inline-block px-2.5 py-0.5 bg-emerald-200/80 text-emerald-900 font-semibold text-xs rounded-full">
-            ภาพรวมแผนงาน Day 1
+            ภาพรวมแผนงาน Day 1 (ระยะใกล้สบายๆ)
           </span>
           <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">
-            ตารางเวลา & ไฮไลต์สถานที่ระยะไกล (Top Summary)
+            ตารางเวลา & ไฮไลต์โซน JAXA & สวนโดโฮ (Top Summary)
           </h2>
         </div>
         <span class="px-3 py-1 bg-slate-900 text-white font-semibold text-xs rounded-full">
-          500 เยน / วัน (คุ้มค่าที่สุด)
+          จักรยาน 500 เยน / วัน
         </span>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         <a href="#part-bike" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
-          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">08:30 – 09:00</span>
+          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">09:00 – 09:30</span>
           <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
             <i class="fa-solid fa-bicycle text-emerald-600 me-1"></i> 1. เช่าจักรยาน
           </h3>
@@ -47,32 +116,32 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         </a>
 
         <a href="#part-jaxa" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
-          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">09:30 – 11:30</span>
+          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">09:45 – 11:45</span>
           <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
             <i class="fa-solid fa-shuttle-space text-sky-600 me-1"></i> 2. JAXA Space Center
           </h3>
           <p class="text-slate-500 text-xs leading-relaxed">ชมจรวด H-II Rocket ยาว 50 เมตร & Space Dome</p>
         </a>
 
-        <a href="#part-botanical" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+        <a href="#part-science" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
           <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">12:00 – 13:30</span>
           <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
-            <i class="fa-solid fa-seedling text-emerald-600 me-1"></i> 3. Botanical Garden
+            <i class="fa-solid fa-robot text-teal-600 me-1"></i> 3. Science Square & Geology
           </h3>
-          <p class="text-slate-500 text-xs leading-relaxed">เรือนกระจกยักษ์ 3 หลัง & มื้อเที่ยง Ramen Tatsuro</p>
+          <p class="text-slate-500 text-xs leading-relaxed">เล่นหุ่นยนต์แมวน้ำ AI Paro & ฟอสซิล/อัญมณี (ห่าง JAXA 1.2 กม.)</p>
         </a>
 
-        <a href="#part-ringring" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
-          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">14:00 – 16:30</span>
+        <a href="#part-doho" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">13:45 – 15:30</span>
           <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
-            <i class="fa-solid fa-route text-amber-600 me-1"></i> 4. Ring Ring Road
+            <i class="fa-solid fa-seedling text-emerald-600 me-1"></i> 4. Doho Park & Cafe
           </h3>
-          <p class="text-slate-500 text-xs leading-relaxed">ซากคลังโบราณ Hirasawa Kanka & Tsukuba Winery</p>
+          <p class="text-slate-500 text-xs leading-relaxed">ทานมื้อเที่ยง/ขนม & เดินชิลริมทะเลสาบสวน Doho (ห่าง 800 ม.)</p>
         </a>
       </div>
 
       <div class="bg-amber-50 border border-amber-200/80 rounded-xl p-3.5 text-xs text-amber-900">
-        <i class="fa-solid fa-lightbulb me-1.5 text-amber-600"></i><strong>คำแนะนำ:</strong> Tsukuba มีเส้นทาง Pedestrian/Bike Deck แยกจากทางรถยนต์อย่างชัดเจน ปั่นง่าย ปลอดภัย 100% สำหรับเด็กและผู้ใหญ่
+        <i class="fa-solid fa-lightbulb me-1.5 text-amber-600"></i><strong>คำแนะนำเรื่องระยะทาง:</strong> เส้นทางนี้ออกแบบให้ปั่นระยะสั้น แต่ละจุดห่างกันเพียง 800 เมตร ถึง 2.1 กิโลเมตร บนทางเท้าลอยฟ้า Pedestrian Deck ไร้รถยนต์ ปั่นสบาย ปลอดภัยสำหรับครอบครัว 100%
       </div>
     </section>
 
@@ -96,7 +165,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
           <div class="flex items-center gap-3">
             <span class="w-9 h-9 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">1</span>
             <div>
-              <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">08:30 – 09:00</span>
+              <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">09:00 – 09:30</span>
               <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">จุดเช่าจักรยาน Kanto Railway Rent-a-cycle (สถานี Tsukuba)</h2>
             </div>
           </div>
@@ -105,30 +174,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-4">
           <div class="rounded-xl overflow-hidden border border-slate-200 shadow-xs">
-            <img src={`${base}/images/ringring_square_tsuchiura_ext.jpg`} alt="อาคารจุดบริการนักปั่น Ring-Ring Square Tsuchiura เชื่อมตรงสถานี JR Tsuchiura" class="w-full h-40 object-cover" />
-            <div class="bg-slate-50 p-2 text-center font-medium text-xs text-slate-700">อาคารเชื่อมตรงสถานี JR Tsuchiura</div>
+            <img src={`${base}/images/tsukuba_station.jpg`} alt="จุดเช่าจักรยานสถานี Tsukuba Exit A5" class="w-full h-40 object-cover" />
+            <div class="bg-slate-50 p-2 text-center font-medium text-xs text-slate-700">จุดบริการเช่าจักรยาน Exit A5</div>
           </div>
           <div class="rounded-xl overflow-hidden border border-slate-200 shadow-xs">
-            <img src={`${base}/images/ringring_square_tsuchiura_shop.jpg`} alt="ร้านจำหน่ายและให้เช่าจักรยาน le cyc ชั้น 1 Ring-Ring Square Tsuchiura" class="w-full h-40 object-cover" />
-            <div class="bg-slate-50 p-2 text-center font-medium text-xs text-slate-700">ร้าน le cyc บริการเช่าจักรยาน & อุปกรณ์</div>
+            <img src={`${base}/images/ringring_square_tsuchiura_shop.jpg`} alt="ร้านจำหน่ายและให้เช่าจักรยาน" class="w-full h-40 object-cover" />
+            <div class="bg-slate-50 p-2 text-center font-medium text-xs text-slate-700">บริการจักรยานพร้อมหมวกกันน็อก</div>
           </div>
           <div class="rounded-xl overflow-hidden border border-slate-200 shadow-xs">
-            <img src={`${base}/images/ringring_square_tsuchiura_bikes.jpg`} alt="บริการจักรยานให้เช่าหลากหลายประเภท ณ Ring-Ring Square Tsuchiura" class="w-full h-40 object-cover" />
-            <div class="bg-slate-50 p-2 text-center font-medium text-xs text-slate-700">จักรยานเสือหมอบ E-Bike ครบครัน</div>
+            <img src={`${base}/images/ringring_square_tsuchiura_bikes.jpg`} alt="จักรยานสภาพดีเยี่ยม ปั่นสบาย" class="w-full h-40 object-cover" />
+            <div class="bg-slate-50 p-2 text-center font-medium text-xs text-slate-700">จักรยานแม่บ้าน & E-Bike ให้เช่า</div>
           </div>
         </div>
 
         <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-4 text-sm text-slate-700">
-          <div class="space-y-2">
-            <h3 class="font-bold text-slate-900 flex items-center gap-2">
-              <i class="fa-solid fa-square-parking text-emerald-600"></i>จุดบริการเช่าจักรยานหลักบนเส้นทาง Ring-Ring Road:
-            </h3>
-            <ul class="list-disc pl-5 space-y-1.5">
-              <li><strong>จุดที่ 1: Kanto Railway Rent-a-cycle (สถานี Tsukuba)</strong> — สะดวกที่สุดสำหรับทริปนี้ ปั่นจากสถานี Tsukuba ออกเส้นทางจักรยานได้ทันที (ผู้ใหญ่ 500 เยน/วัน)</li>
-              <li><strong>จุดที่ 2: Ring-Ring Square Tsuchiura (ริงริงสแควร์ ทสึจิอุระ)</strong> — ศูนย์รวมนักปั่นเชื่อมตรงสถานี JR Tsuchiura มีร้าน le cyc (ชั้น 1), ล็อกเกอร์หยอดเหรียญ, ห้องอาบน้ำ และจุดคืนจักรยานกว้างขวาง 11 แห่งรอบจังหวัดอิบารากิ</li>
-            </ul>
-          </div>
-
           <div class="space-y-2">
             <h3 class="font-bold text-slate-900 flex items-center gap-2">
               <i class="fa-solid fa-file-signature text-emerald-600"></i>ขั้นตอนการเช่า (สถานี Tsukuba):
@@ -146,9 +205,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
               <i class="fa-solid fa-shield-halved text-rose-600"></i>กฎการปั่นจักรยานในญี่ปุ่น:
             </h3>
             <ul class="list-disc pl-5 space-y-1">
-              <li>ปั่นชิดซ้ายบนเส้นทางจักรยาน (Tsukuba มีทาง Pedestrian/Bike Deck แยกจากถนนใหญ่)</li>
-              <li>เมื่อจอดตามสถานที่ท่องเที่ยว ให้ล็อกแม่กุญแจจักรยานเสมอ</li>
-              <li>ต้องนำจักรยานมาคืนที่จุดเช่าเดิมก่อนเวลา 17:30 น.</li>
+              <li>ปั่นชิดซ้ายบนเส้นทาง Pedestrian/Bike Deck ที่แยกจากทางรถยนต์อย่างชัดเจน</li>
+              <li>เมื่อจอดตามสถานที่ท่องเที่ยว ให้ล็อกแม่กุญแจจักรยานที่ล้อหลังเสมอ</li>
+              <li>นำจักรยานกลับมาคืนที่จุดเช่าเดิมก่อนเวลา 18:00 น.</li>
             </ul>
           </div>
         </div>
@@ -160,7 +219,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
           <div class="flex items-center gap-3">
             <span class="w-9 h-9 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">2</span>
             <div>
-              <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">09:30 – 11:30 (ปั่น ~2.1 กม. 10 นาที)</span>
+              <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">09:45 – 11:45 (ปั่นจากสถานี ~2.1 กม. 8–10 นาที)</span>
               <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">JAXA Tsukuba Space Center (ศูนย์อวกาศสึกุบะ)</h2>
             </div>
           </div>
@@ -189,77 +248,79 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         </div>
       </article>
 
-      <!-- Part 3: Tsukuba Botanical Garden -->
-      <article id="part-botanical" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+      <!-- Part 3: Science Square & Geology Museum -->
+      <article id="part-science" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
           <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">3</span>
+            <span class="w-9 h-9 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">3</span>
             <div>
-              <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">12:00 – 13:30 (ปั่นจาก JAXA ~4.5 กม. 18 นาที)</span>
-              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">Tsukuba Botanical Garden (สวนพฤกษศาสตร์สึกุบะ)</h2>
+              <span class="px-2.5 py-0.5 bg-teal-100 text-teal-800 font-semibold text-xs rounded-full">12:00 – 13:30 (ปั่นจาก JAXA เพียง ~1.2 กม. 5 นาที)</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">Science Square AIST & Geological Museum (พิพิธภัณฑ์ธรณีวิทยา)</h2>
             </div>
           </div>
-          <span class="px-3 py-1 bg-emerald-600 text-white font-semibold text-xs rounded-full">เรือนกระจกยักษ์</span>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
-          <img src={`${base}/images/tsukuba_botanical_garden_ta1.jpg`} alt="Tsukuba Botanical Garden Greenhouses" class="w-full h-64 object-cover" />
-        </div>
-
-        <p class="text-slate-600 text-sm leading-relaxed">
-          สวนพฤกษศาสตร์วิจัยขนาดใหญ่ในสังกัดพิพิธภัณฑ์ธรรมชาติและวิทยาศาสตร์แห่งชาติ (Kahaku) มีเรือนกระจกปรับอุณหภูมิยักษ์ 3 หลัง 
-          รวบรวมพฤกษชาติเขตร้อน สะวันนา และป่าดิบชื้นมากกว่า 7,000 สายพันธุ์
-        </p>
-
-        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
-          <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong>ค่าเข้าชม:</strong> ผู้ใหญ่ 320 เยน / เด็กและนักเรียน เข้าชมฟรี</li>
-            <li><strong>จุดเด่น:</strong> ด้านในเรือนกระจกอุ่นสบาย เดินชมกล้วยไม้หายาก ต้นแคคตัสยักษ์ และพืชซาวันน่า เหมาะกับครอบครัวสายธรรมชาติ</li>
-            <li><strong>อาหารมื้อเที่ยง:</strong> แวะทานราเมนชามยักษ์สุดอร่อยที่ร้าน <strong>Ramen Tatsuro</strong> หรือพกเบนโตะมานั่งทานในพื้นที่สวนได้</li>
-          </ul>
-
-          <a href="https://maps.google.com/?q=Tsukuba+Botanical+Garden" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
-            <i class="fa-solid fa-map-location-dot me-1.5"></i>พิกัด Botanical Garden บน Google Maps
-          </a>
-        </div>
-      </article>
-
-      <!-- Part 4: Ring Ring Road & Hirasawa Kanka -->
-      <article id="part-ringring" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
-          <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">4</span>
-            <div>
-              <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">14:00 – 16:30 (เส้นทางปั่น Ring Ring Road)</span>
-              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">ปั่นตาม Ring Ring Road &rarr; ซากโบราณสถาน Hirasawa Kanka & Tsukuba Winery</h2>
-            </div>
-          </div>
-          <span class="px-3 py-1 bg-amber-600 text-white font-semibold text-xs rounded-full">จุดไกลสุด (วิวสวยมาก)</span>
+          <span class="px-3 py-1 bg-teal-600 text-white font-semibold text-xs rounded-full">เข้าชมฟรีทั้งคู่</span>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-80">
           <div class="rounded-xl overflow-hidden border border-slate-200">
-            <img src={`${base}/images/ringring_square_tsuchiura_map.png`} alt="แผนผังเส้นทางปั่นจักรยาน Tsukuba-Kasumigaura Ring-Ring Road" class="w-full h-64 object-cover" />
+            <img src={`${base}/images/science_square_ta1.jpg`} alt="Science Square AIST" class="w-full h-64 object-cover" />
           </div>
           <div class="rounded-xl overflow-hidden border border-slate-200">
-            <img src={`${base}/images/soba_shin_ida_ext.webp`} alt="Tsukuba Scenic Ring Ring Road and Culture" class="w-full h-64 object-cover" />
+            <img src={`${base}/images/geological_museum_ta1.jpg`} alt="Geological Museum" class="w-full h-64 object-cover" />
           </div>
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
-          ปั่นจักรยานบนเส้นทาง Tsukuba Kasumigaura Ring Ring Road ทางปั่นจักรยานดีเด่นระดับชาติ ปลอดภัย ไม่มีรถยนต์ 
-          ชมซากคลังโบราณสมัยนารา (Hirasawa Kanka Ruins) และแวะไร่องุ่น Tsukuba Winery 6,000 ต้น
+          ตั้งอยู่ติดกันข้างๆ JAXA! Science Square AIST โชว์รูมนวัตกรรมและเทคโนโลยีอนาคต สัมผัสหุ่นยนต์แมวน้ำบำบัด Paro Seal Robot และข้างๆ เป็นพิพิธภัณฑ์ธรณีวิทยา รวบรวมอัญมณี ฟอสซิล และหินภูเขาไฟทั่วโลก
         </p>
 
         <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
           <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong>ลักษณะเส้นทาง:</strong> ดัดแปลงมาจากสายทางรถไฟเก่า เรียบราบ ไร้ความชัน ปั่นง่ายแม้เด็กๆ หรือผู้ใหญ่ที่ไม่ค่อยได้ออกกำลังกาย</li>
-            <li><strong>จุดแวะพัก:</strong> ซากโบราณสถานฮิราซาวะคังกะ มีอาคารเสาไม้โบราณและลานหญ้ากว้าง เห็นทิวเขาเขาสึกุบะไกลๆ เป็นฉากหลัง</li>
-            <li><strong>ขากลับ (16:30 - 17:15):</strong> ปั่นจักรยานมุ่งหน้ากลับสถานี Tsukuba คืนจักรยานแก่ศูนย์ Kanto Railway ก่อนเวลา 17:30 น.</li>
+            <li><strong>ระยะทาง:</strong> อยู่ห่างจาก JAXA เพียง 1.2 กิโลเมตร ปั่นจักรยานบนทางเท้าลอยฟ้าเพียง 5 นาที</li>
+            <li><strong>ไฮไลต์:</strong> ทรวดทรงหินอัญมณีเรืองแสง, ฟอสซิลไดโนเสาร์ขนาดใหญ่ และการสาธิต AI หุ่นยนต์อัจฉริยะ</li>
           </ul>
+
+          <a href="https://maps.google.com/?q=Science+Square+AIST" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>พิกัด Science Square AIST บน Google Maps
+          </a>
         </div>
       </article>
+
+      <!-- Part 4: Doho Park & Return -->
+      <article id="part-doho" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">4</span>
+            <div>
+              <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">13:45 – 16:30 (ปั่นจาก AIST เพียง ~800 ม. 3 นาที)</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">สวนสาธารณะโดโฮ (Doho Park) & ทานอาหาร/จิบกาแฟริมทะเลสาบ</h2>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-emerald-600 text-white font-semibold text-xs rounded-full">พักผ่อนริมทะเลสาบ</span>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src={`${base}/images/doho_park_cafe_lakeside.jpg`} alt="Doho Park Lakeside Cafe" class="w-full h-64 object-cover" />
+        </div>
+
+        <p class="text-slate-600 text-sm leading-relaxed">
+          สวนสาธารณะใหญ่ร่มรื่นมีทะเลสาบกึ่งกลางสวน พร้อมคาเฟ่เรือนไม้อบอุ่น Doho Cafe & ร้านเบเกอรี่ชื่อดัง ปั่นพักผ่อน ทานมื้อเที่ยงเลท หรือเบเกอรี่อบใหม่ริมน้ำสบายๆ
+        </p>
+
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>บรรยากาศ:</strong> มีต้นแปะก๊วยและสนยักษ์ล้อมรอบทะเลสาบ มีลานเล่นเด็ก และเป็ดบึงธรรมชาติ</li>
+            <li><strong>ขากลับ (16:00 - 16:30):</strong> ปั่นจักรยานย้อนกลับตาม Pedestrian Deck สู่สถานี Tsukuba (ระยะทาง ~2.2 กม.) คืนจักรยานเรียบร้อยก่อนเวลา 18:00 น.</li>
+          </ul>
+
+          <a href="https://maps.google.com/?q=Doho+Park" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>พิกัด Doho Park บน Google Maps
+          </a>
+        </div>
+      </article>
+
     </div>
 
   </div>
 </Layout>
+
