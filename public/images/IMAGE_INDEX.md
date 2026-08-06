@@ -127,6 +127,20 @@
 | `tsukuba_station.jpg` | Tsukuba Station | ภาพถ่ายย่านสถานี Tsukuba Express และห้างสรรพสินค้า Tonarie | `บรรยากาศหน้าสถานี Tsukuba Station และอาคารขนส่ง` |
 | `tsukubasan_hitachino_real.jpg` | Tsukubasan Hitachino | ภาพถ่ายอาคารเรือนไม้โบราณ 200 ปี Gassho-zukuri และเตาถ่านอิโรริย่างเนื้อฮิตาจิ | `เรือนไม้โบราณ Gassho-zukuri ร้าน Tsukubasan Hitachino` |
 | `tsukubasan_shrine_real.jpg` | Tsukubasan Shrine | ภาพถ่ายจริงซุ้มประตูและอาคารศาลเจ้าสึคุบะซันเชิงเขา | `ภาพถ่ายอาคารศาลเจ้าสึคุบะซันเชิงเขาสึกุบะ` |
+| `tsukuba_bus_station_matcha.webp` | Bus Travel to Tsukuba | ป้ายรถบัส Tsukuba Express (TX) และจุดขึ้นรถบัสประจำทางมุ่งหน้า Tsukubasanguchi หน้าสถานี Tsukuba | `ป้ายรถบัส Tsukuba Station และจุดขึ้นรถบัสไป Tsukubasanguchi` |
+| `tsukubasanguchi_bus_stop_matcha.webp` | Bus Travel to Tsukuba | จุดจอดรถบัสป้าย Tsukubasanguchi (Numata) และ Tsukubasan Shuttle Bus | `จุดจอดรถบัสป้าย Tsukubasanguchi และ Tsukubasan Shuttle Bus` |
+| `tsukuba_bike_rental_kanto_office.webp` | Bike Rental Tsukuba | อาคารสำนักงานเช่าจักรยาน Kanto Railway Tsukuba North Office ติดป้าย Tsukubasanguchi | `สำนักงานเช่าจักรยาน Kanto Railway Tsukuba North Office` |
+| `tsukuba_bike_rental_selection.webp` | Bike Rental Tsukuba | การเลือกขนาดจักรยานที่เหมาะสมและการกรอกแบบฟอร์มเช่าจักรยาน (ผู้ใหญ่ 500 เยน / เด็ก 250 เยน) | `แบบฟอร์มและการเลือกเช่าจักรยาน Kanto Railway Tsukuba` |
+| `tsukuba_bike_rental_lock_key.webp` | Bike Rental Tsukuba | หมายเลขอุปกรณ์ กุญแจ ล็อกจักรยาน และการแนะนำข้อควรระวังในการปั่นจักรยาน | `กุญแจ ล็อกจักรยาน และอุปกรณ์ความปลอดภัยเช่าจักรยาน` |
+| `tsukuba_cycling_countryside.webp` | Cycling Tsukuba | การปั่นจักรยานชมบรรยากาศชนบท บ้านเรือนสไตล์ดั้งเดิม และทุ่งนาเชิงเขาทสึคุบะ | `บรรยากาศปั่นจักรยานชมเมืองชนบทและทุ่งนาเชิงเขาทสึคุบะ` |
+| `hirasawa_kanga_ruins.webp` | Hirasawa Kanga Ruins | ซากโบราณสถานฮิราซาวะคังกะ (Hirasawa Kanga Ruins) สำนักงานปกครองโบราณ 1,000 ปี | `อาคารโชโซซากโบราณสถานฮิราซาวะคังกะ (Hirasawa Kanga Ruins)` |
+| `hojo_pond_sakura.webp` | Hojo Pond | สระโฮโจ (Hojo Pond) จุดชมซากุระ 500 ต้นเชิงเขาทสึคุบะ | `ทัศนียภาพสระโฮโจ (Hojo Pond) จุดชมดอกซากุระ` |
+| `aoyama_udon_ext.webp` | AOYAMA Kamaage Udon | หน้าร้านอุด้งเรือนญี่ปุ่นโบราณ AOYAMA Kamaage Udon บนถนนประวัติศาสตร์ทสึคุบะ | `หน้าร้านอุด้งเรือนไม้โบราณ AOYAMA Kamaage Udon` |
+| `aoyama_udon_int.webp` | AOYAMA Kamaage Udon | บรรยากาศภายในร้านอุด้งตกแต่งสไตล์ไทโชโชวะ อบอุ่นผ่อนคลาย | `บรรยากาศภายในร้าน AOYAMA Kamaage Udon สไตล์ไทโช` |
+| `aoyama_kamaage_udon.webp` | AOYAMA Kamaage Udon | คามาอาเกะอุด้งเส้นเหนียวนุ่ม เสิร์ฟพร้อมขิงฝนสด เครื่องเทศ และซอสเข้มข้น | `เมนูคามาอาเกะอุด้งเสิร์ฟพร้อมขิงฝนสดร้าน AOYAMA` |
+| `tsukuba_winery_vineyard.webp` | Tsukuba Winery | ไร่ปะรำองุ่น Tsukuba Winery ทางทิศใต้ของเขาทสึคุบะ | `ไร่องุ่น Tsukuba Winery เชิงเขาทสึคุบะ` |
+| `tsukuba_winery_mountain_view.webp` | Tsukuba Winery | ทัศนียภาพเขาทสึคุบะมุมกว้างมองจากไร่องุ่น Tsukuba Winery | `วิวทิวทัศน์เขาทสึคุบะมองจากไร่องุ่น Tsukuba Winery` |
+| `tsukuba_winery_bottles.webp` | Tsukuba Winery | ขวดไวน์คราฟต์ local Tsukuba Winery และเส้นทางปั่นจักรยาน Ring Ring Road | `ผลิตภัณฑ์ไวน์ Tsukuba Winery และเส้นทางปั่น Ring Ring Road` |
 
 ---
 
