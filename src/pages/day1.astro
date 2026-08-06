@@ -39,52 +39,52 @@ const day1Spots: Spot[] = [
   },
   {
     step: 4,
-    name: "มื้อเที่ยง: ทงคัตสึ TonQ Tsukuba Honten",
-    lat: 36.0765,
-    lng: 140.1135,
-    desc: "มื้อเที่ยงไฮไลต์! ทงคัตสึทอดกรอบพรีเมียมอันดับ 1 ของเมือง Tsukuba",
-    distFromPrev: "~1.5 กม. (ปั่น 6 นาทีจาก AIST)",
-    icon: "fa-utensils",
-    img: `${base}/images/doho_park_cafe_lakeside.jpg`,
-    googleMapsUrl: "https://maps.google.com/?q=TonQ+Tsukuba"
+    name: "มื้อเที่ยง: เบเกอรี่ Boulangerie Couronne Tsukuba",
+    lat: 36.0612,
+    lng: 140.1147,
+    desc: "มื้อเที่ยงไฮไลต์! ร้านเบเกอรี่อันดับ 1 ของเมือง Tsukuba ขนมปังไส้กรอกยาว Long Sausage France & เทอร์เรซร่มรื่น",
+    distFromPrev: "~1.5 กม. (ปั่น 5 นาทีจาก AIST/JAXA)",
+    icon: "fa-wheat-awn",
+    img: `${base}/images/couronne_tsukuba_real.jpg`,
+    googleMapsUrl: "https://maps.google.com/?q=Couronne+Tsukuba"
   },
   {
     step: 5,
     name: "สวนสาธารณะโดโฮ & คืนจักรยาน",
     lat: 36.0602,
     lng: 140.1215,
-    desc: "เดินชิลริมทะเลสาบสวน Doho Park ปั่นย้อนกลับคืนจักรยานก่อน 18:00 น.",
-    distFromPrev: "~800 ม. (ปั่นไปสวนโดโฮ)",
+    desc: "เดินชิลริมทะเลสาบสวน Doho Park ปั่นย้อนกลับคืนจักรยานก่อน 18:00 น. (เดินจากร้าน Couronne เพียง 2 นาที)",
+    distFromPrev: "~200 ม. (เดินจากร้าน Couronne เข้าสวนโดโฮ)",
     icon: "fa-flag-checkered",
-    img: `${base}/images/tsukuba_station.jpg`,
+    img: `${base}/images/doho_park_scenery_real.jpg`,
     googleMapsUrl: "https://maps.google.com/?q=Doho+Park"
   },
   {
     step: 6,
-    name: "มื้อเย็น: ร้านอาหารญี่ปุ่น Gohan-ya Fugen",
-    lat: 36.0820,
-    lng: 140.1150,
-    desc: "มื้อเย็นอบอุ่น เซ็ตอาหารญี่ปุ่นเทโชกุดั้งเดิม บรรยากาศโลคอลแท้ๆ",
-    distFromPrev: "ใกล้สถานี Tsukuba (เดิน 5 นาที)",
-    icon: "fa-bowl-rice",
-    img: `${base}/images/tsukuba_ramen.jpg`,
-    googleMapsUrl: "https://maps.google.com/?q=Gohan-ya+Fugen+Tsukuba"
+    name: "มื้อเย็น: สเต๊กเนื้อวากิว Hitachi Beef Sansui",
+    lat: 36.0825,
+    lng: 140.1130,
+    desc: "มื้อเย็นพรีเมียม สเต๊กเนื้อวัวฮิตาจิเกรด A5 ชั้น 2 Hotel Nikko Tsukuba (เดิน 2 นาทีจาก Exit A3)",
+    distFromPrev: "ติดสถานี Tsukuba Station",
+    icon: "fa-drumstick-bite",
+    img: `${base}/images/hotel_nikko_tsukuba_real.jpg`,
+    googleMapsUrl: "https://maps.google.com/?q=Hotel+Nikko+Tsukuba+Sansui"
   }
 ];
 ---
 
-<Layout title="Day 1: ปั่นจักรยานชิลๆ โซน JAXA & ร้านทงคัตสึ TonQ - Tsukuba Travel Strategy" activePath="/day1">
+<Layout title="Day 1: ปั่นจักรยานชิลๆ โซน JAXA & ร้านเบเกอรี่ Couronne - Tsukuba Travel Strategy" activePath="/day1">
   <!-- Header -->
   <header class="bg-slate-900 text-white py-12 border-b border-slate-800 text-center">
     <div class="max-w-4xl mx-auto px-4 space-y-3">
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-xs font-semibold">
-        <i class="fa-solid fa-bicycle"></i> JAXA & TONKATSU TONQ (EASY CYCLING)
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full text-xs font-semibold">
+        <i class="fa-solid fa-bicycle"></i> JAXA & COURONNE BAKERY (EASY CYCLING)
       </span>
       <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">
-        Day 1: เช่าจักรยานปั่นชิลๆ ตะลุย JAXA & ลิ้มลองทงคัตสึ TonQ ติดอันดับเมือง
+        Day 1: เช่าจักรยานปั่นชิลๆ ตะลุย JAXA & ลิ้มลองเบเกอรี่อันดับ 1 Couronne
       </h1>
       <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
-        เน้นเที่ยวโซน JAXA, พิพิธภัณฑ์วิทยาศาสตร์ Science Square, มื้อเที่ยงหมูทอด TonQ และมื้อเย็นเทโชกุ Gohan-ya Fugen
+        เน้นเที่ยวโซน JAXA, พิพิธภัณฑ์วิทยาศาสตร์ Science Square, มื้อเที่ยงเบเกอรี่อบสด Couronne และมื้อเย็นเทโชกุ Gohan-ya Fugen
       </p>
     </div>
   </header>
@@ -94,11 +94,11 @@ const day1Spots: Spot[] = [
     <!-- Day 1 Route Map (TOP SECTION) -->
     <DayMap 
       mapId="map-day1"
-      title="แผนที่เส้นทางปั่นจักรยาน Day 1 (JAXA & ร้านอาหารทงคัตสึ TonQ)"
-      subtitle="พิกัดจุดเช่าจักรยาน JAXA Space Center, Science Square AIST, ร้านทงคัตสึ TonQ และสวน Doho Park"
+      title="แผนที่เส้นทางปั่นจักรยาน Day 1 (JAXA & ร้านเบเกอรี่ Couronne)"
+      subtitle="พิกัดจุดเช่าจักรยาน JAXA Space Center, Science Square AIST, ร้านเบเกอรี่ Couronne และสวน Doho Park"
       themeColor="emerald"
       spots={day1Spots}
-      totalDistance="ระยะทางปั่นรวมทั้งวันเพียง ~6 กม. (ละจุดห่าง 0.8–2.1 กม.)"
+      totalDistance="ระยะทางปั่นรวมทั้งวันเพียง ~6 กม. (วนเป็นวงกลมต่อเนื่อง ปั่นง่ายสบายๆ)"
     />
 
     <!-- TOP SECTION: Day 1 High-Level Plan Summary -->
@@ -109,7 +109,7 @@ const day1Spots: Spot[] = [
             ภาพรวมแผนงาน Day 1 (ระยะใกล้สบายๆ)
           </span>
           <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">
-            ตารางเวลา & ไฮไลต์โซน JAXA & ร้าน TonQ (Top Summary)
+            ตารางเวลา & ไฮไลต์โซน JAXA & ร้าน Couronne (Top Summary)
           </h2>
         </div>
         <span class="px-3 py-1 bg-slate-900 text-white font-semibold text-xs rounded-full">
@@ -134,20 +134,20 @@ const day1Spots: Spot[] = [
           <p class="text-slate-500 text-xs leading-relaxed">ชมจรวด H-II Rocket ยาว 50 เมตร & Space Dome</p>
         </a>
 
-        <a href="#part-tonq" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+        <a href="#part-couronne" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
           <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">12:30 – 14:00</span>
           <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
-            <i class="fa-solid fa-utensils text-rose-600 me-1"></i> 3. มื้อเที่ยง: ทงคัตสึ TonQ
+            <i class="fa-solid fa-wheat-awn text-amber-600 me-1"></i> 3. มื้อเที่ยง: Couronne Tsukuba
           </h3>
-          <p class="text-slate-500 text-xs leading-relaxed">ร้านหมูทอดทงคัตสึพรีเมียมอันดับ 1 ของเมือง Tsukuba</p>
+          <p class="text-slate-500 text-xs leading-relaxed">ร้านเบเกอรี่อันดับ 1 ไส้กรอกยาว Long Sausage France</p>
         </a>
 
-        <a href="#part-fugen" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+        <a href="#part-sansui" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
           <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">18:00 – 19:30</span>
           <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
-            <i class="fa-solid fa-bowl-rice text-amber-600 me-1"></i> 4. มื้อเย็น: Gohan-ya Fugen
+            <i class="fa-solid fa-drumstick-bite text-rose-600 me-1"></i> 4. มื้อเย็น: Hitachi Beef Sansui
           </h3>
-          <p class="text-slate-500 text-xs leading-relaxed">ชุดอาหารญี่ปุ่นเทโชกุดั้งเดิม บรรยากาศโลคอลอบอุ่น</p>
+          <p class="text-slate-500 text-xs leading-relaxed">สเต๊กเนื้อวัวฮิตาจิ A5 ชั้น 2 Hotel Nikko Tsukuba</p>
         </a>
       </div>
 
@@ -235,59 +235,82 @@ const day1Spots: Spot[] = [
         </p>
       </article>
 
-      <!-- Part 3: TonQ Tonkatsu Lunch -->
-      <article id="part-tonq" class="bg-white border-2 border-rose-300 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+      <!-- Part 3: Couronne Bakery Lunch -->
+      <article id="part-couronne" class="bg-white border-2 border-amber-300 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
           <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-rose-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">3</span>
+            <span class="w-9 h-9 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">3</span>
             <div>
-              <span class="px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">12:30 – 14:00 (ร้าน TonQ Tsukuba Honten)</span>
-              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">มื้อเที่ยงไฮไลต์: ร้านหมูทอดทงคัตสึ TonQ (とんかつ とんQ つくば本店)</h2>
+              <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">12:30 – 14:00 (ร้าน Boulangerie Couronne Tsukuba)</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">มื้อเที่ยงไฮไลต์: ร้านเบเกอรี่อันดับ 1 Boulangerie Couronne (パン工房 クーロンヌ)</h2>
             </div>
           </div>
-          <span class="px-3 py-1 bg-rose-600 text-white font-semibold text-xs rounded-full">อันดับ 1 ของเมือง 🥩</span>
+          <span class="px-3 py-1 bg-amber-600 text-white font-semibold text-xs rounded-full">เบเกอรี่ในตำนาน 🥖</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 my-2">
+          <div class="rounded-xl overflow-hidden border border-slate-200">
+            <img src={`${base}/images/couronne_tsukuba_real.jpg`} alt="หน้าร้านเรือนไม้และเบเกอรี่อบสดใหม่ร้าน Boulangerie Couronne Tsukuba" class="w-full h-56 object-cover" />
+            <div class="bg-slate-50 p-2 text-center text-xs font-medium text-slate-700">หน้าร้านเรือนไม้ & เทอร์เรซกลางแจ้ง</div>
+          </div>
+          <div class="rounded-xl overflow-hidden border border-slate-200">
+            <img src={`${base}/images/couronne_tsukuba.jpeg`} alt="บรรยากาศภายในร้านเบเกอรี่ Boulangerie Couronne Tsukuba ขนมปังอบสดใหม่จากเตาอบหิน" class="w-full h-56 object-cover" />
+            <div class="bg-slate-50 p-2 text-center text-xs font-medium text-slate-700">ภายในร้าน เตาอบหินโบราณ (石窯焼) & ขนมปังสด</div>
+          </div>
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
-          ทานมื้อเที่ยงสุดฟินกับร้านทงคัตสึชื่องดังที่สุดใน Tsukuba <strong>TonQ (とんかつ とんQ つくば本店)</strong> หมูทอดชิ้นหนากรุบกรอบนอกนุ่มใน เสิร์ฟพร้อมกะหล่ำปลีสดกรอบ น้ำซุปหมูมิโซะ และซอสทงคัตสึสูตรพิเศษ คุ้มค่าคุ้มราคาเป็นอันดับ 1!
+          ทานมื้อเที่ยงชิลๆ กับร้านเบเกอรี่อบสดใหม่ขึ้นชื่ออันดับ 1 ของเมือง Tsukuba <strong>Boulangerie Couronne (パン工房 クーロンヌ)</strong> ตั้งอยู่ริมสวน Doho Park โดดเด่นด้วยขนมปังฝรั่งเศสไส้กรอกยาวเกือบครึ่งเมตร Long Sausage France, ครีมปังไข่ Nasu นุ่มละมุน นั่งทานที่โต๊ะเทอร์เรซกลางแจ้งร่มรื่น หรือซื้อถือไปนั่งปิกนิกริมทะเลสาบในสวน Doho Park
         </p>
 
         <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
           <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong>ที่ตั้ง:</strong> 〒305-0033 茨城県つくば市東新井13-12 (ห่างจาก Science Square AIST ~1.5 กม.)</li>
-            <li><strong>เมนูแนะนำ:</strong> เซ็ตทงคัตสึหมูสันนอก/สันใน, เซ็ตหมูทอดแป้งเกล็ดขนมปังสด และซุปมิโซะเติมได้ตลอด</li>
+            <li><strong>ที่ตั้ง:</strong> 〒305-0056 茨城県つくば市松野木152-40 (ขอบสวน Doho Park)</li>
+            <li><strong>เมนูแนะนำ:</strong> Long Sausage France, Kiwami Cream Pan, ขนมปังแกงกะหรี่ และกาแฟ/ชาสด</li>
+            <li><strong>การเดินทาง:</strong> เดินเพียง 2 นาทีจากสวน Doho Park หรือปั่นจักรยาน 5 นาทีจาก JAXA/AIST</li>
           </ul>
 
-          <a href="https://maps.google.com/?q=TonQ+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+          <a href="https://maps.google.com/?q=Couronne+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
             <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
           </a>
         </div>
+
+        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4 text-xs text-emerald-900 space-y-1">
+          <p><i class="fa-solid fa-lightbulb me-1.5 text-emerald-600"></i><strong>ทางเลือกมื้อเที่ยงสำรอง (Alternative Choice):</strong></p>
+          <p class="text-emerald-800 leading-relaxed">
+            หากต้องการเปลี่ยนบรรยากาศเป็นคาเฟ่อาหารตึกปูนเปลือยมินิมอล Quiche Plate & กาแฟดริป สามารถแวะร้าน <strong>cox (コックス)</strong> ซึ่งตั้งอยู่ฝั่งตรงข้ามย่านเดียวกันได้เลย (ดูรายละเอียดเพิ่มเติมใน <a href={`${base}/knowledge/food#cafe-cox`} class="text-emerald-700 font-bold underline">Knowledge Hub: Cafe Cox</a>)
+          </p>
+        </div>
       </article>
 
-      <!-- Part 4: Gohan-ya Fugen Dinner -->
-      <article id="part-fugen" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+      <!-- Part 4: Hitachi Beef Sansui Dinner -->
+      <article id="part-sansui" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
           <div class="flex items-center gap-3">
-            <span class="w-9 h-9 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">4</span>
+            <span class="w-9 h-9 rounded-full bg-rose-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">4</span>
             <div>
-              <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">18:00 – 19:30 (ร้าน Gohan-ya Fugen)</span>
-              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">มื้อเย็นไฮไลต์: ร้านอาหารญี่ปุ่นดั้งเดิม Gohan-ya Fugen (ごはんや 冨元)</h2>
+              <span class="px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">18:00 – 19:30 (ร้าน Hitachi Beef Sansui • Hotel Nikko Tsukuba)</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">มื้อเย็นไฮไลต์: ร้าน Hitachi Beef Sansui (常陸牛 山水)</h2>
             </div>
           </div>
-          <span class="px-3 py-1 bg-amber-600 text-white font-semibold text-xs rounded-full">เซ็ตเทโชกุโลคอล 🍱</span>
+          <span class="px-3 py-1 bg-rose-600 text-white font-semibold text-xs rounded-full">เนื้อวัวฮิตาจิ A5 🥩</span>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src={`${base}/images/hotel_nikko_tsukuba_real.jpg`} alt="Hitachi Beef Sansui at Hotel Nikko Tsukuba" class="w-full h-64 object-cover" />
         </div>
 
         <p class="text-slate-600 text-sm leading-relaxed">
-          ทานมื้อเย็นสไตล์โฮมเมดญี่ปุ่นดั้งเดิมกับร้าน <strong>Gohan-ya Fugen (ごはんや 冨元 / ふげん)</strong> บรรยากาศโลคอลอบอุ่นเป็นกันเอง เสิร์ฟชุดอาหารเซ็ตเทโชกุ ปลาปิ้งย่างเตาถ่าน ปลานึ่งซีอิ๊ว และผักเครื่องเคียงตามฤดูกาล
+          ทานมื้อเย็นสุดหรูหราหลังคืนจักรยานที่ร้าน <strong>Hitachi Beef Sansui (常陸牛 山水)</strong> ตั้งอยู่บนชั้น 2 ของโรงแรม Hotel Nikko Tsukuba เดินเพียง 2 นาทีจากสถานี Tsukuba Exit A3 เสิร์ฟสเต๊กเนื้อวัวฮิตาจิวากิว A5 ลายหินอ่อน สุกี้ยากี้ และชาบูชาบู รสเลิศ
         </p>
 
         <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
           <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong>จุดเด่น:</strong> รสชาติอาหารญี่ปุ่นแท้ๆ วัตถุดิบสดใหม่ ให้ความรู้สึกเหมือนทานอาหารรสมือแม่ในบ้านญี่ปุ่น</li>
-            <li><strong>การเดินทาง:</strong> ตั้งอยู่ย่านใจกลางเมืองใกล้อาคาร Tsukuba Center (เดิน 5-8 นาที)</li>
+            <li><strong>จุดเด่น:</strong> เนื้อวากิวประจำจังหวัด Ibaraki A5 คุณภาพสูงสุด บรรยากาศเงียบสงบหรูหราติดสถานี</li>
+            <li><strong>การเดินทาง:</strong> ชั้น 2 Hotel Nikko Tsukuba (เดิน 2 นาทีจากสถานี Tsukuba Exit A3)</li>
           </ul>
 
-          <a href="https://maps.google.com/?q=Gohan-ya+Fugen+Tsukuba" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
+          <a href="https://maps.google.com/?q=Hotel+Nikko+Tsukuba+Sansui" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-xs font-semibold transition-colors">
             <i class="fa-solid fa-map-location-dot me-1.5"></i>เปิด Google Maps
           </a>
         </div>

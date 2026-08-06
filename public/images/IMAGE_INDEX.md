@@ -13,7 +13,10 @@
 | `aozora_kitchen_kids1.jpg` | Aozora Kitchen | ภาพเด็กๆ ร่วมกิจกรรมสร้างสรรค์เมนูอาหารอย่างสนุกสนาน | `เด็กๆ ร่วมกิจกรรมห้องเรียนทำอาหาร Aozora Kitchen` |
 | `aozora_kitchen_level.png` | Aozora Kitchen | ภาพแผนผังระดับทักษะความสามารถการทำอาหารตามช่วงวัย | `แผนผังระดับทักษะคุกกิ้งตามช่วงวัยเด็ก Aozora Kitchen` |
 | `aozora_kitchen_support.jpg` | Aozora Kitchen | ภาพทีมงานและคุณครูคอยดูแลช่วยเหลือเด็กๆ ในการสไลซ์และเตรียมวัตถุดิบ | `คุณครูคอยดูแลเด็กๆ ในกิจกรรมทำอาหาร Aozora Kitchen` |
+| `cafe_cox_real.jpg` | Cafe Cox Tsukuba | ภาพถ่ายอาคารปูนเปลือยดีไซน์มินิมอลและประตูไม้บานใหญ่ร้านคาเฟ่ cox ย่าน Onozaki | `ภาพถ่ายอาคารดีไซน์ปูนเปลือยมินิมอลร้านคาเฟ่ cox (コックス)` |
 | `cafe_takezono_real.webp` | Takezono Bakery | ภาพถ่ายหน้าร้านและเบเกอรี่หลังคาสีฟ้าเปิดแต่เช้าย่าน Takezono | `หน้าร้านและขนมปังอบใหม่ร้าน Café Boulangerie Takezono` |
+| `couronne_tsukuba.jpeg` | Couronne Bakery | ภาพถ่ายบรรยากาศภายในร้านเบเกอรี่ Boulangerie Couronne Tsukuba เตาอบหินโบราณ (石窯焼) และชั้นวางขนมปังอบสดใหม่จาก Google Maps | `บรรยากาศภายในร้านเบเกอรี่ Boulangerie Couronne Tsukuba ขนมปังอบสดใหม่จากเตาอบหิน` |
+| `couronne_tsukuba_real.jpg` | Couronne Bakery | ภาพถ่ายบรรยากาศเรือนไม้เบเกอรี่และที่นั่งเทอร์เรซกลางแจ้งร้าน Couronne Tsukuba | `หน้าร้านเรือนไม้และเบเกอรี่อบสดใหม่ร้าน Boulangerie Couronne Tsukuba` |
 | `daiwa_roynet_tsukuba.jpg` | Daiwa Roynet Hotel | ภาพหน้าอาคารโรงแรม Daiwa Roynet Hotel Tsukuba ติดสถานีรถไฟ | `ภาพโรงแรม Daiwa Roynet Hotel Tsukuba` |
 | `daiwa_roynet_tsukuba_real.jpg` | Daiwa Roynet Hotel | ภาพถ่ายจริงภายนอกอาคารโรงแรม Daiwa Roynet Hotel หน้าสถานี Tsukuba Exit A5 | `ภาพถ่ายอาคารโรงแรม Daiwa Roynet Hotel Tsukuba ติดสถานีรถไฟ` |
 | `doho_park.jpg` | Doho Park | สวนสาธารณะโดโฮร่มรื่นมีสระน้ำขนาดใหญ่และทางเดินพักผ่อน | `ทัศนียภาพสระน้ำและสวนสาธารณะโดโฮ (Doho Park)` |
@@ -28,6 +31,7 @@
 | `geological_museum_ta1.jpg` | Geological Museum | ภาพภายนอกพิพิธภัณฑ์ธรณีวิทยา สถาบัน AIST เมืองทซึคุบะ | `อาคารพิพิธภัณฑ์ธรณีวิทยา Geological Museum AIST` |
 | `geological_museum_ta2.jpg` | Geological Museum | ภาพนิทรรศการจัดแสดงฟอสซิลและตัวอย่างโครงสร้างแผ่นดินไหว | `ห้องจัดแสดงฟอสซิลและตัวอย่างทางธรณีวิทยา` |
 | `geological_museum_ta3.jpg` | Geological Museum | นิทรรศการอัญมณี แร่ธาตุ และหินภูเขาไฟจำลอง | `ตู้จัดแสดงแร่ธาตุและอัญมณีธรรมชาติ Geological Museum` |
+| `hare_gohan_real.jpg` | HARE GOHAN Tsukuba | ภาพถ่ายหน้าร้านและเซ็ตอาหารเที่ยงโฮมเมดสไตล์คราฟต์ร้าน HARE GOHAN โครงการ MeeToco | `หน้าร้านและเซ็ตอาหารเที่ยงสุขภาพร้าน HARE GOHAN (ハレごはん)` |
 | `hotel_jal_city_tsukuba_bstatic.jpg` | Hotel JAL City | ภาพอาคารโรงแรม Hotel JAL City Tsukuba จาก Booking.com | `อาคารภายนอกโรงแรม Hotel JAL City Tsukuba` |
 | `hotel_nikko_tsukuba.jpg` | Hotel Nikko Tsukuba | โรงแรมบริการครบครันระดับ 4 ดาว เดิน 2 นาทีจากสถานี Tsukuba | `ภาพโรงแรม Hotel Nikko Tsukuba` |
 | `hotel_nikko_tsukuba_bstatic.jpg` | Hotel Nikko Tsukuba | ภาพอาคารภายนอกโรงแรม Hotel Nikko Tsukuba จาก Booking.com | `อาคารภายนอกโรงแรม Hotel Nikko Tsukuba` |
