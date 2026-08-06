@@ -1,0 +1,239 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Day 1: ปั่นจักรยานสถานที่ระยะไกล - Tsukuba Travel Strategy" activePath="/day1">
+  <!-- Header -->
+  <header class="bg-slate-900 text-white py-12 border-b border-slate-800 text-center">
+    <div class="max-w-4xl mx-auto px-4 space-y-3">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-xs font-semibold">
+        <i class="fa-solid fa-bicycle"></i> CYCLING DAY TOUR
+      </span>
+      <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">
+        Day 1: เช่าจักรยานตะลุยสถานที่ท่องเที่ยวระยะไกล (Distant Spots)
+      </h1>
+      <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
+        ระยะทางปั่นรวม ~12–15 กม. บนเส้นทางจักรยานไร้รถยนต์ ปลอดภัย ปั่นสบายทั้งครอบครัว
+      </p>
+    </div>
+  </header>
+
+  <div class="max-w-4xl mx-auto px-4 py-10 space-y-10">
+
+    <!-- TOP SECTION: Day 1 High-Level Plan Summary -->
+    <section class="bg-emerald-50/70 border border-emerald-200 rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-emerald-200/80 pb-4">
+        <div>
+          <span class="inline-block px-2.5 py-0.5 bg-emerald-200/80 text-emerald-900 font-semibold text-xs rounded-full">
+            ภาพรวมแผนงาน Day 1
+          </span>
+          <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">
+            ตารางเวลา & ไฮไลต์สถานที่ระยะไกล (Top Summary)
+          </h2>
+        </div>
+        <span class="px-3 py-1 bg-slate-900 text-white font-semibold text-xs rounded-full">
+          500 เยน / วัน (คุ้มค่าที่สุด)
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="#part-bike" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">08:30 – 09:00</span>
+          <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
+            <i class="fa-solid fa-bicycle text-emerald-600 me-1"></i> 1. เช่าจักรยาน
+          </h3>
+          <p class="text-slate-500 text-xs leading-relaxed">Kanto Railway Rent-a-cycle หน้าสถานี Tsukuba</p>
+        </a>
+
+        <a href="#part-jaxa" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">09:30 – 11:30</span>
+          <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
+            <i class="fa-solid fa-shuttle-space text-sky-600 me-1"></i> 2. JAXA Space Center
+          </h3>
+          <p class="text-slate-500 text-xs leading-relaxed">ชมจรวด H-II Rocket ยาว 50 เมตร & Space Dome</p>
+        </a>
+
+        <a href="#part-botanical" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">12:00 – 13:30</span>
+          <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
+            <i class="fa-solid fa-seedling text-emerald-600 me-1"></i> 3. Botanical Garden
+          </h3>
+          <p class="text-slate-500 text-xs leading-relaxed">เรือนกระจกยักษ์ 3 หลัง & มื้อเที่ยง Ramen Tatsuro</p>
+        </a>
+
+        <a href="#part-ringring" class="group bg-white border border-emerald-100 hover:border-emerald-400 rounded-xl p-4 transition-all shadow-xs hover:shadow-md space-y-1.5">
+          <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[11px] rounded">14:00 – 16:30</span>
+          <h3 class="font-bold text-slate-900 text-sm group-hover:text-emerald-700 transition-colors">
+            <i class="fa-solid fa-route text-amber-600 me-1"></i> 4. Ring Ring Road
+          </h3>
+          <p class="text-slate-500 text-xs leading-relaxed">ซากคลังโบราณ Hirasawa Kanka & Tsukuba Winery</p>
+        </a>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200/80 rounded-xl p-3.5 text-xs text-amber-900">
+        <i class="fa-solid fa-lightbulb me-1.5 text-amber-600"></i><strong>คำแนะนำ:</strong> Tsukuba มีเส้นทาง Pedestrian/Bike Deck แยกจากทางรถยนต์อย่างชัดเจน ปั่นง่าย ปลอดภัย 100% สำหรับเด็กและผู้ใหญ่
+      </div>
+    </section>
+
+    <!-- BOTTOM SECTION: Detailed Breakdown of Each Part -->
+    <div class="space-y-8">
+      <div class="space-y-1 border-b border-slate-200 pb-4">
+        <span class="inline-block px-3 py-1 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">
+          Detailed Breakdown
+        </span>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
+          รายละเอียดเชิงลึกของแต่ละส่วน (Step-by-Step Details)
+        </h2>
+        <p class="text-slate-600 text-sm">
+          คู่มือวิธีปฏิบัติ การเข้าชม ค่าใช้จ่าย และพิกัดสถานที่แต่ละจุด
+        </p>
+      </div>
+
+      <!-- Part 1: Bike Rental -->
+      <article id="part-bike" class="bg-white border-2 border-emerald-300 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">1</span>
+            <div>
+              <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">08:30 – 09:00</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">จุดเช่าจักรยาน Kanto Railway Rent-a-cycle (สถานี Tsukuba)</h2>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-slate-900 text-white font-semibold text-xs rounded-full">500 เยน / วัน</span>
+        </div>
+
+        <p class="text-slate-600 text-sm leading-relaxed">
+          เดินจากโรงแรมย้อนกลับมาที่สถานี Tsukuba Station เช่าจักรยานคุณภาพดีที่ศูนย์บริการ Kanto Railway (เปิด 09:00 - 18:00 น.) 
+          ในราคาเพียง 500 เยน/วัน (หรือเลือกจักรยานไฟฟ้า E-bike ~1,000 เยน)
+        </p>
+
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-4 text-sm text-slate-700">
+          <div class="space-y-2">
+            <h3 class="font-bold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-file-signature text-emerald-600"></i>ขั้นตอนการเช่า:
+            </h3>
+            <ol class="list-decimal pl-5 space-y-1">
+              <li>ยื่นพาสปอร์ตเล่มจริงแก่เจ้าหน้าที่</li>
+              <li>กรอกแบบฟอร์มชื่อภาษาอังกฤษ และเบอร์โทรศัพท์</li>
+              <li>ชำระเงิน 500 เยน/คัน</li>
+              <li>รับกุญแจ ล็อกจักรยาน และหมวกกันน็อก</li>
+            </ol>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="font-bold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-rose-600"></i>กฎการปั่นจักรยานในญี่ปุ่น:
+            </h3>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>ปั่นชิดซ้ายบนเส้นทางจักรยาน (Tsukuba มีทาง Pedestrian/Bike Deck แยกจากถนนใหญ่)</li>
+              <li>เมื่อจอดตามสถานที่ท่องเที่ยว ให้ล็อกแม่กุญแจจักรยานเสมอ</li>
+              <li>ต้องนำจักรยานมาคืนที่จุดเช่าเดิมก่อนเวลา 17:30 น.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Part 2: JAXA Space Center -->
+      <article id="part-jaxa" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-sky-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">2</span>
+            <div>
+              <span class="px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">09:30 – 11:30 (ปั่น ~2.1 กม. 10 นาที)</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">JAXA Tsukuba Space Center (ศูนย์อวกาศสึกุบะ)</h2>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-sky-600 text-white font-semibold text-xs rounded-full">เข้าชมฟรี ⭐</span>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src="/images/jaxa_tsukuba_space_center_ta1.jpg" alt="JAXA Tsukuba Space Center H-II Rocket" class="w-full h-64 object-cover" />
+        </div>
+
+        <p class="text-slate-600 text-sm leading-relaxed">
+          ศูนย์วิจัยอวกาศหลักของญี่ปุ่น ชมจรวด H-II Rocket ขนาดจริงยาว 50 เมตรตั้งตระหง่านหน้าทางเข้า เข้าชมอาคารนิทรรศการ Space Dome ฟรี 
+          มอดูลห้องทดลองอวกาศ Kibo โมเดลดาวเทียม และชุดนักบินอวกาศจริง
+        </p>
+
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>ค่าเข้าชม:</strong> ฟรี (สำหรับโซน Space Dome และ Rocket Park)</li>
+            <li><strong>ไฮไลต์เด็กๆ ชอบ:</strong> แบบจำลองขนาดเท่าของจริงของสถานีอวกาศ ISS โมดูล Kibo เดินเข้าไปถ่ายรูปเสมือนเป็นนักบินอวกาศได้</li>
+            <li><strong>ร้านของฝาก JAXA Museum Shop:</strong> อาหารอวกาศจริง (แกงกะหรี่อวกาศ, ไอศกรีมอวกาศ), พวงกุญแจจรวด และเสื้อยืด JAXA แท้</li>
+          </ul>
+          
+          <a href="https://maps.google.com/?q=JAXA+Tsukuba+Space+Center" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>พิกัด JAXA บน Google Maps
+          </a>
+        </div>
+      </article>
+
+      <!-- Part 3: Tsukuba Botanical Garden -->
+      <article id="part-botanical" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">3</span>
+            <div>
+              <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">12:00 – 13:30 (ปั่นจาก JAXA ~4.5 กม. 18 นาที)</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">Tsukuba Botanical Garden (สวนพฤกษศาสตร์สึกุบะ)</h2>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-emerald-600 text-white font-semibold text-xs rounded-full">เรือนกระจกยักษ์</span>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src="/images/tsukuba_botanical_garden_ta1.jpg" alt="Tsukuba Botanical Garden Greenhouses" class="w-full h-64 object-cover" />
+        </div>
+
+        <p class="text-slate-600 text-sm leading-relaxed">
+          สวนพฤกษศาสตร์วิจัยขนาดใหญ่ในสังกัดพิพิธภัณฑ์ธรรมชาติและวิทยาศาสตร์แห่งชาติ (Kahaku) มีเรือนกระจกปรับอุณหภูมิยักษ์ 3 หลัง 
+          รวบรวมพฤกษชาติเขตร้อน สะวันนา และป่าดิบชื้นมากกว่า 7,000 สายพันธุ์
+        </p>
+
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>ค่าเข้าชม:</strong> ผู้ใหญ่ 320 เยน / เด็กและนักเรียน เข้าชมฟรี</li>
+            <li><strong>จุดเด่น:</strong> ด้านในเรือนกระจกอุ่นสบาย เดินชมกล้วยไม้หายาก ต้นแคคตัสยักษ์ และพืชซาวันน่า เหมาะกับครอบครัวสายธรรมชาติ</li>
+            <li><strong>อาหารมื้อเที่ยง:</strong> แวะทานราเมนชามยักษ์สุดอร่อยที่ร้าน <strong>Ramen Tatsuro</strong> หรือพกเบนโตะมานั่งทานในพื้นที่สวนได้</li>
+          </ul>
+
+          <a href="https://maps.google.com/?q=Tsukuba+Botanical+Garden" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-full text-xs font-semibold border border-slate-300 transition-colors">
+            <i class="fa-solid fa-map-location-dot me-1.5"></i>พิกัด Botanical Garden บน Google Maps
+          </a>
+        </div>
+      </article>
+
+      <!-- Part 4: Ring Ring Road & Hirasawa Kanka -->
+      <article id="part-ringring" class="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <div class="flex items-center gap-3">
+            <span class="w-9 h-9 rounded-full bg-amber-600 text-white font-bold flex items-center justify-center text-sm shadow-sm shrink-0">4</span>
+            <div>
+              <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">14:00 – 16:30 (เส้นทางปั่น Ring Ring Road)</span>
+              <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">ปั่นตาม Ring Ring Road &rarr; ซากโบราณสถาน Hirasawa Kanka & Tsukuba Winery</h2>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-amber-600 text-white font-semibold text-xs rounded-full">จุดไกลสุด (วิวสวยมาก)</span>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-slate-200 max-h-80">
+          <img src="/images/soba_shin_ida_ext.webp" alt="Tsukuba Scenic Ring Ring Road and Culture" class="w-full h-64 object-cover" />
+        </div>
+
+        <p class="text-slate-600 text-sm leading-relaxed">
+          ปั่นจักรยานบนเส้นทาง Tsukuba Kasumigaura Ring Ring Road ทางปั่นจักรยานดีเด่นระดับชาติ ปลอดภัย ไม่มีรถยนต์ 
+          ชมซากคลังโบราณสมัยนารา (Hirasawa Kanka Ruins) และแวะไร่องุ่น Tsukuba Winery 6,000 ต้น
+        </p>
+
+        <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-5 space-y-3 text-sm text-slate-700">
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong>ลักษณะเส้นทาง:</strong> ดัดแปลงมาจากสายทางรถไฟเก่า เรียบราบ ไร้ความชัน ปั่นง่ายแม้เด็กๆ หรือผู้ใหญ่ที่ไม่ค่อยได้ออกกำลังกาย</li>
+            <li><strong>จุดแวะพัก:</strong> ซากโบราณสถานฮิราซาวะคังกะ มีอาคารเสาไม้โบราณและลานหญ้ากว้าง เห็นทิวเขาเขาสึกุบะไกลๆ เป็นฉากหลัง</li>
+            <li><strong>ขากลับ (16:30 - 17:15):</strong> ปั่นจักรยานมุ่งหน้ากลับสถานี Tsukuba คืนจักรยานแก่ศูนย์ Kanto Railway ก่อนเวลา 17:30 น.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</Layout>

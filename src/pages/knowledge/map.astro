@@ -1,0 +1,267 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Interactive Map & Transport - Knowledge Hub Tsukuba" activePath="/knowledge/map">
+  <!-- Include Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
+  <header class="bg-slate-900 text-white py-12 border-b border-slate-800 text-center">
+    <div class="max-w-4xl mx-auto px-4 space-y-3">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-teal-500/20 text-teal-300 border border-teal-500/30 rounded-full text-xs font-semibold">
+        <i class="fa-solid fa-map-location-dot"></i> MAP & LOGISTICS
+      </span>
+      <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">
+        แผนที่พิกัด 20 จุด & คู่มือการเดินทาง (Map & Logistics)
+      </h1>
+      <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
+        แผนที่ปักหมุด GPS, คู่มือการเดินทางจากโตเกียวสู่ทซึคุบะ และบริการเช่าจักรยานปั่นเที่ยว
+      </p>
+    </div>
+  </header>
+
+  <div class="max-w-6xl mx-auto px-4 py-10 space-y-10">
+    
+    <!-- Filter Controls -->
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+      <div>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-teal-600"></i>แผนที่พิกัดรวมจุดสำคัญ (Interactive GPS Map)
+        </h2>
+        <p class="text-slate-600 text-sm">คลิกที่หมุดบนแผนที่เพื่อดูข้อมูลสถานที่ หรือกรองตามหมวดหมู่</p>
+      </div>
+      
+      <div class="flex flex-wrap gap-1.5">
+        <button class="filter-btn active px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-900 text-white transition-colors cursor-pointer" data-cat="all">ทั้งหมด</button>
+        <button class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer" data-cat="science">Science</button>
+        <button class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer" data-cat="nature">Nature</button>
+        <button class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer" data-cat="food">Food</button>
+        <button class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer" data-cat="hotel">Hotel</button>
+        <button class="filter-btn px-3 py-1.5 rounded-full text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer" data-cat="cycling">🚲 เช่าจักรยาน</button>
+      </div>
+    </div>
+
+    <!-- Map & Sidebar Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[540px]">
+      <div class="lg:col-span-2 rounded-2xl overflow-hidden border border-slate-200 min-h-[400px] h-full shadow-sm">
+        <div id="map" class="w-full h-full min-h-[400px]"></div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col h-[400px] lg:h-full space-y-3">
+        <h3 class="font-bold text-slate-900 text-sm border-b border-slate-100 pb-2">รายชื่อพิกัดสำคัญ (20 Spots)</h3>
+        <div id="spot-list" class="overflow-y-auto flex-1 space-y-2 pr-1 scrollbar-thin">
+          <!-- Rendered via Client JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Logistics & Transport Guide -->
+    <section id="transport" class="space-y-6 pt-4">
+      <div class="space-y-1 border-b border-slate-200 pb-4">
+        <span class="inline-block px-3 py-1 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">
+          Transport Guide
+        </span>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
+          คู่มือการเดินทาง & ขนส่ง (Logistics & Travel Guide)
+        </h2>
+        <p class="text-slate-600 text-sm">
+          วิธีการเดินทางจากโตเกียวถึงสึกุบะ การขึ้นรถบัส และจุดเช่าจักรยาน
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Tokyo to Tsukuba -->
+        <article class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+          <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">
+            <i class="fa-solid fa-train me-1"></i> Tsukuba Express (TX)
+          </span>
+          <h3 class="text-lg font-bold text-slate-900">1. จากโตเกียว ไปยังเมืองทซึคุบะ (Tokyo to Tsukuba)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            เดินทางจากโตเกียวด้วยรถไฟด่วน Tsukuba Express (TX) สะดวกสบายที่สุด
+          </p>
+
+          <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-3">
+            <div class="space-y-1">
+              <h4 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+                <i class="fa-solid fa-train-subway text-sky-600"></i>Tsukuba Express (TX):
+              </h4>
+              <ul class="list-disc pl-5 space-y-1">
+                <li><strong>สถานีต้นทาง:</strong> ขึ้นที่ Akihabara (อากิฮาบาระ) หรือ Asakusa (อาซาคุสะ)</li>
+                <li><strong>Rapid Train (ด่วนพิเศษ):</strong> ใช้เวลาเพียง 45 นาที (จอด 7 สถานี)</li>
+                <li><strong>Semi-Rapid (ด่วน):</strong> ใช้เวลา 52 นาที</li>
+                <li><strong>ค่าโดยสาร:</strong> 1,210 เยน (ใช้บัตร IC Card เช่น Suica / Pasmo ได้)</li>
+              </ul>
+            </div>
+
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-amber-900">
+              <strong><i class="fa-solid fa-ticket me-1"></i> ตั๋วส่วนลดแนะนำ:</strong> Tsukubasan Story Ticket (筑波山ストーリーチケット) 
+              รวมค่ารถไฟ TX ไป-กลับ + รถบัส + Cable Car/Ropeway ไม่จำกัดรอบ ประหยัดกว่า 30%
+            </div>
+          </div>
+        </article>
+
+        <!-- Bicycle Rental -->
+        <article class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
+          <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">
+            <i class="fa-solid fa-bicycle me-1"></i> เช่าจักรยาน 500 เยน
+          </span>
+          <h3 class="text-lg font-bold text-slate-900">2. บริการเช่าจักรยานปั่นเที่ยว (Rent-a-cycle)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            ปั่นจักรยานบนเส้นทาง Tsukuba Kasumigaura Ring Ring Road ทางปั่นจักรยานดีเด่นระดับชาติ
+          </p>
+
+          <div class="bg-slate-50 border border-slate-200/80 rounded-xl p-4 text-xs text-slate-700 space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-location-dot text-emerald-600"></i>จุดเช่าจักรยานหลัก: Kanto Railway Tsukuba Station
+            </h4>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>ค่าเช่าถูกมาก:</strong> ผู้ใหญ่เพียง 500 เยน / เด็ก 250 เยน ต่อวัน!</li>
+              <li><strong>อุปกรณ์ที่ได้รับ:</strong> ตัวรถจักรยาน, สายล็อก+กุญแจ, หมวกกันน็อก และแผนที่ฟรี</li>
+              <li><strong>สถานที่ท่องเที่ยวบนเส้นทางปั่น:</strong> JAXA Space Center, Botanical Garden, ซากคลังโบราณ Hirasawa Kanka, สระโฮโจ, AOYAMA Udon และ Tsukuba Winery</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Airport Bus -->
+      <article class="bg-amber-50/50 border border-amber-200/80 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center gap-4">
+        <span class="px-3 py-1 bg-slate-900 text-white font-semibold text-xs rounded-full shrink-0">
+          <i class="fa-solid fa-bus me-1.5"></i> Airport Highway Bus
+        </span>
+        <div class="space-y-1">
+          <h3 class="text-lg font-bold text-slate-900">3. รถบัส Highway Bus ตรงจากสนามบิน (Airport to Tsukuba)</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            มีรถบัส Highway Bus วิ่งตรงจากสนามบิน <strong>Narita Airport (~60 นาที)</strong> และ <strong>Haneda Airport (~120 นาที)</strong> 
+            มายัง Tsukuba Center Bus Terminal โดยไม่ต้องเปลี่ยนขบวน ลากกระเป๋าขึ้นรถนั่งสบายตลอดสาย
+          </p>
+        </div>
+      </article>
+    </section>
+
+  </div>
+</Layout>
+
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const spotsData = [
+      { id: 1, name: "JAXA Tsukuba Space Center", cat: "science", catName: "Science", lat: 36.0645, lng: 140.1265, dist: "2.1 กม. (บัส 8 นาที)", img: "/images/jaxa_tsukuba_space_center_ta1.jpg", link: "/knowledge/science#jaxa", desc: "ศูนย์อวกาศใหญ่ที่สุดในญี่ปุ่น จรวด H-II และโมเดล Kibo ISS" },
+      { id: 2, name: "Tsukuba Botanical Garden (Bottani)", cat: "science", catName: "Science", lat: 36.1008, lng: 140.1118, dist: "2.2 กม. (บัส 8 นาที)", img: "/images/tsukuba_botanical_garden_ta1.jpg", link: "/knowledge/science#botanical", desc: "สวนพฤกษศาสตร์วิจัยแห่งชาติ โดมเรือนกระจกพืชพรรณเขตร้อน" },
+      { id: 3, name: "Tsukuba Expo Center", cat: "science", catName: "Science", lat: 36.0858, lng: 140.1132, dist: "450 ม. (เดิน 5 นาที)", img: "/images/tsukuba_expo_center.jpg", link: "/knowledge/science#expo", desc: "พิพิธภัณฑ์วิทยาศาสตร์ ท้องฟ้าจำลองโดมใหญ่ และหุ่นยนต์" },
+      { id: 4, name: "Geological Museum (地質標本館)", cat: "science", catName: "Science", lat: 36.0560, lng: 140.1350, dist: "3.2 กม. (บัส 12 นาที)", img: "/images/geological_museum_ta1.jpg", link: "/knowledge/science#geological", desc: "พิพิธภัณฑ์ธรณีวิทยา อัญมณี ฟอสซิล และหินภูเขาไฟ" },
+      { id: 5, name: "Science Square AIST", cat: "science", catName: "Science", lat: 36.0562, lng: 140.1365, dist: "3.3 กม. (บัส 12 นาที)", img: "/images/science_square_ta1.jpg", link: "/knowledge/science#science-square", desc: "โชว์รูมนวัตกรรมและหุ่นยนต์อัจฉริยะ Paro Seal Robot" },
+      { id: 6, name: "NARO Tsukuba Food Research Center", cat: "science", catName: "Science", lat: 36.0305, lng: 140.1340, dist: "6.0 กม. (บัส 20 นาที)", img: "/images/naro_food_research.jpg", link: "/knowledge/science#naro", desc: "สถาบันวิจัยเทคโนโลยีอาหารและการเกษตรอัจฉริยะ" },
+
+      { id: 7, name: "ยอดเขาสึกุบะ & Cable Car (Mt. Tsukuba)", cat: "nature", catName: "Nature", lat: 36.2254, lng: 140.1075, dist: "18 กม. (บัส 36 นาที)", img: "/images/tsukubasan_shrine_real.jpg", link: "/knowledge/nature#tsukubasan", desc: "ยอดเขา 877m 1 ใน 100 ภูเขาชื่อดัง วิว 360° ที่ราบคันโต" },
+      { id: 8, name: "ศาลเจ้าสึคุบะซัน (Tsukubasan Shrine)", cat: "nature", catName: "Nature", lat: 36.2137, lng: 140.1017, dist: "16.5 กม. (บัส 36 นาที)", img: "/images/mt_tsukuba_shrine_gate.jpg", link: "/knowledge/nature#shrine", desc: "ศาลเจ้าชินโตเทพเจ้าสามีภรรยา ขอพรความรักและการผูกสัมพันธ์" },
+      { id: 9, name: "Tsukuba Center Building (Arata Isozaki)", cat: "nature", catName: "Nature", lat: 36.0818, lng: 140.1128, dist: "150 ม. (เดิน 2 นาที)", img: "/images/tsukuba_center_building_real.jpg", link: "/knowledge/nature#center-building", desc: "ผลงานสถาปัตยกรรม Postmodern Sunken Plaza รูปไข่" },
+      { id: 10, name: "Tsukuba Museum of Art (พิพิธภัณฑ์ศิลปะ)", cat: "nature", catName: "Nature", lat: 36.0825, lng: 140.1138, dist: "300 ม. (เดิน 4 นาที)", img: "/images/tsukuba_art_museum_real2.jpg", link: "/knowledge/nature#art-museum", desc: "พิพิธภัณฑ์ศิลปะประจำจังหวัดอิบารากิ นิทรรศการและกิจกรรมเด็ก" },
+      { id: 11, name: "สวนสาธารณะโดโฮ & Doho Cafe", cat: "nature", catName: "Nature", lat: 36.0602, lng: 140.1215, dist: "2.5 กม. (บัส 10 นาที)", img: "/images/doho_park_cafe_lakeside.jpg", link: "/knowledge/nature#doho-park", desc: "สวนสาธารณะใหญ่พร้อมทะเลสาบ คาเฟ่เรือนไม้อบอุ่น Doho Cafe" },
+      { id: 12, name: "ซากโบราณสถานฮิราซาวะคังกะ (Hirasawa Kanga)", cat: "nature", catName: "Nature", lat: 36.1750, lng: 140.0980, dist: "14 กม. (ปั่นจักรยาน/บัส)", img: "/images/tsukubasan_shrine_real.jpg", link: "/knowledge/nature#hirasawa", desc: "ซากสำนักงานปกครองโบราณ 1,000 ปีก่อน และจุดชมวิวสระโฮโจ" },
+
+      { id: 13, name: "Ramen Tatsuro (ラーメン龍郎)", cat: "food", catName: "Food", lat: 36.0885, lng: 140.1165, dist: "725 ม. (เดิน 8 นาที)", img: "/images/ramen_tatsuro_ta1.jpg", link: "/knowledge/food#ramen", desc: "ร้านราเมน Miso Jiro ชามยักษ์ หมูชาชูหนานุ่มผักพูนชาม" },
+      { id: 14, name: "AOYAMA Kamaage Udon (ร้านอุด้งบ้านโบราณ)", cat: "food", catName: "Food", lat: 36.1820, lng: 140.0920, dist: "15 กม. (ย่านโฮโจ)", img: "/images/soba_shin_ida_duck.webp", link: "/knowledge/food#aoyama-udon", desc: "อุด้งคามาอาเกะเหนียวนุ่มในเรือนโบราณยุคไทโช ถนนทสึคุบะ" },
+      { id: 15, name: "Tsukuba Winery (โรงผลิตไวน์ทซึคุบะ)", cat: "food", catName: "Food", lat: 36.1910, lng: 140.1050, dist: "16 กม. (ข้างทาง Ring Ring)", img: "/images/tsukuba_botanical_garden_ta1.jpg", link: "/knowledge/food#winery", desc: "โรงบ่มไวน์และไร่องุ่น 6,000 ต้น ติดเส้นทางปั่นจักรยาน Ring Ring Road" },
+      { id: 16, name: "Kawarakeya Strawberry Farm", cat: "food", catName: "Food", lat: 36.0385, lng: 140.1200, dist: "5.2 กม. (บัส 18 นาที)", img: "/images/kawarakeya_strawberry_1.jpg", link: "/knowledge/food#strawberry", desc: "ฟาร์มเก็บสตรอเบอร์รี่สดเรือนกระจก และให้อาหารน้องแพะ 🐐" },
+      { id: 17, name: "BiVi Tsukuba (ร้านอาหาร & Hitachi Beef)", cat: "food", catName: "Food", lat: 36.0831, lng: 140.1100, dist: "50 ม. (ติดสถานี)", img: "/images/tsukuba_center_building.jpg", link: "/knowledge/food#hitachi-beef", desc: "ศูนย์การค้าและคอมเพล็กซ์ร้านอาหาร เสิร์ฟเนื้อวัวฮิตาจิสเต๊ก" },
+
+      { id: 18, name: "Tabist Tsukuba Sky Hotel (ที่พักยืนยัน)", cat: "hotel", catName: "Hotel", lat: 36.0750, lng: 140.1180, dist: "1.2 กม. (เดิน 15 นาที / แท็กซี่ 4 นาที)", img: "/images/tabist_sky_hotel_booking_01_ext.jpg", link: "/knowledge/hotel#tabist-sky", desc: "ที่พักยืนยันสำหรับทริปนี้ คุ้มค่า สะอาด มีลานจอดรถฟรี" },
+      { id: 19, name: "Daiwa Roynet Hotel Tsukuba", cat: "hotel", catName: "Hotel", lat: 36.0838, lng: 140.1108, dist: "101 ม. (เดิน 1 นาที)", img: "/images/daiwa_roynet_tsukuba_real.jpg", link: "/knowledge/hotel#daiwa", desc: "ที่พักทำเลอันดับ 1 ติดสถานี Tsukuba Station ทางออก A5" },
+      { id: 20, name: "Tsukubasan Edoya Ryokan", cat: "hotel", catName: "Hotel", lat: 36.2130, lng: 140.1010, dist: "16.5 กม. (บัส shuttle)", img: "/images/tsukubasan_shrine_real.jpg", link: "/knowledge/hotel#edoya", desc: "เรียวกังดั้งเดิม 300 ปี พร้อมออนเซ็นธรรมชาติเชิงเขาสึคุบะ" },
+      { id: 21, name: "จุดเช่าจักรยาน Kanto Railway Tsukuba Station", cat: "cycling", catName: "เช่าจักรยาน", lat: 36.0830, lng: 140.1110, dist: "หน้าสถานี Tsukuba Exit A5", img: "/images/tsukuba_station.jpg", link: "/day1#part-bike", desc: "จุดบริการเช่าจักรยาน 500 เยน/วัน เปิด 09:00 - 18:00 น." }
+    ];
+
+    const catColor = {
+      science: "#0284c7",
+      nature: "#16a34a",
+      food: "#d97706",
+      hotel: "#be123c",
+      cycling: "#0d9488"
+    };
+
+    const map = L.map('map').setView([36.1000, 140.1150], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const markers = [];
+    const spotListContainer = document.getElementById('spot-list');
+
+    function createPin(color) {
+      return L.divIcon({
+        className: 'custom-pin',
+        html: `<div style="background-color: ${color}; width: 22px; height: 22px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"></div>`,
+        iconSize: [22, 22],
+        iconAnchor: [11, 11]
+      });
+    }
+
+    spotsData.forEach((spot) => {
+      const color = catColor[spot.cat] || '#0f172a';
+      const marker = L.marker([spot.lat, spot.lng], { icon: createPin(color) }).addTo(map);
+
+      const popupContent = `
+        <div style="width: 200px;">
+          <img src="${spot.img}" style="width: 100%; height: 100px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;" alt="${spot.name}">
+          <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; color: #0f172a;">${spot.name}</div>
+          <div style="font-size: 0.8rem; color: #64748b; margin-bottom: 8px;">${spot.desc}</div>
+          <a href="${spot.link}" style="display: block; text-align: center; background: #0f172a; color: white; border-radius: 9999px; padding: 4px 8px; font-size: 0.75rem; text-decoration: none;">ดูรายละเอียด</a>
+        </div>
+      `;
+      marker.bindPopup(popupContent);
+      markers.push({ category: spot.cat, marker: marker, id: spot.id });
+
+      const card = document.createElement('div');
+      card.className = 'flex items-center gap-3 p-2 bg-white border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-50 hover:border-slate-300 transition-colors spot-item-card';
+      card.setAttribute('data-cat', spot.cat);
+      card.onclick = () => {
+        map.setView([spot.lat, spot.lng], 14);
+        marker.openPopup();
+      };
+
+      card.innerHTML = `
+        <img src="${spot.img}" class="w-12 h-12 rounded-lg object-cover shrink-0" alt="${spot.name}">
+        <div class="min-w-0 flex-1">
+          <div class="font-bold text-slate-900 text-xs truncate">${spot.name}</div>
+          <span class="inline-block px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[10px] rounded mt-0.5 font-medium">${spot.dist}</span>
+        </div>
+      `;
+      spotListContainer.appendChild(card);
+    });
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-slate-900', 'text-white');
+          b.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
+        });
+        this.classList.add('active', 'bg-slate-900', 'text-white');
+        this.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+
+        const cat = this.getAttribute('data-cat');
+
+        markers.forEach(item => {
+          if (cat === 'all' || item.category === cat) {
+            map.addLayer(item.marker);
+          } else {
+            map.removeLayer(item.marker);
+          }
+        });
+
+        document.querySelectorAll('.spot-item-card').forEach(card => {
+          if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>

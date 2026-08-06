@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Knowledge Hub - Tsukuba Travel Strategy" activePath="/knowledge">
+  <header class="bg-slate-900 text-white py-12 border-b border-slate-800 text-center">
+    <div class="max-w-4xl mx-auto px-4 space-y-3">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-xs font-semibold">
+        <i class="fa-solid fa-book-open"></i> KNOWLEDGE HUB
+      </span>
+      <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">
+        คลังข้อมูลสถานที่ท่องเที่ยวเมืองสึกุบะ (Knowledge Hub)
+      </h1>
+      <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
+        รวบรวมข้อมูลสถานที่ท่องเที่ยว ร้านอาหาร โรงแรม รถไฟ และแผนที่ GPS แยกตาม 5 หมวดหมู่ สำหรับใช้ปรับเปลี่ยนแผนเดินทาง
+      </p>
+    </div>
+  </header>
+
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Science Category Card -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="rounded-xl overflow-hidden h-44">
+            <img src="/images/jaxa_tsukuba_space_center_ta1.jpg" alt="Science & Space" class="w-full h-full object-cover" />
+          </div>
+          <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">Science & Space</span>
+          <h2 class="text-xl font-bold text-slate-900">ศูนย์วิทยาศาสตร์ & อวกาศ</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            JAXA Space Center, Tsukuba Expo Center, สวนพฤกษศาสตร์ Botanical Garden, Science Square AIST, พิพิธภัณฑ์ธรณีวิทยา และ NARO Food Research
+          </p>
+        </div>
+        <a href="/knowledge/science" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors mt-auto">
+          <i class="fa-solid fa-atom me-2"></i>เข้าชมหมวด Science & Space &rarr;
+        </a>
+      </div>
+
+      <!-- Nature Category Card -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="rounded-xl overflow-hidden h-44">
+            <img src="/images/mt_tsukuba_trip1_summit_view.jpg" alt="Scenic & Nature" class="w-full h-full object-cover" />
+          </div>
+          <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">Scenic & Nature</span>
+          <h2 class="text-xl font-bold text-slate-900">ธรรมชาติ & ภูเขาสึกุบะ</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            ยอดเขาสึกุบะ (Mount Tsukuba), Cable Car, Ropeway, ศาลเจ้า Tsukubasan Shrine, สวนสาธารณะ Doho Park และเส้นทางปั่น Ring Ring Road
+          </p>
+        </div>
+        <a href="/knowledge/nature" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors mt-auto">
+          <i class="fa-solid fa-mountain me-2"></i>เข้าชมหมวด Scenic & Nature &rarr;
+        </a>
+      </div>
+
+      <!-- Food Category Card -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="rounded-xl overflow-hidden h-44">
+            <img src="/images/ramen_tatsuro.jpg" alt="Dining & Farm" class="w-full h-full object-cover" />
+          </div>
+          <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">Dining & Farm</span>
+          <h2 class="text-xl font-bold text-slate-900">อาหาร & ฟาร์มสตรอเบอร์รี่</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            ราเมงชามยักษ์ Ramen Tatsuro, AOYAMA Udon, เนื้อวัววากิวฮิตาจิ (Hitachi Beef), ฟาร์มสตรอเบอร์รี่สด Kawarakeya และโซบะ Shin Ida
+          </p>
+        </div>
+        <a href="/knowledge/food" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors mt-auto">
+          <i class="fa-solid fa-utensils me-2"></i>เข้าชมหมวด Dining & Farm &rarr;
+        </a>
+      </div>
+
+      <!-- Hotel Category Card -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="rounded-xl overflow-hidden h-44">
+            <img src="/images/tabist_sky_hotel_booking_01_ext.jpg" alt="Hotel Guide" class="w-full h-full object-cover" />
+          </div>
+          <span class="inline-block px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">Hotel Guide</span>
+          <h2 class="text-xl font-bold text-slate-900">ที่พัก & โรงแรม</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Tabist Tsukuba Sky Hotel (ที่พักยืนยัน), Daiwa Roynet Hotel, Hotel Nikko Tsukuba, Toyoko Inn Tsukuba Station
+          </p>
+        </div>
+        <a href="/knowledge/hotel" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors mt-auto">
+          <i class="fa-solid fa-hotel me-2"></i>เข้าชมหมวด Hotel Guide &rarr;
+        </a>
+      </div>
+
+      <!-- Map Category Card -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
+        <div class="space-y-3">
+          <div class="rounded-xl overflow-hidden h-44">
+            <img src="/images/tsukuba_expo_center_facility_map.jpeg" alt="GPS Map" class="w-full h-full object-cover" />
+          </div>
+          <span class="inline-block px-2.5 py-0.5 bg-teal-100 text-teal-800 font-semibold text-xs rounded-full">GPS Map & Coordinates</span>
+          <h2 class="text-xl font-bold text-slate-900">แผนที่พิกัด 20 จุด</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            รวมพิกัดสถานที่ท่องเที่ยว ร้านอาหาร จุดปักหมุด Google Maps สถานีรถไฟ Tsukuba Bus Terminal และคู่มือการเดินทางด้วยรถบัส
+          </p>
+        </div>
+        <a href="/knowledge/map" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors mt-auto">
+          <i class="fa-solid fa-map-location-dot me-2"></i>เข้าชม Interactive Map &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+</Layout>

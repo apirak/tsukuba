@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@theme {
+  --font-sans: 'Inter', 'Sarabun', -apple-system, sans-serif;
+  --font-display: 'Neue Haas Grotesk Display', 'Inter', 'Sarabun', -apple-system, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-canvas-night: #000000;
+  --color-canvas-night-elevated: #0a0a0a;
+  --color-canvas-light: #ffffff;
+  --color-canvas-cream: #fbfbf5;
+  --color-canvas-page: #f8fafc;
+
+  --color-ink: #0f172a;
+  --color-ink-muted: #64748b;
+  --color-ink-subtle: #94a3b8;
+
+  --color-hairline-light: #e4e4e7;
+  --color-hairline-dark: #1e2c31;
+
+  --color-aloe: #c1fbd4;
+  --color-pistachio: #d4f9e0;
+  --color-sky-accent: #0284c7;
+  --color-green-accent: #16a34a;
+  --color-amber-accent: #d97706;
+  --color-rose-accent: #be123c;
+  --color-teal-accent: #0d9488;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-feature-settings: "ss03" 1;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom map pin styling */
+.custom-pin {
+  background: transparent;
+  border: none;
+}

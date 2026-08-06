@@ -1,17 +1,265 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Tsukuba Travel Strategy & Portal" activePath="/">
+  <!-- Hero Section -->
+  <header class="bg-black text-white pt-14 pb-12 border-b border-slate-800 text-center">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <div class="flex flex-wrap justify-center gap-2">
+        <span class="px-3 py-1 bg-white/10 text-slate-200 border border-white/15 rounded-full text-xs font-semibold">
+          <i class="fa-solid fa-calendar-days me-1.5"></i> Dec 24–27, 2026
+        </span>
+        <span class="px-3 py-1 bg-white/10 text-slate-200 border border-white/15 rounded-full text-xs font-semibold">
+          <i class="fa-solid fa-users me-1.5"></i> ครอบครัว 3 คน (Bank, แก้ว, เติมเต็ม)
+        </span>
+        <span class="px-3 py-1 bg-rose-950/80 text-rose-200 border border-rose-800 rounded-full text-xs font-semibold">
+          <i class="fa-solid fa-hotel me-1.5 text-rose-400"></i> Tabist つくばスカイホテル
+        </span>
+        <span class="px-3 py-1 bg-emerald-950/80 text-emerald-200 border border-emerald-800 rounded-full text-xs font-semibold">
+          <i class="fa-solid fa-bicycle me-1.5 text-emerald-400"></i> เช่าจักรยาน 500 เยน/วัน
+        </span>
+      </div>
+      
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">
+        Tsukuba Travel Strategy & Portal
+      </h1>
+      
+      <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        ศูนย์รวมข้อมูลการเดินทางท่องเที่ยวเมืองวิทยาศาสตร์สึกุบะ แบ่งเป็นแผนการเดินทางจริง 3 วัน (Solid Plan) 
+        และคลังข้อมูลอ้างอิงสถานที่ท่องเที่ยวแยกตามหมวดหมู่ (Knowledge Hub)
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3 pt-2">
+        <a href="/day0" class="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full text-sm font-semibold border border-white/20 transition-colors">
+          <i class="fa-solid fa-plane-arrival me-2 text-sky-400"></i>Day 0: ลงเครื่อง & เข้าที่พัก
+        </a>
+        <a href="/day1" class="inline-flex items-center px-4 py-2 bg-emerald-400 hover:bg-emerald-300 text-slate-950 rounded-full text-sm font-semibold transition-colors">
+          <i class="fa-solid fa-bicycle me-2"></i>Day 1: ปั่นจักรยานไกล
+        </a>
+        <a href="/day2" class="inline-flex items-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-full text-sm font-semibold border border-white/20 transition-colors">
+          <i class="fa-solid fa-building-columns me-2 text-amber-400"></i>Day 2: เที่ยวเมือง & สกี
+        </a>
+        <a href="/knowledge" class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-full text-sm font-semibold transition-colors">
+          <i class="fa-solid fa-book-open me-2"></i>Knowledge Hub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Portal Content -->
+  <div class="max-w-6xl mx-auto px-4 py-12 space-y-12">
+
+    <!-- 3 Days Itinerary Overview -->
+    <section class="space-y-6">
+      <div class="space-y-1 border-b border-slate-200 pb-4">
+        <span class="inline-block px-3 py-1 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">
+          Solid Plan
+        </span>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
+          ภาพรวมแผนการเดินทาง 3 วัน (Overview 3 Days)
+        </h2>
+        <p class="text-slate-600 text-sm">
+          แผนการเดินทางหลัก 3 วัน เรียงตามลำดับเวลาตั้งแต่เดินทางถึงญี่ปุ่นจนถึงเดินทางออกจากเมือง
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Day 0 Overview Card -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 bg-sky-100 text-sky-700 font-semibold text-xs rounded-full">Day 0</span>
+              <span class="text-xs text-slate-500 font-medium">วันแรกเดินทางถึง</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 leading-snug">
+              ลงสนามบิน &rarr; สึกุบะ &rarr; เข้าที่พัก
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              เดินทางจากสนามบินนาริตะ/ฮาเนดะ ด้วย Highway Bus ตรงถึง Tsukuba Center 
+              เช็กอิน Tabist Tsukuba Sky Hotel และเดินสำรวจเมืองสึกุบะยามค่ำคืน
+            </p>
+
+            <div class="bg-slate-50 border border-slate-100 rounded-xl p-3.5 space-y-2 text-xs text-slate-700">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-600"></i> Highway Bus ต่อเดียวถึง Tsukuba Center</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-600"></i> เช็กอิน Tabist Tsukuba Sky Hotel</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-sky-600"></i> มื้อเย็นราเมง / เดินชม Tsukuba Center Illumination</div>
+            </div>
+          </div>
+
+          <!-- Daily Map Thumbnail & Links -->
+          <div class="space-y-3 pt-2">
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+              <div class="bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 border-b border-slate-200 flex items-center gap-1.5">
+                <i class="fa-solid fa-map-location-dot"></i> เส้นทางเดินทาง Day 0
+              </div>
+              <img src="/images/narita_tsukuba_bus_real.jpg" alt="Day 0 Bus Map" class="w-full h-32 object-cover" />
+            </div>
+
+            <a href="/day0" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors">
+              <i class="fa-solid fa-arrow-right me-2"></i>ดูแผนรายละเอียด Day 0
+            </a>
+          </div>
+        </div>
+
+        <!-- Day 1 Overview Card -->
+        <div class="bg-white border-2 border-emerald-400 rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">Day 1</span>
+              <span class="text-xs text-slate-500 font-medium">ปั่นจักรยานโซนนอก</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 leading-snug">
+              ปั่นจักรยานสถานที่ระยะไกล (Distant Spots)
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              เช่าจักรยาน 500 เยน ลุยศูนย์อวกาศ JAXA, สวนพฤกษศาสตร์ Botanical Garden, 
+              ปั่นเส้นทาง Tsukuba Ring Ring Road ชมโบราณสถาน Hirasawa Kanka และชิมไวน์
+            </p>
+
+            <div class="bg-emerald-50/60 border border-emerald-100 rounded-xl p-3.5 space-y-2 text-xs text-slate-700">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i> JAXA Space Center (จรวด H-II)</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i> Tsukuba Botanical Garden</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600"></i> Tsukuba Ring Ring Road & Hirasawa Kanka</div>
+            </div>
+          </div>
+
+          <!-- Daily Map Thumbnail & Links -->
+          <div class="space-y-3 pt-2">
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+              <div class="bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 border-b border-slate-200 flex items-center gap-1.5">
+                <i class="fa-solid fa-map-location-dot"></i> เส้นทางปั่นจักรยาน Day 1
+              </div>
+              <img src="/images/jaxa_space_center.jpg" alt="Day 1 Bike Map" class="w-full h-32 object-cover" />
+            </div>
+
+            <a href="/day1" class="inline-flex items-center justify-center w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full text-sm font-semibold transition-colors">
+              <i class="fa-solid fa-arrow-right me-2"></i>ดูแผนรายละเอียด Day 1
+            </a>
+          </div>
+        </div>
+
+        <!-- Day 2 Overview Card -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">Day 2</span>
+              <span class="text-xs text-slate-500 font-medium">เที่ยวเมือง & ย้ายไปสกี</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 leading-snug">
+              เที่ยวสถานที่ในเมือง &rarr; ออกเดินทางไปลานสกี
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              เที่ยวพิพิธภัณฑ์ Expo Center ชมจรวด H-II และท้องฟ้าจำลอง, Science Square หุ่นยนต์ AI, 
+              พักผ่อนสวน Doho Park ทานสเต๊กเนื้อฮิตาจิ ก่อนเดินทางไปลานสกี
+            </p>
+
+            <div class="bg-slate-50 border border-slate-100 rounded-xl p-3.5 space-y-2 text-xs text-slate-700">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-600"></i> Tsukuba Expo Center & Planetarium</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-600"></i> Science Square AIST (หุ่นยนต์ AI)</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-600"></i> สวน Doho Park & สเต๊กเนื้อฮิตาจิ</div>
+            </div>
+          </div>
+
+          <!-- Daily Map Thumbnail & Links -->
+          <div class="space-y-3 pt-2">
+            <div class="border border-slate-200 rounded-xl overflow-hidden">
+              <div class="bg-slate-100 px-3 py-1.5 text-xs font-semibold text-slate-600 border-b border-slate-200 flex items-center gap-1.5">
+                <i class="fa-solid fa-map-location-dot"></i> เส้นทางในเมือง Day 2
+              </div>
+              <img src="/images/tsukuba_expo_center.jpg" alt="Day 2 City Map" class="w-full h-32 object-cover" />
+            </div>
+
+            <a href="/day2" class="inline-flex items-center justify-center w-full px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors">
+              <i class="fa-solid fa-arrow-right me-2"></i>ดูแผนรายละเอียด Day 2
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Travel Map Summary & Knowledge Quick Access -->
+    <section class="bg-amber-50/50 border border-amber-200/70 rounded-2xl p-6 md:p-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-2 max-w-2xl">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-teal-100 text-teal-800 font-semibold text-xs rounded-full">
+            <i class="fa-solid fa-map-location-dot"></i> Map & Locations
+          </span>
+          <h2 class="text-xl md:text-2xl font-bold text-slate-900">
+            แผนที่การเดินทาง & พิกัดสถานที่ทั้ง 20 จุด
+          </h2>
+          <p class="text-slate-600 text-sm">
+            รวมพิกัด GPS ทั้งหมดในเมืองสึกุบะ แยกตามสถานี ที่พัก สถานที่ท่องเที่ยว ร้านอาหาร และจุดเช่าจักรยาน
+          </p>
+        </div>
+        <div>
+          <a href="/knowledge/map" class="inline-flex items-center px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-sm font-semibold transition-colors shadow-sm">
+            <i class="fa-solid fa-map me-2"></i>เปิดแผนที่ Interactive Map
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Knowledge Hub Categories Overview -->
+    <section class="space-y-6">
+      <div class="space-y-1 border-b border-slate-200 pb-4">
+        <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">
+          Knowledge Base
+        </span>
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
+          คลังข้อมูลอ้างอิงสถานที่ (Knowledge Hub)
+        </h2>
+        <p class="text-slate-600 text-sm">
+          ข้อมูลเชิงลึก 5 หมวดหมู่ สำหรับใช้อ้างอิงในกรณีต้องการปรับเปลี่ยนแผนการเดินทาง
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <a href="/knowledge/science" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="inline-block px-2.5 py-0.5 bg-sky-100 text-sky-800 font-semibold text-xs rounded-full">Science & Space</span>
+            <h3 class="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">ศูนย์วิทยาศาสตร์ & อวกาศ</h3>
+            <p class="text-slate-600 text-sm">JAXA Space Center, Tsukuba Expo Center, Botanical Garden, Science Square, Geological Museum</p>
+          </div>
+        </a>
+
+        <a href="/knowledge/nature" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="inline-block px-2.5 py-0.5 bg-emerald-100 text-emerald-800 font-semibold text-xs rounded-full">Scenic & Nature</span>
+            <h3 class="text-lg font-bold text-slate-900 group-hover:text-emerald-600 transition-colors">ธรรมชาติ & ภูเขาสึกุบะ</h3>
+            <p class="text-slate-600 text-sm">เขาสึคุบะ, Cable Car, Ropeway, Tsukubasan Shrine, Doho Park, Ring Ring Road</p>
+          </div>
+        </a>
+
+        <a href="/knowledge/food" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="inline-block px-2.5 py-0.5 bg-amber-100 text-amber-800 font-semibold text-xs rounded-full">Dining & Farm</span>
+            <h3 class="text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors">อาหาร & ฟาร์มสตรอเบอร์รี่</h3>
+            <p class="text-slate-600 text-sm">Ramen Tatsuro, AOYAMA Udon, เนื้อวัวฮิตาจิ, Kawarakeya Strawberry Farm</p>
+          </div>
+        </a>
+
+        <a href="/knowledge/hotel" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="inline-block px-2.5 py-0.5 bg-rose-100 text-rose-800 font-semibold text-xs rounded-full">Hotel Guide</span>
+            <h3 class="text-lg font-bold text-slate-900 group-hover:text-rose-600 transition-colors">ที่พัก & โรงแรม</h3>
+            <p class="text-slate-600 text-sm">Tabist Tsukuba Sky Hotel (ที่พักยืนยัน), Daiwa Roynet, Hotel Nikko, Toyoko Inn</p>
+          </div>
+        </a>
+
+        <a href="/knowledge/map" class="group bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-slate-300 transition-all flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="inline-block px-2.5 py-0.5 bg-teal-100 text-teal-800 font-semibold text-xs rounded-full">GPS Map</span>
+            <h3 class="text-lg font-bold text-slate-900 group-hover:text-teal-600 transition-colors">แผนที่พิกัด 20 จุด</h3>
+            <p class="text-slate-600 text-sm">แผนที่แบบ Interactive พร้อมระบบปักปักพิกัด Google Maps และการเดินทางด้วยบัส</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </div>
+</Layout>
