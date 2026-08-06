@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         <i class="fa-solid fa-map-location-dot"></i> MAP & LOGISTICS
       </span>
       <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">
-        แผนที่พิกัด 20 จุด & คู่มือการเดินทาง (Map & Logistics)
+        แผนที่พิกัด 26 จุด & คู่มือการเดินทาง (Map & Logistics)
       </h1>
       <p class="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
         แผนที่ปักหมุด GPS, คู่มือการเดินทางจากโตเกียวสู่ทซึคุบะ และบริการเช่าจักรยานปั่นเที่ยว
@@ -43,13 +43,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     </div>
 
     <!-- Map & Sidebar Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[540px]">
-      <div class="lg:col-span-2 rounded-2xl overflow-hidden border border-slate-200 min-h-[400px] h-full shadow-sm">
-        <div id="map" class="w-full h-full min-h-[400px]"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[540px] w-full min-w-0 overflow-hidden">
+      <div class="lg:col-span-2 rounded-2xl overflow-hidden border border-slate-200 min-h-[400px] h-full shadow-sm relative z-0 min-w-0 w-full">
+        <div id="map" class="w-full h-full min-h-[400px] rounded-2xl overflow-hidden relative z-0 min-w-0"></div>
       </div>
 
       <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col h-[400px] lg:h-full space-y-3">
-        <h3 class="font-bold text-slate-900 text-sm border-b border-slate-100 pb-2">รายชื่อพิกัดสำคัญ (20 Spots)</h3>
+        <h3 class="font-bold text-slate-900 text-sm border-b border-slate-100 pb-2">รายชื่อพิกัดสำคัญ (26 Spots)</h3>
         <div id="spot-list" class="overflow-y-auto flex-1 space-y-2 pr-1 scrollbar-thin">
           <!-- Rendered via Client JS -->
         </div>
@@ -119,7 +119,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
             <ul class="list-disc pl-5 space-y-1">
               <li><strong>ค่าเช่าถูกมาก:</strong> ผู้ใหญ่เพียง 500 เยน / เด็ก 250 เยน ต่อวัน!</li>
               <li><strong>อุปกรณ์ที่ได้รับ:</strong> ตัวรถจักรยาน, สายล็อก+กุญแจ, หมวกกันน็อก และแผนที่ฟรี</li>
-              <li><strong>สถานที่ท่องเที่ยวบนเส้นทางปั่น:</strong> JAXA Space Center, Botanical Garden, ซากคลังโบราณ Hirasawa Kanka, สระโฮโจ, AOYAMA Udon และ Tsukuba Winery</li>
+              <li><strong>สถานที่ท่องเที่ยวบนเส้นทางปั่น:</strong> JAXA Space Center, Botanical Garden, ซากโกดังโบราณ Hirasawa Kanka, สระโดโฮ, AOYAMA Udon และ Tsukuba Winery</li>
             </ul>
           </div>
         </article>
@@ -135,7 +135,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
           <h3 class="text-lg font-bold text-slate-900">3. รถบัส Highway Bus ตรงจากสนามบิน (Airport to Tsukuba)</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
             มีรถบัส Highway Bus วิ่งตรงจากสนามบิน <strong>Narita Airport (~60 นาที)</strong> และ <strong>Haneda Airport (~120 นาที)</strong> 
-            มายัง Tsukuba Center Bus Terminal โดยไม่ต้องเปลี่ยนขบวน ลากกระเป๋าขึ้นรถนั่งสบายตลอดสาย
+            มายัง Tsukuba Center Bus Terminal โดยไม่ต้องเปลี่ยนขบวน ลากกระเป๋าขึ้นรถนัดนั่งสบายตลอดสาย
           </p>
         </div>
       </article>
@@ -151,36 +151,33 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     const spotsData = [
       { id: 1, name: "JAXA Tsukuba Space Center", cat: "science", catName: "Science", lat: 36.0645, lng: 140.1265, dist: "2.1 กม. (บัส 8 นาที)", img: `${base}/images/jaxa_tsukuba_space_center_ta1.jpg`, link: `${base}/knowledge/science#jaxa`, desc: "ศูนย์อวกาศใหญ่ที่สุดในญี่ปุ่น จรวด H-II และโมเดล Kibo ISS" },
       { id: 2, name: "Tsukuba Botanical Garden (Bottani)", cat: "science", catName: "Science", lat: 36.1008, lng: 140.1118, dist: "2.2 กม. (บัส 8 นาที)", img: `${base}/images/tsukuba_botanical_garden_ta1.jpg`, link: `${base}/knowledge/science#botanical`, desc: "สวนพฤกษศาสตร์วิจัยแห่งชาติ โดมเรือนกระจกพืชพรรณเขตร้อน" },
-      { id: 3, name: "Tsukuba Expo Center", cat: "science", catName: "Science", lat: 36.0858, lng: 140.1132, dist: "450 ม. (เดิน 5 นาที)", img: `${base}/images/tsukuba_expo_center.jpg`, link: `${base}/knowledge/science#expo`, desc: "พิพิธภัณฑ์วิทยาศาสตร์ ท้องฟ้าจำลองโดมใหญ่ และหุ่นยนต์" },
+      { id: 3, name: "Tsukuba Expo Center", cat: "science", catName: "Science", lat: 36.0858, lng: 140.1132, dist: "450 ม. (เดิน 5 นาที)", img: `${base}/images/tsukuba_expo_center.jpg`, link: `${base}/knowledge/science#expo`, desc: "พิพิธภัณฑ์วิทยาศาสตร์ ท้องฟ้าจำลองโดมยักษ์ & หุ่นยนต์" },
       { id: 4, name: "Geological Museum (地質標本館)", cat: "science", catName: "Science", lat: 36.0560, lng: 140.1350, dist: "3.2 กม. (บัส 12 นาที)", img: `${base}/images/geological_museum_ta1.jpg`, link: `${base}/knowledge/science#geological`, desc: "พิพิธภัณฑ์ธรณีวิทยา อัญมณี ฟอสซิล และหินภูเขาไฟ" },
       { id: 5, name: "Science Square AIST", cat: "science", catName: "Science", lat: 36.0562, lng: 140.1365, dist: "3.3 กม. (บัส 12 นาที)", img: `${base}/images/science_square_ta1.jpg`, link: `${base}/knowledge/science#science-square`, desc: "โชว์รูมนวัตกรรมและหุ่นยนต์อัจฉริยะ Paro Seal Robot" },
       { id: 6, name: "NARO Tsukuba Food Research Center", cat: "science", catName: "Science", lat: 36.0305, lng: 140.1340, dist: "6.0 กม. (บัส 20 นาที)", img: `${base}/images/naro_food_research.jpg`, link: `${base}/knowledge/science#naro`, desc: "สถาบันวิจัยเทคโนโลยีอาหารและการเกษตรอัจฉริยะ" },
 
-      { id: 7, name: "ยอดเขาสึกุบะ & Cable Car (Mt. Tsukuba)", cat: "nature", catName: "Nature", lat: 36.2254, lng: 140.1075, dist: "18 กม. (บัส 36 นาที)", img: `${base}/images/tsukubasan_shrine_real.jpg`, link: `${base}/knowledge/nature#tsukubasan`, desc: "ยอดเขา 877m 1 ใน 100 ภูเขาชื่อดัง วิว 360° ที่ราบ�      { id: 16, name: "TonQ Tsukuba Honten (とんかつ とんQ つくば本店)", cat: "food", catName: "Food", lat: 36.0765, lng: 140.1135, dist: "800 ม. (เดิน 10 นาที / แท็กซี่ 3 นาที)", img: `${base}/images/doho_park_cafe_lakeside.jpg`, link: `${base}/knowledge/food#tonq-tonkatsu`, desc: "ร้านทงคัตสึหมูทอดพรีเมียมอันดับ 1 ของเมือง Tsukuba" },
-      { id: 17, name: "Gohan-ya Fugen (ごはんや 冨元 / ふげん)", cat: "food", catName: "Food", lat: 36.0820, lng: 140.1150, dist: "450 ม. (เดิน 5 นาที)", img: `${base}/images/tsukuba_ramen.jpg`, link: `${base}/knowledge/food#gohan-fugen`, desc: "ร้านอาหารญี่ปุ่นดั้งเดิม เซ็ตเทโชกุ ปลาปิ้งย่างและต้มเค็มโฮมเมด" },
-      { id: 18, name: "Tsukubasan Hitachino (つくば山 ひたち野)", cat: "food", catName: "Food", lat: 36.2085, lng: 140.1005, dist: "17 กม. (บัส 35 นาที)", img: `${base}/images/tsukubasan_hitachino_real.jpg`, link: `${base}/knowledge/food#hitachino`, desc: "เนื้อวัวฮิตาจิเตาถ่านอิโรริ ในเรือนไม้โบราณ 200 ปี Gassho-zukuri" },
-      { id: 19, name: "Café Boulangerie Takezono", cat: "food", catName: "Food", lat: 36.0807, lng: 140.1194, dist: "650 ม. (เดิน 8 นาที)", img: `${base}/images/cafe_takezono_real.webp`, link: `${base}/knowledge/food#takezono-bakery`, desc: "เบเกอรี่หลังคาสีฟ้าอบสดใหม่ เปิด 06:00 น. Pomme Caramel & Canelé" },
-      { id: 20, name: "Kurabiyori (คุราบิโยริ - 蔵日和)", cat: "food", catName: "Food", lat: 36.1023, lng: 140.1416, dist: "2.8 กม. (แท็กซี่ 8 นาที)", img: `${base}/images/kurabiyori_real.webp`, link: `${base}/knowledge/food#kurabiyori`, desc: "เบเกอรี่โกดังข้าวเอโดะ 180 ปี มรดกวัฒนธรรม & เมเปิลเมล่อนปังอันดับ 1" },
-      { id: 21, name: "Kuradashi YAKIIMO KAITSUKA", cat: "food", catName: "Food", lat: 36.0880, lng: 140.1020, dist: "2.5 กม. (แท็กซี่ 7 นาที)", img: `${base}/images/kaitsuka_yakiimo_real.webp`, link: `${base}/knowledge/food#kaitsuka-yakiimo`, desc: "ร้านของหวานมันเผาชื่อดัง เบนิเท็นชิ ซอฟต์ครีมลาเต้ & พายแอปเปิ้ล" },
-      { id: 22, name: "TSUKUBA BREWERY (โรงเบียร์สึคุบะ)", cat: "food", catName: "Food", lat: 36.0631, lng: 140.1215, dist: "2.2 กม. (บัส 8 นาที)", img: `${base}/images/tsukuba_brewery_real.webp`, link: `${base}/knowledge/food#tsukuba-brewery`, desc: "บาร์เบียร์คราฟต์สด local ใชวัตถุดิบเมือง Tsukuba หมักสดจากถัง" },
-      { id: 23, name: "Ramen Tatsuro (ラーメン龍郎)", cat: "food", catName: "Food", lat: 36.0885, lng: 140.1165, dist: "725 ม. (เดิน 8 นาที)", img: `${base}/images/ramen_tatsuro_ta1.jpg`, link: `${base}/knowledge/food#ramen`, desc: "ร้านราเมน Miso Jiro ชามยักษ์ หมูชาชูหนานุ่มผักพูนชาม" },
-      { id: 24, name: "Kawarakeya Strawberry Farm", cat: "food", catName: "Food", lat: 36.0385, lng: 140.1200, dist: "5.2 กม. (บัส 18 นาที)", img: `${base}/images/kawarakeya_strawberry_1.jpg`, link: `${base}/knowledge/food#strawberry`, desc: "ฟาร์มเก็บสตรอเบอร์รี่สดเรือนกระจก และให้อาหารน้องแพะ 🐐" },
+      { id: 7, name: "ยอดเขาสึกุบะ & Cable Car (Mt. Tsukuba)", cat: "nature", catName: "Nature", lat: 36.2254, lng: 140.1075, dist: "18 กม. (บัส 36 นาที)", img: `${base}/images/tsukubasan_shrine_real.jpg`, link: `${base}/knowledge/nature#tsukubasan`, desc: "ยอดเขา 877m 1 ใน 100 ภูเขาชื่อดัง วิว 360 องศา" },
+      { id: 8, name: "สวนสาธารณะโดโฮ (Doho Park)", cat: "nature", catName: "Nature", lat: 36.0612, lng: 140.1147, dist: "1.5 กม. (เดิน 18 นาที / ปั่น 6 นาที)", img: `${base}/images/doho_park_scenery_real.jpg`, link: `${base}/knowledge/nature#doho-park`, desc: "สวนร่มรื่นบึงน้ำใหญ่ คาเฟ่เรือนไม้ & เส้นทางปั่นจักรยาน" },
+      { id: 9, name: "สวนมัตสึมิ & หอชมวิว 45m (Matsumi Park)", cat: "nature", catName: "Nature", lat: 36.0910, lng: 140.1076, dist: "1.2 กม. (เดิน 14 นาที)", img: `${base}/images/tsukuba_center_building_real.jpg`, link: `${base}/knowledge/nature#matsumi-park`, desc: "หอชมวิวแปดเหลี่ยมสูง 45m วิวพาโนรามา 360° & บึงปลาคาร์ฟ" },
+      { id: 10, name: "Tsukuba Center Building & Art Museum", cat: "nature", catName: "Nature", lat: 36.0825, lng: 140.1138, dist: "300 ม. (เดิน 4 นาที)", img: `${base}/images/tsukuba_center_building_real.jpg`, link: `${base}/day2#part-plaza`, desc: "สถาปัตยกรรมระดับโลก Arata Isozaki Sunken Plaza" },
+      { id: 11, name: "ซากโบราณสถานฮิราซาวะ (Hirasawa Kanka Ruins)", cat: "nature", catName: "Nature", lat: 36.1820, lng: 140.0950, dist: "12 กม. (บัส 25 นาที)", img: `${base}/images/tsukubasan_shrine_real.jpg`, link: `${base}/knowledge/nature#hirasawa`, desc: "ซากพระราชวังโบราณยุคนารา-เฮอัน มรดกทางประวัติศาสตร์" },
 
-      { id: 25, name: "Tabist Tsukuba Sky Hotel (ที่พักยืนยัน 34G2+8J)", cat: "hotel", catName: "Hotel", lat: 36.07543, lng: 140.101449, dist: "1.1 กม. (เดิน 14 นาที / แท็กซี่ 4 นาที)", img: `${base}/images/tabist_sky_hotel_booking_01_ext.jpg`, link: `${base}/knowledge/hotel#tabist-sky`, desc: "ที่พักยืนยันสำหรับทริปนี้ คุ้มค่า สะอาด มีลานจอดรถฟรี (Plus Code: 34G2+8J • พิกัด 36.07543, 140.101449)" },
-      { id: 26, name: "Daiwa Roynet Hotel Tsukuba", cat: "hotel", catName: "Hotel", lat: 36.0838, lng: 140.1108, dist: "101 ม. (เดิน 1 นาที)", img: `${base}/images/daiwa_roynet_tsukuba_real.jpg`, link: `${base}/knowledge/hotel#daiwa`, desc: "ที่พักทำเลอันดับ 1 ติดสถานี Tsukuba Station ทางออก A5" },
-      { id: 27, name: "จุดเช่าจักรยาน Kanto Railway Tsukuba Station", cat: "cycling", catName: "เช่าจักรยาน", lat: 36.0830, lng: 140.1110, dist: "หน้าสถานี Tsukuba Exit A5", img: `${base}/images/tsukuba_station.jpg`, link: `${base}/day1#part-bike`, desc: "จุดบริการเช่าจักรยาน 500 เยน/วัน เปิด 09:00 - 18:00 น." }�ิ A5 & สุกี้ยากี้ ชั้น 2 Hotel Nikko Tsukuba" },
-      { id: 15, name: "Sushi Dokoro Yagura (鮨処 やぐら つくば本店)", cat: "food", catName: "Food", lat: 36.0805, lng: 140.1175, dist: "600 ม. (เดิน 8 นาที)", img: `${base}/images/sushi_yagura_real.jpg`, link: `${base}/knowledge/food#sushi-yagura`, desc: "ร้านซูชิดั้งเดิมขึ้นชื่อที่สุด ปลาสดชิ้นใหญ่ นิกิริ & ชิราชิด้งเต็มคำ" },
-      { id: 16, name: "Tsukubasan Hitachino (つくば山 ひたち野)", cat: "food", catName: "Food", lat: 36.2085, lng: 140.1005, dist: "17 กม. (บัส 35 นาที)", img: `${base}/images/tsukubasan_hitachino_real.jpg`, link: `${base}/knowledge/food#hitachino`, desc: "เนื้อวัวฮิตาจิเตาถ่านอิโรริ ในเรือนไม้โบราณ 200 ปี Gassho-zukuri" },
-      { id: 17, name: "Café Boulangerie Takezono", cat: "food", catName: "Food", lat: 36.0807, lng: 140.1194, dist: "650 ม. (เดิน 8 นาที)", img: `${base}/images/cafe_takezono_real.webp`, link: `${base}/knowledge/food#takezono-bakery`, desc: "เบเกอรี่หลังคาสีฟ้าอบสดใหม่ เปิด 06:00 น. Pomme Caramel & Canelé" },
-      { id: 18, name: "Kurabiyori (คุราบิโยริ - 蔵日和)", cat: "food", catName: "Food", lat: 36.1023, lng: 140.1416, dist: "2.8 กม. (แท็กซี่ 8 นาที)", img: `${base}/images/kurabiyori_real.webp`, link: `${base}/knowledge/food#kurabiyori`, desc: "เบเกอรี่โกดังข้าวเอโดะ 180 ปี มรดกวัฒนธรรม & เมเปิลเมล่อนปังอันดับ 1" },
-      { id: 19, name: "Kuradashi YAKIIMO KAITSUKA", cat: "food", catName: "Food", lat: 36.0880, lng: 140.1020, dist: "2.5 กม. (แท็กซี่ 7 นาที)", img: `${base}/images/kaitsuka_yakiimo_real.webp`, link: `${base}/knowledge/food#kaitsuka-yakiimo`, desc: "ร้านของหวานมันเผาชื่อดัง เบนิเท็นชิ ซอฟต์ครีมลาเต้ & พายแอปเปิ้ล" },
-      { id: 20, name: "TSUKUBA BREWERY (โรงเบียร์สึคุบะ)", cat: "food", catName: "Food", lat: 36.0631, lng: 140.1215, dist: "2.2 กม. (บัส 8 นาที)", img: `${base}/images/tsukuba_brewery_real.webp`, link: `${base}/knowledge/food#tsukuba-brewery`, desc: "บาร์เบียร์คราฟต์สด local ใช้วัตถุดิบเมือง Tsukuba หมักสดจากถัง" },
-      { id: 21, name: "Ramen Tatsuro (ラーメン龍郎)", cat: "food", catName: "Food", lat: 36.0885, lng: 140.1165, dist: "725 ม. (เดิน 8 นาที)", img: `${base}/images/ramen_tatsuro_ta1.jpg`, link: `${base}/knowledge/food#ramen`, desc: "ร้านราเมน Miso Jiro ชามยักษ์ หมูชาชูหนานุ่มผักพูนชาม" },
-      { id: 22, name: "Kawarakeya Strawberry Farm", cat: "food", catName: "Food", lat: 36.0385, lng: 140.1200, dist: "5.2 กม. (บัส 18 นาที)", img: `${base}/images/kawarakeya_strawberry_1.jpg`, link: `${base}/knowledge/food#strawberry`, desc: "ฟาร์มเก็บสตรอเบอร์รี่สดเรือนกระจก และให้อาหารน้องแพะ 🐐" },
+      { id: 12, name: "Boulangerie Couronne Tsukuba", cat: "food", catName: "Food", lat: 36.0612, lng: 140.1147, dist: "1.5 กม. (ขอบสวน Doho Park)", img: `${base}/images/couronne_tsukuba_real.jpg`, link: `${base}/knowledge/food#couronne-bakery`, desc: "ร้านเบเกอรี่อันดับ 1 ขนมปังไส้กรอกยาว Long Sausage France" },
+      { id: 13, name: "cox (コックス)", cat: "food", catName: "Food", lat: 36.0618, lng: 140.1135, dist: "1.5 กม. (ย่าน Onozaki)", img: `${base}/images/cafe_cox_real.jpg`, link: `${base}/knowledge/food#cafe-cox`, desc: "คาเฟ่อาหารดีไซน์ตึกปูนเปลือยมินิมอล Quiche Plate & กาแฟดริป" },
+      { id: 14, name: "HARE GOHAN (ハレごはん)", cat: "food", catName: "Food", lat: 36.0930, lng: 140.0910, dist: "3.5 กม. (โครงการ MeeToco)", img: `${base}/images/hare_gohan_real.jpg`, link: `${base}/knowledge/food#hare-gohan`, desc: "ร้านอาหารโฮมเมดสไตล์คราฟต์ วัตถุดิบผักสดเกษตรกรโลคอล" },
+      { id: 15, name: "Hitachi Beef Sansui (常陸牛 山水)", cat: "food", catName: "Food", lat: 36.0825, lng: 140.1130, dist: "200 ม. (ชั้น 2 Hotel Nikko)", img: `${base}/images/hotel_nikko_tsukuba_real.jpg`, link: `${base}/day1#part-sansui`, desc: "สเต๊กเนื้อวัวฮิตาจิวากิว A5 ติดสถานี Tsukuba Exit A3" },
+      { id: 16, name: "Sushi Dokoro Yagura (鮨処 やぐら 本店)", cat: "food", catName: "Food", lat: 36.0805, lng: 140.1175, dist: "600 ม. (เดิน 8 นาที)", img: `${base}/images/sushi_yagura_real.jpg`, link: `${base}/knowledge/food#sushi-yagura`, desc: "ร้านซูชิดั้งเดิมชิ้นใหญ่สดฉ่ำ นิกิริ & ชิราชิด้งรวม" },
+      { id: 17, name: "Tsukubasan Hitachino (つくば山 ひたち野)", cat: "food", catName: "Food", lat: 36.2085, lng: 140.1005, dist: "17 กม. (บัส 35 นาที)", img: `${base}/images/tsukubasan_hitachino_real.jpg`, link: `${base}/knowledge/food#hitachino`, desc: "เนื้อวัวฮิตาจิเตาถ่านอิโรริ เรือนไม้โบราณ 200 ปี Gassho-zukuri" },
+      { id: 18, name: "Café Boulangerie Takezono", cat: "food", catName: "Food", lat: 36.0807, lng: 140.1194, dist: "650 ม. (เดิน 8 นาที)", img: `${base}/images/cafe_takezono_real.webp`, link: `${base}/knowledge/food#takezono-bakery`, desc: "เบเกอรี่หลังคาสีฟ้าอบสดใหม่ Pomme Caramel & Canelé" },
+      { id: 19, name: "Kurabiyori (蔵日和)", cat: "food", catName: "Food", lat: 36.1023, lng: 140.1416, dist: "2.8 กม. (แท็กซี่ 8 นาที)", img: `${base}/images/kurabiyori_real.webp`, link: `${base}/knowledge/food#kurabiyori`, desc: "เบเกอรี่โกดังข้าวเอโดะ 180 ปี & เมเปิลเมล่อนปังอันดับ 1" },
+      { id: 20, name: "Kuradashi YAKIIMO KAITSUKA", cat: "food", catName: "Food", lat: 36.0880, lng: 140.1020, dist: "2.5 กม. (แท็กซี่ 7 นาที)", img: `${base}/images/kaitsuka_yakiimo_real.webp`, link: `${base}/knowledge/food#kaitsuka-yakiimo`, desc: "ร้านของหวานมันเผาชื่อดัง เบนิเท็นชิ ซอฟต์ครีมลาเต้ & พาย" },
+      { id: 21, name: "TSUKUBA BREWERY (โรงเบียร์สึคุบะ)", cat: "food", catName: "Food", lat: 36.0631, lng: 140.1215, dist: "2.2 กม. (บัส 8 นาที)", img: `${base}/images/tsukuba_brewery_real.webp`, link: `${base}/knowledge/food#tsukuba-brewery`, desc: "บาร์เบียร์คราฟต์สด local หมักสดจากถัง" },
+      { id: 22, name: "Ramen Tatsuro (ラーメン龍郎)", cat: "food", catName: "Food", lat: 36.0885, lng: 140.1165, dist: "725 ม. (เดิน 8 นาที)", img: `${base}/images/ramen_tatsuro_ta1.jpg`, link: `${base}/knowledge/food#ramen`, desc: "ร้านราเมน Miso Jiro ชามยักษ์ หมูชาชูหนานุ่มผักพูนชาม" },
+      { id: 23, name: "Kawarakeya Strawberry Farm", cat: "food", catName: "Food", lat: 36.0385, lng: 140.1200, dist: "5.2 กม. (บัส 18 นาที)", img: `${base}/images/kawarakeya_strawberry_1.jpg`, link: `${base}/knowledge/food#strawberry`, desc: "ฟาร์มเก็บสตรอเบอร์รี่สดเรือนกระจก & ให้อาหารน้องแพะ 🐐" },
 
-      { id: 23, name: "Tabist Tsukuba Sky Hotel (ที่พักยืนยัน 34G2+8J)", cat: "hotel", catName: "Hotel", lat: 36.07543, lng: 140.101449, dist: "1.1 กม. (เดิน 14 นาที / แท็กซี่ 4 นาที)", img: `${base}/images/tabist_sky_hotel_booking_01_ext.jpg`, link: `${base}/knowledge/hotel#tabist-sky`, desc: "ที่พักยืนยันสำหรับทริปนี้ คุ้มค่า สะอาด มีลานจอดรถฟรี (Plus Code: 34G2+8J • พิกัด 36.07543, 140.101449)" },
-      { id: 24, name: "Daiwa Roynet Hotel Tsukuba", cat: "hotel", catName: "Hotel", lat: 36.0838, lng: 140.1108, dist: "101 ม. (เดิน 1 นาที)", img: `${base}/images/daiwa_roynet_tsukuba_real.jpg`, link: `${base}/knowledge/hotel#daiwa`, desc: "ที่พักทำเลอันดับ 1 ติดสถานี Tsukuba Station ทางออก A5" },
-      { id: 25, name: "จุดเช่าจักรยาน Kanto Railway Tsukuba Station", cat: "cycling", catName: "เช่าจักรยาน", lat: 36.0830, lng: 140.1110, dist: "หน้าสถานี Tsukuba Exit A5", img: `${base}/images/tsukuba_station.jpg`, link: `${base}/day1#part-bike`, desc: "จุดบริการเช่าจักรยาน 500 เยน/วัน เปิด 09:00 - 18:00 น." }
+      { id: 24, name: "Tabist Tsukuba Sky Hotel (ที่พักยืนยัน 34G2+8J)", cat: "hotel", catName: "Hotel", lat: 36.07543, lng: 140.101449, dist: "1.1 กม. (เดิน 14 นาที)", img: `${base}/images/tabist_sky_hotel_booking_01_ext.jpg`, link: `${base}/knowledge/hotel#tabist-sky`, desc: "ที่พักยืนยันสำหรับทริปนี้ คุ้มค่า สะอาด มีลานจอดรถฟรี" },
+      { id: 25, name: "Daiwa Roynet Hotel Tsukuba", cat: "hotel", catName: "Hotel", lat: 36.0838, lng: 140.1108, dist: "101 ม. (เดิน 1 นาที)", img: `${base}/images/daiwa_roynet_tsukuba_real.jpg`, link: `${base}/knowledge/hotel#daiwa`, desc: "ที่พักทำเลอันดับ 1 ติดสถานี Tsukuba Station Exit A5" },
+      { id: 26, name: "จุดเช่าจักรยาน Kanto Railway Tsukuba Station", cat: "cycling", catName: "เช่าจักรยาน", lat: 36.0830, lng: 140.1110, dist: "หน้าสถานี Tsukuba Exit A5", img: `${base}/images/tsukuba_station.jpg`, link: `${base}/day1#part-bike`, desc: "จุดบริการเช่าจักรยาน 500 เยน/วัน เปิด 09:00 - 18:00 น." }
     ];
 
     const catColor = {
@@ -216,7 +213,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       const marker = L.marker([spot.lat, spot.lng], { icon: createPin(color) }).addTo(map);
 
       const popupContent = `
-        <div style="width: 200px;">
+        <div style="width: 200px; font-family: sans-serif;">
           <img src="${spot.img}" style="width: 100%; height: 100px; object-fit: cover; border-radius: 6px; margin-bottom: 6px;" alt="${spot.name}">
           <div style="font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; color: #0f172a;">${spot.name}</div>
           <div style="font-size: 0.8rem; color: #64748b; margin-bottom: 8px;">${spot.desc}</div>
@@ -271,7 +268,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
             card.style.display = 'none';
           }
         });
+
+        setTimeout(() => { map.invalidateSize(); }, 150);
       });
     });
+
+    setTimeout(() => { map.invalidateSize(); }, 300);
+    window.addEventListener('resize', () => { map.invalidateSize(); });
   });
 </script>
