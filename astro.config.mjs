@@ -4,8 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://apirak.github.io',
-  base: '/tsukuba-astro',
+  site: 'https://apirak.com',
+  base: '/tsukuba',
   vite: {
     plugins: [tailwindcss()]
   }
