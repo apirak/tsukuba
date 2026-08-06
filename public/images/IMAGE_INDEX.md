@@ -67,6 +67,10 @@
 | `ramen_tatsuro_tb1.jpg` | Ramen Tatsuro | ชาม Tsukemen ราเมนเส้นใหญ่เหนียวนุ่มแยกน้ำซุปจุ่ม | `ชามราเมน Tsukemen น้ำซุปเข้มข้น Ramen Tatsuro` |
 | `ramen_tatsuro_tb2.jpg` | Ramen Tatsuro | ภาพส่วนผสมไข่ต้มยางมะตูมและกระเทียมฝนสดราเมน | `ท็อปปิ้งไข่ยางมะตูมและกระเทียมสดราเมน` |
 | `ramen_tatsuro_tb3.jpg` | Ramen Tatsuro | ป้ายชื่อร้านและเมนูยอดนิยมหน้าร้าน Ramen Tatsuro | `ป้ายชื่อร้านและป้ายเมนูหน้าร้าน Ramen Tatsuro` |
+| `ringring_square_tsuchiura_ext.jpg` | Ring-Ring Square Tsuchiura | ภาพภายนอกอาคารจุดบริการนักปั่นจักรยาน Ring-Ring Square เชื่อมตรงกับสถานี JR Tsuchiura | `อาคารจุดบริการนักปั่น Ring-Ring Square Tsuchiura เชื่อมตรงสถานี JR Tsuchiura` |
+| `ringring_square_tsuchiura_shop.jpg` | Ring-Ring Square Tsuchiura | บรรยากาศภายในร้าน le cyc จำหน่ายและให้เช่าจักรยานเสือหมอบ E-bike และอุปกรณ์ | `ร้านจำหน่ายและให้เช่าจักรยาน le cyc ชั้น 1 Ring-Ring Square Tsuchiura` |
+| `ringring_square_tsuchiura_bikes.jpg` | Ring-Ring Square Tsuchiura | ขบวนจักรยานหลากหลายประเภทให้เช่าปั่นบนเส้นทาง Ring-Ring Road | `บริการจักรยานให้เช่าหลากหลายประเภท ณ Ring-Ring Square Tsuchiura` |
+| `ringring_square_tsuchiura_map.png` | Ring-Ring Square Tsuchiura | แผนผังเส้นทางปั่นจักรยาน Tsukuba-Kasumigaura Ring-Ring Road และจุดคืนจักรยาน 11 แห่ง | `แผนผังเส้นทางปั่นจักรยาน Ring-Ring Road และจุดบริการเช่าคืน 11 แห่ง` |
 | `science_square_ta1.jpg` | Science Square AIST | หุ่นยนต์แมวน้ำบำบัด Paro AI และนวัตกรรมอนาคต Science Square | `หุ่นยนต์แมวน้ำ Paro AI ณ Science Square AIST` |
 | `science_square_ta2.jpg` | Science Square AIST | นวัตกรรมยานยนต์ขับเคลื่อนอัตโนมัติและเซลล์พลังงานสะอาด | `นิทรรศการยานยนต์ขับเคลื่อนอัตโนมัติ AIST` |
 | `science_square_ta3.jpg` | Science Square AIST | โซนทดลองวิทยาศาสตร์หุ่นยนต์ปฏิสัมพันธ์สำหรับเด็ก | `โซนทดลองวิทยาศาสตร์หุ่นยนต์ Interactive Science Square` |
