@@ -4,8 +4,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <Layout title="Interactive Map & Transport - Knowledge Hub Tsukuba" activePath="/knowledge/map">
-  <!-- Include Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
 
   <header class="bg-slate-900 text-white py-12 border-b border-slate-800 text-center">
     <div class="max-w-4xl mx-auto px-4 space-y-3">
@@ -43,14 +42,14 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     </div>
 
     <!-- Map & Sidebar Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[540px] w-full min-w-0 overflow-hidden">
-      <div class="lg:col-span-2 rounded-2xl overflow-hidden border border-slate-200 min-h-[400px] h-full shadow-sm relative z-0 min-w-0 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-[540px] w-full min-w-0">
+      <div class="lg:col-span-2 rounded-2xl overflow-hidden border border-slate-200 min-h-[400px] h-[400px] lg:h-full shadow-sm relative z-0 min-w-0 w-full">
         <div id="map" class="w-full h-full min-h-[400px] rounded-2xl overflow-hidden relative z-0 min-w-0"></div>
       </div>
 
-      <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col h-[400px] lg:h-full space-y-3">
-        <h3 class="font-bold text-slate-900 text-sm border-b border-slate-100 pb-2">รายชื่อพิกัดสำคัญ (26 Spots)</h3>
-        <div id="spot-list" class="overflow-y-auto flex-1 space-y-2 pr-1 scrollbar-thin">
+      <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col h-[400px] lg:h-full min-h-0 min-w-0 space-y-3">
+        <h3 class="font-bold text-slate-900 text-sm border-b border-slate-100 pb-2 shrink-0">รายชื่อพิกัดสำคัญ (26 Spots)</h3>
+        <div id="spot-list" class="overflow-y-auto flex-1 min-h-0 space-y-2 pr-1 scrollbar-thin">
           <!-- Rendered via Client JS -->
         </div>
       </div>

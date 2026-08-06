@@ -72,8 +72,7 @@ const themeStyles = {
 const currentTheme = themeStyles[themeColor] || themeStyles.sky;
 ---
 
-<!-- Include Leaflet CSS if not present -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
 
 <section class={`border rounded-2xl p-4 md:p-6 space-y-5 shadow-sm ${currentTheme.bg} ${currentTheme.border}`}>
   <!-- Map Header -->
@@ -136,13 +135,13 @@ const currentTheme = themeStyles[themeColor] || themeStyles.sky;
     </div>
 
     <!-- Spot List Cards -->
-    <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-xs flex flex-col h-[360px] md:h-[420px]">
-      <div class="font-bold text-xs text-slate-900 border-b border-slate-100 pb-2 mb-2 flex items-center justify-between">
+    <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-xs flex flex-col h-[360px] md:h-[420px] min-h-0 min-w-0">
+      <div class="font-bold text-xs text-slate-900 border-b border-slate-100 pb-2 mb-2 flex items-center justify-between shrink-0">
         <span><i class="fa-solid fa-list-ol text-slate-500 me-1"></i> รายการจุดแวะ ({spots.length} จุด)</span>
         <span class="text-[10px] text-slate-500 font-normal">คลิกเพื่อซูม</span>
       </div>
 
-      <div class="overflow-y-auto flex-1 space-y-2 pr-1 scrollbar-thin">
+      <div class="overflow-y-auto flex-1 min-h-0 space-y-2 pr-1 scrollbar-thin">
         {spots.map((spot, index) => (
           <div 
             class="flex items-start gap-2.5 p-2.5 bg-slate-50 hover:bg-slate-100 border border-slate-200/80 rounded-lg cursor-pointer transition-all hover:shadow-xs spot-card-item"
